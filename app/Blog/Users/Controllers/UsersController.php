@@ -1,6 +1,8 @@
 <?php
 namespace App\Blog\Users\Controllers;
 
+use App\Blog\Users\Requests\CreateUsersRequest;
+use App\Blog\Users\Requests\UpdateUsersRequest;
 use App\Http\Controllers\Controller;
 use App\Blog\Users\User;
 use App\Http\Requests\CreateUserRequest;
@@ -36,18 +38,20 @@ class UsersController extends Controller
 
     }
 
-    public function postCreate(CreateUserRequest $request)
+    public function postCreate(CreateUsersRequest $request)
     {
         $data['module'] = $this->module;
-        if ($row = $this->model->create($request->all())) {
-            flash()->success(trans('app.Created successfully'));
-            return redirect( '/' . $this->module );
-        }
-        flash()->error(trans('app.failed to save'));
-        return back();
+        $row = new User();
+        $row->name = $request->name;
+        $row->email = $request->email;
+        $row->mobile_number = $request->mobile_number;
+        $row->password =bcrypt( $request->password);
+        $row->save();
+        return redirect( '/' . $this->module );
+
     }
 
-    public function getEdit(Request $request , $id)
+    public function getEdit($id)
     {
         $data['module'] = $this->module;
         $data['page_title'] = trans('app.Edit') . " " . $this->title;
@@ -56,14 +60,21 @@ class UsersController extends Controller
         return view('admin.'. $this->module . '.edit', $data);
 
     }
-    public function postEdit(Request $request , $id)
+    public function postEdit(UpdateUsersRequest $request , $id)
     {
         $data['module'] = $this->module;
         $row = $this->model->findOrFail($id);
-        if ($row->update($request->all())) {
-            flash(trans('app.Update successfully'))->success();
-            return redirect( '/' . $this->module );
-        }
+//        if ($row->update($request->all())) {
+//            flash(trans('app.Update successfully'))->success();
+//            return redirect( '/' . $this->module );
+//        }
+        $row->name = $request->name;
+        $row->email = $request->email;
+        $row->mobile_number = $request->mobile_number;
+        $row->password =bcrypt( $request->email);
+        $row->update();
+        return redirect( '/' . $this->module );
+
 
     }
     public function getView($id)

@@ -3,6 +3,7 @@
 namespace App\Blog\Categories\Controllers;
 use App\Blog\Categories\Category;
 use App\Blog\Categories\Requests\CreateCategoriesRequest;
+use App\Blog\Categories\Requests\UpdateCategoriesRequest;
 use App\Http\Controllers\Controller;
 
 
@@ -56,7 +57,7 @@ class CategoriesController extends Controller
         return view('admin.'.$this->module . '.edit', $data);
     }
 
-    public function postEdit(CreateCategoriesRequest $request , $id) {
+    public function postEdit(UpdateCategoriesRequest $request , $id) {
         $row = $this->model->findOrFail($id);
         if ($row->update($request->except(['_token','_method']))) {
             flash(trans('app.Update successfully'))->success();

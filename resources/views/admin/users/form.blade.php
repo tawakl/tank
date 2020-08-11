@@ -20,7 +20,7 @@ $attributes=['class'=>'form-control','label'=>trans('users.Mobile'),'placeholder
 @php
 $attributes=['class'=>'form-control','label'=>trans('users.password'),'placeholder'=>trans('users.password'),'stared'=>1];
 @endphp
-@include('form.password',['name'=>'password','attributes'=>$attributes])
+@include('form.password',['name'=>'password','type'=>'password','attributes'=>$attributes])
 
 @php
 $attributes=['class'=>'form-control','label'=>trans('users.password_confirmation'),'placeholder'=>trans('users.password_confirmation'),'stared'=>1];

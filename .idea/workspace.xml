@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="" />
+    <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Blog/Categories/Requests/UpdateCategoriesRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Categories/Controllers/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Categories/Controllers/CategoriesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Users/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Users/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CreateUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Users/Requests/UpdateUsersRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sections/css.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sections/css.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/form.blade.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +23,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -123,18 +136,20 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1fa4i637EvtYmt1XumVxE7BkQri" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Blog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Blog/Categories/Requests" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Blog/Categories/Requests" />
+      <recent name="$PROJECT_DIR$/app/Blog/Users/Requests" />
+      <recent name="$PROJECT_DIR$/app/Blog/Users" />
       <recent name="$PROJECT_DIR$/app/Blog" />
       <recent name="$PROJECT_DIR$/resources/views/admin" />
-      <recent name="$PROJECT_DIR$/database/migrations" />
-      <recent name="$PROJECT_DIR$/app/Blog/Users" />
-      <recent name="$PROJECT_DIR$/resources/views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -165,11 +180,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596442993924</updated>
-      <workItem from="1596442995625" duration="27368000" />
+      <workItem from="1596442995625" duration="35264000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
