@@ -11,11 +11,11 @@
                     @endforeach
                 @endif
 
-                @if(@$attributes['file_type'] == 'attachment' )
-                    {!! viewFile($value) !!}
-                @else
-                    {!! viewImage($value,'small') !!}
-                @endif
+{{--                @if(@$attributes['file_type'] == 'attachment' )--}}
+{{--                    {!! viewFile($value) !!}--}}
+{{--                @else--}}
+{{--                    {!! viewImage($value,'small') !!}--}}
+{{--                @endif--}}
             </div>
 
         </div>

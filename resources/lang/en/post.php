@@ -13,13 +13,20 @@ return [
     |
     */
 
-    'Name' => 'Name',
-    'Email' => 'Email',
-    'Users' => 'Users',
-    'Mobile' => 'Mobile',
-    'password' => 'Password',
-    'password_confirmation' => 'Password Confirmation',
-    'Created at' => 'Created at',
-    'ID' => 'ID',
+
+    'title' => 'Title',
+    'image' => 'Image',
+    'categories' => 'Categories',
+    'List posts' => 'List Posts',
+    'created_at' => 'Created At',
+    'action' => 'action',
+    'Edit' => 'Edit',
+    'delete' => 'Delete',
+    'Picture' => 'Picture',
+    'description' => 'Description',
+    'Is active' => 'Is Active',
+
+
+
 
 ];

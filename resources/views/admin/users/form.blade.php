@@ -12,7 +12,7 @@ $attributes=['class'=>'form-control','label'=>trans('users.Name'),'placeholder'=
 
 
 @php
-$attributes=['class'=>'form-control','label'=>trans('users.Mobile'),'placeholder'=>trans('users.Mobile'),'required'=>1];
+$attributes=['class'=>'form-control','label'=>trans('users.Mobile'),'placeholder'=>trans('users.Mobile')];
 @endphp
 @include('form.input',['name'=>'mobile_number','type'=>'text','attributes'=>$attributes])
 

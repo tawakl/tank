@@ -3,7 +3,7 @@
     <a href="/home" class="brand-link">
         <img src="{{asset('admin/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
              style="opacity: .8">
-        <span class="brand-text font-weight-light">{{trans('app.Palmera')}}</span>
+        <span class="brand-text font-weight-light">{{trans('app.blog')}}</span>
     </a>
 
     <!-- Sidebar -->
@@ -40,9 +40,17 @@
                 </li>
                 <li class="nav-item has-treeview menu-open">
                     <a href="{{ route('categories') }}" class="nav-link ">
-                        <i class="fas fa-users p-2"></i>
+                        <i class="fas fa-list p-2"></i>
                         <p>
                             {{trans('navigation.categories')}}
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview menu-open">
+                    <a href="{{ route('posts') }}" class="nav-link ">
+                        <i class="fa fa-address-book p-2"></i>
+                        <p>
+                            {{trans('navigation.posts')}}
                         </p>
                     </a>
                 </li>

@@ -13,13 +13,12 @@ return [
     |
     */
 
-    'Name' => 'Name',
-    'Email' => 'Email',
-    'Users' => 'Users',
-    'Mobile' => 'Mobile',
-    'password' => 'Password',
-    'password_confirmation' => 'Password Confirmation',
-    'Created at' => 'Created at',
-    'ID' => 'ID',
+
+    'users' => 'Users',
+    'home' => 'Home',
+    'categories' => 'Categories',
+    'posts' => 'Posts',
+
+
 
 ];

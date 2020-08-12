@@ -81,7 +81,7 @@ class UsersController extends Controller
     {
         $data['module'] = $this->module;
         $data['page_title'] = trans('app.View') . " " . $this->title;
-        $data['breadcrumb'] = [$this->title => $this->module.'?'.request()->getQueryString()];
+        $data['breadcrumb'] = [$this->title => route('users')];
         $data['row'] = $this->model->findOrFail($id);
         return view('admin.'.$this->module . '.view', $data);
     }
