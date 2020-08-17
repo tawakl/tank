@@ -7,6 +7,7 @@
 
 
     @include('admin.sections.css')
+    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
