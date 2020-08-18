@@ -2,11 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Blog/Tags/Controllers/TagsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Blog/Tags/Requests/CreateTagsRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Blog/Tags/Requests/UpdateTagsRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Blog/Tags/Routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Blog/Tags/Tag.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2019_11_17_114040_create_tags_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/tags/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/tags/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/tags/form.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/tags/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Blog/Categories/Controllers/CategoriesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Categories/Controllers/CategoriesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Blog/Posts/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Posts/Controllers/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Posts/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Posts/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/checkCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/checkCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/posts/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/posts/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/posts/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/sections/css.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sections/css.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sections/js.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sections/js.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sections/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sections/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,16 +155,16 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
-      <recent name="$PROJECT_DIR$/resources/lang/en" />
       <recent name="$PROJECT_DIR$/resources/views/admin" />
       <recent name="$PROJECT_DIR$/database/migrations" />
       <recent name="$PROJECT_DIR$/app/Blog" />
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/resources/lang/en" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -179,7 +198,7 @@
       <workItem from="1596442995625" duration="39052000" />
       <workItem from="1597216540882" duration="16548000" />
       <workItem from="1597560941830" duration="1190000" />
-      <workItem from="1597666252791" duration="10967000" />
+      <workItem from="1597666252791" duration="27214000" />
     </task>
     <servers />
   </component>

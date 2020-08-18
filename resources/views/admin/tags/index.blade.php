@@ -2,12 +2,12 @@
 @section('title')
     <h6 class="slim-pagetitle">
 
-        {{trans('app.List Categories')}}
+        {{trans('app.List Tags')}}
 
     </h6>
 @endsection
 @section('content')
-    <a href="categories/create" class="btn btn-success">
+    <a href="tags/create" class="btn btn-success">
         <i class="fa fa-plus"></i> {{trans('app.Create')}}
     </a>
     <section class="section-wrapper">
@@ -19,29 +19,25 @@
                 <table class="table display responsive nowrap">
                     <thead>
                     <tr>
-                        <th class="text-center">#</th>
                         <th class="text-center">Name</th>
-                        <th class="text-center">Description</th>
                         <th class="text-center">Action</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($rows as $row)
                         <tr class="text-center">
-                            <td>{{$row->id}}</td>
-                            <td>{{$row->title}}</td>
-                            <td>{!! $row->description !!}</td>
+                            <td>{{$row->title}} <span class="badge badge-primary ml-2">{{$row->posts->count()}}</span></td>
                             <td class="center">
 
                                 @if(request('deleted') != 'yes')
-                                    <a class="btn btn-success btn-xs" href="{{$module}}/edit/{{$row->id}}" title="{{trans('category.Edit')}}">
+                                    <a class="btn btn-success btn-xs" href="{{$module}}/edit/{{$row->id}}" title="{{trans('tags.Edit')}}">
                                         <i class="fa fa-edit"></i>
                                     </a>
-                                        <form  class="d-inline" method="POST" action="{{route('categories.delete' , $row->id)}}">
+                                        <form  class="d-inline" method="POST" action="{{route('tags.delete' , $row->id)}}">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
                                             <button  type="submit" class="btn btn-danger btn-xs" value="Delete celebrities"
-                                                     data-confirm="{{trans('category.Are you sure you want to delete this item')}}?">
+                                                     data-confirm="{{trans('tags.Are you sure you want to delete this item')}}?">
                                                 <i class="fas fa-trash-alt"></i>
                                             </button>
                                         </form>

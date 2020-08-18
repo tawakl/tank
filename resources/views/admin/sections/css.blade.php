@@ -9,4 +9,7 @@
 <link rel="stylesheet" href="{{asset('admin/dist/css/adminlte.min.css')}}">
 {{--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">--}}
 
+<script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+
+
 

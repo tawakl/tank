@@ -59,7 +59,7 @@
                     </table>
                 </div>
             @else
-                {{trans("users.There is no results")}}
+                        <p class="text-center text-bold"> {{trans("users.There is no results")}}</p>
             @endif
                 </div>
         <br>

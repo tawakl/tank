@@ -54,6 +54,14 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item has-treeview menu-open">
+                    <a href="{{ route('tags') }}" class="nav-link ">
+                        <i class="fa fa-address-book p-2"></i>
+                        <p>
+                            {{trans('navigation.tags')}}
+                        </p>
+                    </a>
+                </li>
 {{--                <li class="nav-item has-treeview menu-open">--}}
 {{--                    <a href="{{ route('homeSliders') }}" class="nav-link ">--}}
 {{--                        <i class="fas fa-poll p-2"></i>--}}

@@ -26,7 +26,11 @@ Route::group(['middleware' => 'auth'], function () {
     require base_path('app/Blog/Users/Routes/web.php');
     require base_path('app/Blog/Categories/Routes/web.php');
     require base_path('app/Blog/Posts/Routes/web.php');
+    require base_path('app/Blog/Posts/Routes/web.php');
+    require base_path('app/Blog/Tags/Routes/web.php');
+
 
 });
+
 
 

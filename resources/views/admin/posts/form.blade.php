@@ -37,10 +37,23 @@
         'class'=>'form-control select2',
         'required'=>'required',
         'label'=>trans('post.categories'),
-        'id' => 'roles'
         ]
     ]
 )
+@if(count($tags))
+
+    @include('form.multiselect',[
+    'name'=>'tags[]',
+    'options'=>$row->getTags(),
+    'selected',
+    'attributes'=>[
+        'class'=>'form-control select2',
+        'required'=>'required',
+        'label'=>trans('post.tags'),
+        ]
+    ]
+)
+@endif
 
 @include('form.boolean',['value'=> $row->is_active ?? null,'name'=>'is_active','attributes'=>['label'=>trans('post.Is active') ,'required'=>1]])
 

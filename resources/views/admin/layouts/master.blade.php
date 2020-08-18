@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blog</title>
 
-
     @include('admin.sections.css')
-    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 
 </head>
 
@@ -69,7 +67,7 @@
 @include('admin.sections.js')
 
 <script>
-    $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+    $('div.alert').not('.alert-important').delay(4000).fadeOut(350);
 </script>
 
 </body>

@@ -35,7 +35,7 @@
                         <tr class="text-center">
                             <td>{{$row->id}}</td>
                             <td>{{$row->title}}</td>
-                            <td>{{$row->category->title}}</td>
+                            <td>{{$row->category->title ?? ''}}</td>
                             <td>
                                 <img src="{{asset('storage/'. $row->postimg)}}"
                                      style="width:200px; height:100px">
@@ -67,10 +67,9 @@
             {{ $rows->links() }}
         @else
             <br>
-            <div class="alert alert-danger mt-5" role="alert">
-                No Data
-            </div>
-        @endif
+                <p class="text-center text-bold"> {{trans("users.There is no results")}}</p>
 
+        @endif
+        </div>
     </section>
 @endsection

@@ -6,6 +6,7 @@ namespace App\Blog\Posts;
 
 use App\Blog\BaseApp\BaseModel;
 use App\Blog\Categories\Category;
+use App\Blog\Tags\Tag;
 use App\Blog\users\User;
 
 class Post extends BaseModel
@@ -40,14 +41,20 @@ class Post extends BaseModel
     }
 
 
-//    public function author()
-//    {
-//        return $this->belongsTo(User::class, 'author_id');
-//    }
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class, 'post_tag', 'post_id', 'tag_id');
+    }
 
     public function getCategories()
     {
         return Category::with('title')->pluck('title', 'id')->toArray();
+
+    }
+
+    public function getTags()
+    {
+        return Tag::with('title')->pluck('title', 'id')->toArray();
 
     }
 
