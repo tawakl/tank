@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Categories/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Categories/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Posts/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Posts/Controllers/PostsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Posts/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Posts/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Posts/Requests/CreatePostsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Posts/Requests/CreatePostsRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_09_160615_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_09_160615_create_posts_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/posts/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/posts/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/posts/index.blade.php" afterDir="false" />
     </list>
@@ -180,7 +182,7 @@
       <workItem from="1596442995625" duration="39052000" />
       <workItem from="1597216540882" duration="16548000" />
       <workItem from="1597560941830" duration="1190000" />
-      <workItem from="1597666252791" duration="4779000" />
+      <workItem from="1597666252791" duration="8152000" />
     </task>
     <servers />
   </component>

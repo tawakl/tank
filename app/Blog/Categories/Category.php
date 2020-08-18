@@ -4,7 +4,7 @@ namespace App\Blog\Categories;
 
 
 use App\Blog\BaseApp\BaseModel;
-use App\Starter\Posts\Post;
+use App\Blog\Posts\Post;
 
 class Category extends BaseModel
 {
@@ -18,10 +18,10 @@ class Category extends BaseModel
 
 
 
-//    public function posts()
-//    {
-//        return $this->hasMany(Post::class);
-//    }
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 
 
 

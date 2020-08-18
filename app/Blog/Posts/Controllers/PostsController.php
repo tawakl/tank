@@ -45,6 +45,7 @@ class PostsController extends Controller
         $row = new Post();
         $row->title = $request->title;
         $row->description = $request->description;
+        $row->category_id = $request->category_id;
         $row->postimg = $request->postimg->store('images','public');
         $row->save();
         return redirect( '/' . $this->module );

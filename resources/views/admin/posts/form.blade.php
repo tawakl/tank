@@ -30,17 +30,17 @@
 {{--    <input type="file" name="postimg" value="$row->postimg">--}}
 {{--</div>--}}
 
-{{--@include('form.select',[--}}
-{{--    'name'=>'category_id',--}}
-{{--    'options'=>$row->getCategories(),--}}
-{{--    'attributes'=>[--}}
-{{--        'class'=>'form-control select2',--}}
-{{--        'required'=>'required',--}}
-{{--        'label'=>trans('post.categories'),--}}
-{{--        'id' => 'roles'--}}
-{{--        ]--}}
-{{--    ]--}}
-{{--)--}}
+@include('form.select',[
+    'name'=>'category_id',
+    'options'=>$row->getCategories(),
+    'attributes'=>[
+        'class'=>'form-control select2',
+        'required'=>'required',
+        'label'=>trans('post.categories'),
+        'id' => 'roles'
+        ]
+    ]
+)
 
 @include('form.boolean',['value'=> $row->is_active ?? null,'name'=>'is_active','attributes'=>['label'=>trans('post.Is active') ,'required'=>1]])
 

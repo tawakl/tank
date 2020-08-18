@@ -47,7 +47,7 @@ class Post extends BaseModel
 
     public function getCategories()
     {
-//        return Category::listsTranslations('title')->pluck('title', 'id')->toArray();
+        return Category::with('title')->pluck('title', 'id')->toArray();
 
     }
 

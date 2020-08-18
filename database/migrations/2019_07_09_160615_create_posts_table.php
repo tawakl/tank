@@ -18,6 +18,7 @@ class CreatePostsTable extends Migration
             $table->timestamps();
             $table->text('title')->nullable();
             $table->text('description')->nullable();
+            $table->integer('category_id');
             $table->string('postimg')->nullable();
             $table->boolean('is_active')->nullable()->default(0)->index();
 

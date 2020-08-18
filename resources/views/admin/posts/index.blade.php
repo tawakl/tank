@@ -24,6 +24,7 @@
                     <tr>
                         <th class="text-center">#</th>
                         <th class="text-center">{{trans('post.title')}}</th>
+                        <th class="text-center">{{trans('post.category')}}</th>
                         <th class="text-center">{{trans('post.image')}}</th>
                         <th class="text-center">{{trans('post.created_at')}}</th>
                         <th class="text-center">{{trans('post.action')}}</th>
@@ -34,6 +35,7 @@
                         <tr class="text-center">
                             <td>{{$row->id}}</td>
                             <td>{{$row->title}}</td>
+                            <td>{{$row->category->title}}</td>
                             <td>
                                 <img src="{{asset('storage/'. $row->postimg)}}"
                                      style="width:200px; height:100px">
