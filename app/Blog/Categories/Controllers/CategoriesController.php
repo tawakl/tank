@@ -67,7 +67,6 @@ class CategoriesController extends Controller
 
     public function getDelete($id)
     {
-        authorize('delete-' . $this->module);
         $row = $this->model->findOrFail($id);
         $row->delete();
         flash()->success(trans('app.Deleted Successfully'));

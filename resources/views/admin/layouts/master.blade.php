@@ -10,8 +10,10 @@
     <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
+
     <!-- Navbar -->
     @include('admin.sections.right_header')
 
@@ -19,12 +21,13 @@
 
     <!-- Main Sidebar Container -->
 @include('admin.sections.navigation')
-@include('flash::message')
 
 
 <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
+    @include('flash::message')
+
+    <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
                 <div class="row mb-2">
@@ -64,6 +67,10 @@
 <!-- ./wrapper -->
 
 @include('admin.sections.js')
+
+<script>
+    $('div.alert').not('.alert-important').delay(3000).fadeOut(350);
+</script>
 
 </body>
 </html>

@@ -7,4 +7,6 @@
 <link rel="stylesheet" href="{{asset('admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
 <!-- Theme style -->
 <link rel="stylesheet" href="{{asset('admin/dist/css/adminlte.min.css')}}">
+{{--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">--}}
+
 

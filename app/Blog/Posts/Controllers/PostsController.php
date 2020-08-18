@@ -48,6 +48,7 @@ class PostsController extends Controller
         $row->category_id = $request->category_id;
         $row->postimg = $request->postimg->store('images','public');
         $row->save();
+        flash('app.Update successfully')->success();
         return redirect( '/' . $this->module );
 
     }
