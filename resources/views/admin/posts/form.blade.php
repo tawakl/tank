@@ -25,10 +25,7 @@
  'placeholder'=>trans('post.Picture'),
  'required'  => ($row->id ? false : true),
  ]])
-{{--<div>--}}
-{{--    <label>post img</label>--}}
-{{--    <input type="file" name="postimg" value="$row->postimg">--}}
-{{--</div>--}}
+
 
 @include('form.select',[
     'name'=>'category_id',

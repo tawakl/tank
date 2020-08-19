@@ -15,9 +15,7 @@ return [
 
 
     'title' => 'Title',
-    'image' => 'Image',
-    'categories' => 'Categories',
-    'List posts' => 'List Posts',
+    'List Tags' => 'List Tags',
     'created_at' => 'Created At',
     'action' => 'action',
     'Edit' => 'Edit',
@@ -25,7 +23,6 @@ return [
     'Picture' => 'Picture',
     'description' => 'Description',
     'Is active' => 'Is Active',
-    'tags' => 'Tags',
 
 
 

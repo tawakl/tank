@@ -16,6 +16,7 @@ return [
 
     'Users' => 'Users',
     'blog' => 'Blog',
+    'Categories' => 'Categories',
     'Create' => 'Create',
     'View Users' => 'View Users',
     'Edit Users' => 'Edit Users',
@@ -25,6 +26,13 @@ return [
     'posts' => 'Posts',
     'No' => 'No',
     'Yes' => 'Yes',
+    'Tags' => 'Tags',
+    'Save' => 'Save',
+    'Update successfully' => 'Update Successfully',
+    'Created successfully' => 'Created Successfully',
+    'Deleted Successfully' => 'Deleted Successfully',
+    'changed Successfully' => 'Changed Successfully',
+    'first you need to add categories' => 'first you need to add categories',
 
 
 ];

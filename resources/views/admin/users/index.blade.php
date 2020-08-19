@@ -21,6 +21,7 @@
                             <th class="wd-15p">{{trans('users.Name')}} </th>
                             <th class="wd-15p">{{trans('users.Email')}} </th>
                             <th class="wd-15p">{{trans('users.Mobile')}} </th>
+                            <th class="wd-15p">{{trans('users.Permissions')}} </th>
                             <th class="wd-15p">{{trans('users.Created at')}}</th>
                             <th class="wd-15p"></th>
                         </tr>
@@ -32,6 +33,25 @@
                                 <td class="center">{{$row->name}}</td>
                                 <td class="center">{{$row->email}}</td>
                                 <td class="center">{{$row->mobile_number}}</td>
+                                @if(!$row->isAdmin())
+                                    <td>
+                                    <form class="d-inline" method="POST" action="{{route('users.make-admin', $row->id)}}">
+                                        {{ csrf_field() }}
+                                        <button type="submit" class="btn btn-success btn-xs">
+                                            {{trans('users.Make admin')}}
+                                        </button>
+                                    </form>
+                                    </td>
+                                @else
+                                <td class="center">{{$row->role}}
+                                    <form class="d-inline" method="POST" action="{{route('users.cancle-admin', $row->id)}}">
+                                        {{ csrf_field() }}
+                                        <button type="submit" class="btn btn-danger btn-xs" value="Delete Station">
+                                            {{trans('users.not admin')}}
+                                        </button>
+                                    </form>
+                                </td>
+                                @endif
                                 <td class="center">{{$row->created_at}}</td>
                                 <td class="center">
                                     <a class="btn btn-primary btn-xs" href="{{$module}}/view/{{$row->id}}" title="{{trans('users.View')}}">

@@ -18,6 +18,7 @@ return [
     'home' => 'Home',
     'categories' => 'Categories',
     'posts' => 'Posts',
+    'tags' => 'Tags',
 
 
 

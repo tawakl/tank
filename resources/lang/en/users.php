@@ -21,5 +21,9 @@ return [
     'password_confirmation' => 'Password Confirmation',
     'Created at' => 'Created at',
     'ID' => 'ID',
+    'There is no results' => 'There is no results',
+    'Permissions' => 'Permissions',
+    'not admin' => 'Not Admin',
+    'Make admin' => 'Make Admin',
 
 ];

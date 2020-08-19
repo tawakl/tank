@@ -34,14 +34,14 @@
                             <td class="center">
 
                                 @if(request('deleted') != 'yes')
-                                    <a class="btn btn-success btn-xs" href="{{$module}}/edit/{{$row->id}}" title="{{trans('category.Edit')}}">
+                                    <a class="btn btn-success btn-xs" href="{{$module}}/edit/{{$row->id}}" title="{{trans('categories.Edit')}}">
                                         <i class="fa fa-edit"></i>
                                     </a>
                                         <form  class="d-inline" method="POST" action="{{route('categories.delete' , $row->id)}}">
                                             {{ csrf_field() }}
                                             {{ method_field('DELETE') }}
                                             <button  type="submit" class="btn btn-danger btn-xs" value="Delete celebrities"
-                                                     data-confirm="{{trans('category.Are you sure you want to delete this item')}}?">
+                                                     data-confirm="{{trans('categories.Are you sure you want to delete this item')}}?">
                                                 <i class="fas fa-trash-alt"></i>
                                             </button>
                                         </form>

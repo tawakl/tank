@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Blog\Users\User;
 use App\Http\Requests\CreateUserRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -45,7 +46,7 @@ class UsersController extends Controller
         $row->name = $request->name;
         $row->email = $request->email;
         $row->mobile_number = $request->mobile_number;
-        $row->password =bcrypt( $request->password);
+        $row->password = Hash::make( $request->password);
         $row->save();
         return redirect( '/' . $this->module );
 
@@ -90,6 +91,20 @@ class UsersController extends Controller
         $row = $this->model->findOrFail($id);
         $row->delete();
         flash()->success(trans('app.Deleted Successfully'));
+        return back();
+    }
+    public function makeAdmin(User $user)
+    {
+        $user->role = "admin";
+        $user->save();
+        flash()->success(trans('app.changed Successfully'));
+        return back();
+    }
+    public function cancleAdmin(User $user)
+    {
+        $user->role = "writer";
+        $user->save();
+        flash()->success(trans('app.changed Successfully'));
         return back();
     }
     public function getLogout() {
