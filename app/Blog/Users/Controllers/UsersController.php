@@ -107,8 +107,8 @@ class UsersController extends Controller
         flash()->success(trans('app.changed Successfully'));
         return back();
     }
-    public function getLogout() {
-        auth()->logout();
-        return redirect()->route('login');
-    }
+//    public function getLogout() {
+//        auth()->logout();
+//        return redirect()->route('login');
+//    }
 }

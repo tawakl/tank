@@ -12,6 +12,7 @@
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
                 <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
+                <span class="ml-4 text-bold" style="color: white">{{ auth()->user()->name }}</span>
             </div>
             <div class="info">
                 <a href="#" class="d-block">
@@ -64,30 +65,15 @@
                         </p>
                     </a>
                 </li>
-{{--                <li class="nav-item has-treeview menu-open">--}}
-{{--                    <a href="{{ route('homeSliders') }}" class="nav-link ">--}}
-{{--                        <i class="fas fa-poll p-2"></i>--}}
-{{--                        <p>--}}
-{{--                            {{trans('navigation.home sliders')}}--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item has-treeview menu-open">--}}
-{{--                    <a href="#" class="nav-link ">--}}
-{{--                        <i class="fas fa-poll p-2"></i>--}}
-{{--                        <p>--}}
-{{--                            {{trans('navigation.posts')}}--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item has-treeview menu-open">--}}
-{{--                    <a href="{{ route('aboutUs') }}" class="nav-link ">--}}
-{{--                        <i class="fas fa-poll p-2"></i>--}}
-{{--                        <p>--}}
-{{--                            {{trans('navigation.about_us')}}--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="nav-item has-treeview menu-open">
+                    <a href="{{ route('profile.get.edit') }}" class="nav-link ">
+                        <i class="fa fa-address-book p-2"></i>
+                        <p>
+                            {{trans('navigation.profile')}}
+                        </p>
+                    </a>
+                </li>
+
 
             </ul>
         </nav>

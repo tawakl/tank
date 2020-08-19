@@ -14,16 +14,16 @@
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
                 <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" style="width: 1.9rem">
-{{--                {{ auth()->user()->name }}--}}
+                {{ auth()->user()->name }}
                 <span class=" fa fa-angle-down"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                 <a href="#" class="dropdown-item">
-                    <i class="fa fa-user-circle"></i> My Profile
+                    <i class="fa fa-user-circle"></i> {{trans('app.My Profile')}}
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="/users/logout" class="dropdown-item">
-                    <i class="fa fa-sign-out-alt "></i> Logout
+                <a href="/profile/logout" class="dropdown-item">
+                    <i class="fa fa-sign-out-alt "></i> {{trans('app.logout')}}
                 </a>
             </div>
         </li>

@@ -13,5 +13,5 @@ Route::group(['prefix' => 'users','middleware'=>'admin'], function () {
 
 });
 
-Route::get('users/logout', '\App\Blog\Users\Controllers\UsersController@getLogout')->name('profile.get.logout');
+//Route::get('users/logout', '\App\Blog\Users\Controllers\UsersController@getLogout')->name('profile.get.logout');
 

@@ -23,7 +23,6 @@ class Post extends BaseModel
     protected $fillable = [
         'title',
         'description',
-//        'author_id',
         'category_id',
         'category_title',
         'postimg',
