@@ -25,7 +25,8 @@ class ProfileController extends Controller {
 
     public function postEdit(ProfileRequest $request) {
         $row=$this->model->findOrFail(auth()->user()->id);
-        if($row->update($request->except(['password_confirmation']))) {
+        if($row->update([$request->except(['password_confirmation']),
+            $row->image = $request->image->store('profileImages','public')])) {
             flash(trans('app.Update successfully'))->success();
             return back();
         }

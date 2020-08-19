@@ -47,6 +47,7 @@ class UsersController extends Controller
         $row->email = $request->email;
         $row->mobile_number = $request->mobile_number;
         $row->password = Hash::make( $request->password);
+        $row->image = $request->image->store('profileImages','public');
         $row->save();
         return redirect( '/' . $this->module );
 
@@ -65,14 +66,11 @@ class UsersController extends Controller
     {
         $data['module'] = $this->module;
         $row = $this->model->findOrFail($id);
-//        if ($row->update($request->all())) {
-//            flash(trans('app.Update successfully'))->success();
-//            return redirect( '/' . $this->module );
-//        }
         $row->name = $request->name;
         $row->email = $request->email;
         $row->mobile_number = $request->mobile_number;
-        $row->password =bcrypt( $request->email);
+        $row->password =Hash::make( $request->password);
+        $row->image = $request->image->store('profileImages','public');
         $row->update();
         return redirect( '/' . $this->module );
 
@@ -107,8 +105,5 @@ class UsersController extends Controller
         flash()->success(trans('app.changed Successfully'));
         return back();
     }
-//    public function getLogout() {
-//        auth()->logout();
-//        return redirect()->route('login');
-//    }
+
 }

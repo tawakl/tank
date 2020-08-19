@@ -16,6 +16,15 @@ $attributes=['class'=>'form-control','label'=>trans('users.Mobile'),'placeholder
 @endphp
 @include('form.input',['name'=>'mobile_number','type'=>'text','attributes'=>$attributes])
 
+@include('form.file',[
+ 'name'=>'image',
+ 'value'=> $row->image,
+ 'class' => 'form-control',
+ 'attributes'=>[
+ 'label'=>trans('user.Picture'),
+ 'placeholder'=>trans('user.Picture'),
+ 'required'  => ($row->id ? false : true),
+ ]])
 
 @php
 $attributes=['class'=>'form-control','label'=>trans('users.password'),'placeholder'=>trans('users.password'),'stared'=>1];

@@ -26,10 +26,10 @@
         @include('form.input',['name'=>'mobile_number','type'=>'text','attributes'=>$attributes])
 
 
-{{--        @php--}}
-{{--            $attributes=['label'=>trans('profile.profile_picture')];--}}
-{{--        @endphp--}}
-{{--        @include('form.normalFile',['name'=>'profile_picture','attributes'=>$attributes])--}}
+        @php
+            $attributes=['label'=>trans('user.image')];
+        @endphp
+        @include('form.normalFile',['name'=>'image','attributes'=>$attributes])
 
 
         @php

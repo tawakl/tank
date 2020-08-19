@@ -11,7 +11,13 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
+{{--                @if( auth()->user()->image)--}}
+                <img src="{{asset('storage/'.  auth()->user()->image )}}"
+                     style="width:70px; height:40px" class="img-circle elevation-2" alt="User Image">
+{{--                @else--}}
+{{--                <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">--}}
+
+{{--                @endif--}}
                 <span class="ml-4 text-bold" style="color: white">{{ auth()->user()->name }}</span>
             </div>
             <div class="info">

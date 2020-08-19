@@ -76,7 +76,8 @@ class PostsController extends Controller
         if ($request->tags) {
             $row->tags()->sync($request->tags);
         }
-        if ($row->update($request->all())) {
+        if ($row->update([$request->all(),
+            $row->postimg = $request->postimg->store('images','public')])) {
             flash(trans('app.Update successfully'))->success();
             return redirect('/' . $this->module);
         }
