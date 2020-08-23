@@ -26,6 +26,7 @@ class Post extends BaseModel
         'category_id',
         'category_title',
         'postimg',
+        'author_id',
         'is_active',
 
     ];
@@ -54,6 +55,17 @@ class Post extends BaseModel
     public function getTags()
     {
         return Tag::with('title')->pluck('title', 'id')->toArray();
+
+    }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'author_id');
+    }
+
+    public function getAuthors()
+    {
+        return User::with('name')->pluck('name', 'id')->toArray();
 
     }
 

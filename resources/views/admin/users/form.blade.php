@@ -26,6 +26,18 @@ $attributes=['class'=>'form-control','label'=>trans('users.Mobile'),'placeholder
  'required'  => ($row->id ? false : true),
  ]])
 
+@include('form.input',[
+'name'=>'about',
+'value'=>$row->about,
+'type'=>'textarea',
+'attributes'=>[
+    'class'=>'form-control dateTimePicker',
+    'id'=>'summary-ckeditor',
+    'label'=>trans('post.about'),
+    'placeholder'=>trans('post.about'),
+    ]
+])
+
 @php
 $attributes=['class'=>'form-control','label'=>trans('users.password'),'placeholder'=>trans('users.password'),'stared'=>1];
 @endphp

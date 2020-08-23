@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', '\App\Blog\Front\Controllers\FrontController@getIndex')->name('front');
+
 
 
 Auth::routes();

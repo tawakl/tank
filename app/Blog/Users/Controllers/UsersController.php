@@ -45,6 +45,7 @@ class UsersController extends Controller
         $row = new User();
         $row->name = $request->name;
         $row->email = $request->email;
+        $row->about = $request->about;
         $row->mobile_number = $request->mobile_number;
         $row->password = Hash::make( $request->password);
         $row->image = $request->image->store('profileImages','public');
@@ -68,9 +69,12 @@ class UsersController extends Controller
         $row = $this->model->findOrFail($id);
         $row->name = $request->name;
         $row->email = $request->email;
+        $row->about = $request->about;
         $row->mobile_number = $request->mobile_number;
         $row->password =Hash::make( $request->password);
-        $row->image = $request->image->store('profileImages','public');
+        if ($request->hasFile('postimg')) {
+            $row->image = $request->image->store('profileImages','public');
+        }
         $row->update();
         return redirect( '/' . $this->module );
 

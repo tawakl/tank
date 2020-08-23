@@ -27,6 +27,10 @@
                 <td width="25%" class="align-left">{{trans('users.Created_at')}}</td>
                 <td width="75%" class="align-left">{{@$row->created_at}}</td>
             </tr>
+            <tr>
+                <td width="25%" class="align-left">{{trans('users.about')}}</td>
+                <td width="75%" class="align-left">{!! @$row->about !!}</td>
+            </tr>
 
         </table>
     </div>

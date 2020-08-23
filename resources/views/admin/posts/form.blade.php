@@ -23,7 +23,6 @@
  'attributes'=>[
  'label'=>trans('post.Picture'),
  'placeholder'=>trans('post.Picture'),
- 'required'  => ($row->id ? false : true),
  ]])
 
 
@@ -34,6 +33,16 @@
         'class'=>'form-control select2',
         'required'=>'required',
         'label'=>trans('post.categories'),
+        ]
+    ]
+)
+@include('form.select',[
+    'name'=>'author_id',
+    'options'=>$row->getAuthors(),
+    'attributes'=>[
+        'class'=>'form-control select2',
+        'required'=>'required',
+        'label'=>trans('post.author'),
         ]
     ]
 )

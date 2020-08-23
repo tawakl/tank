@@ -1,14 +1,17 @@
 <?php
 
 namespace App\Blog\Posts\Controllers;
+use App\Blog\Categories\Category;
 use App\Blog\Posts\Post;
 use App\Blog\Tags\Tag;
+use App\Blog\users\User;
 use App\Http\Controllers\Controller;
 use App\Blog\Posts\Requests\CreatePostsRequest;
 use App\Blog\Posts\Requests\UpdatePostsRequest;
 use App\Http\Middleware\checkCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Storage;
 use function Illuminate\Support\Facades\Gate;
 
 
@@ -50,6 +53,7 @@ class PostsController extends Controller
         $row->title = $request->title;
         $row->description = $request->description;
         $row->category_id = $request->category_id;
+        $row->author_id = $request->author_id;
         $row->postimg = $request->postimg->store('images','public');
         $row->save();
         if ($request->tags) {
@@ -72,15 +76,31 @@ class PostsController extends Controller
 
 
     public function postEdit(UpdatePostsRequest $request , $id) {
+        $data['module'] = $this->module;
         $row = $this->model->findOrFail($id);
+        $row->title = $request->title;
+        $row->description = $request->description;
         if ($request->tags) {
             $row->tags()->sync($request->tags);
         }
-        if ($row->update([$request->all(),
-            $row->postimg = $request->postimg->store('images','public')])) {
-            flash(trans('app.Update successfully'))->success();
-            return redirect('/' . $this->module);
+        if ($request->hasFile('postimg')) {
+            $row->postimg = $request->postimg->store('images', 'public');
         }
+        $row->update();
+        return redirect( '/' . $this->module );
+    }
+    public function show($id) {
+        $data['post'] = $this->model->with('author')->findOrFail($id);
+        $data['categories'] = Category::all();
+        return view('admin.'.$this->module . '.show', $data);
+
+    }
+
+    public function all() {
+        $data['posts'] = $this->model->all();
+        $data['categories'] = Category::all();
+        return view('admin.'.$this->module . '.all-posts', $data);
+
     }
 
     public function getDelete($id)

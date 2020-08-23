@@ -26,6 +26,7 @@ class UpdatePostsRequest extends FormRequest
         return [
             'title' => 'required|max:250',
             'description' => 'required',
+            'postimg' => 'nullable',
         ];
     }
 }

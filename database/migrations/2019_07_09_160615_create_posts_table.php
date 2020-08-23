@@ -19,6 +19,8 @@ class CreatePostsTable extends Migration
             $table->text('title')->nullable();
             $table->text('description')->nullable();
             $table->integer('category_id');
+            $table->bigInteger('author_id')->unsigned();
+            $table->foreign('author_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('postimg')->nullable();
             $table->boolean('is_active')->nullable()->default(0)->index();
 

@@ -2,6 +2,7 @@
 
 namespace App\Blog\users;
 
+use App\Blog\Posts\Post;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -19,6 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'about',
         'mobile_number',
         'image'
     ];
@@ -50,6 +52,9 @@ class User extends Authenticatable
         if (trim($value)) {
             $this->attributes['password'] = bcrypt(trim($value));
         }
+    }
+    public function posts(){
+        return $this->hasMany(Post::class);
     }
 
 }
