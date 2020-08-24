@@ -18,6 +18,7 @@ class UserTableSeeder extends Seeder
             \App\Blog\users\User::create([
                 'name' => 'admin',
                 'email'=>'admin@admin.com',
+                'mobile_number'=>'01211440047',
                 'password'=>\Illuminate\Support\Facades\Hash::make('password'),
                 'role' => 'admin'
             ]);
