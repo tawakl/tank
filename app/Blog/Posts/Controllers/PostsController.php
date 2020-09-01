@@ -89,19 +89,8 @@ class PostsController extends Controller
         $row->update();
         return redirect( '/' . $this->module );
     }
-    public function show($id) {
-        $data['post'] = $this->model->with('author')->findOrFail($id);
-        $data['categories'] = Category::all();
-        return view('admin.'.$this->module . '.show', $data);
 
-    }
 
-    public function all() {
-        $data['posts'] = $this->model->all();
-        $data['categories'] = Category::all();
-        return view('admin.'.$this->module . '.all-posts', $data);
-
-    }
 
     public function getDelete($id)
     {

@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', '\App\Blog\Front\Controllers\FrontController@getIndex')->name('front');
+Route::get('/all-posts', '\App\Blog\Front\Controllers\FrontController@all')->name('posts.all');
+Route::get('/post/{id}', '\App\Blog\Front\Controllers\FrontController@showPost')->name('posts.show');
+
+
 
 
 
