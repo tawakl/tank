@@ -79,6 +79,22 @@
                         </p>
                     </a>
                 </li>
+                <li class="nav-item has-treeview menu-open">
+                    <a href="{{ route('contacts.index') }}" class="nav-link ">
+                        <i class="fa fa-address-book p-2"></i>
+                        <p>
+                            {{trans('navigation.contacts')}}
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview menu-open">
+                    <a href="{{ route('testimonials') }}" class="nav-link ">
+                        <i class="fa fa-address-book p-2"></i>
+                        <p>
+                            {{trans('navigation.testimonials')}}
+                        </p>
+                    </a>
+                </li>
 
 
             </ul>

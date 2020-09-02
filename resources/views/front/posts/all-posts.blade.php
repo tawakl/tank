@@ -35,7 +35,6 @@
                 <div class="block-27">
                     <ul>
                         <li>{{$posts->links("pagination::bootstrap-4")}}</li>
-
                     </ul>
                 </div>
             </div>

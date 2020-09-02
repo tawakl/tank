@@ -42,15 +42,19 @@ class UsersController extends Controller
     public function postCreate(CreateUsersRequest $request)
     {
         $data['module'] = $this->module;
-        $row = new User();
-        $row->name = $request->name;
-        $row->email = $request->email;
-        $row->about = $request->about;
-        $row->mobile_number = $request->mobile_number;
-        $row->password = Hash::make( $request->password);
-        $row->image = $request->image->store('profileImages','public');
-        $row->save();
-        return redirect( '/' . $this->module );
+        $row = $this->model->create(array_merge($request->except(['password', 'image', 'password_confirmation']),
+            [
+            'password' => Hash::make( $request->password),
+            'image' => $request->image->store('profileImages','public'),
+            ]
+        ));
+
+        if ($row) {
+            flash()->success(trans('app.Created successfully'));
+            return redirect( '/' . $this->module );
+        }
+        flash()->error(trans('app.failed to save'));
+        return back();
 
     }
 
