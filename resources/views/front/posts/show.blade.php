@@ -41,113 +41,83 @@
                     </div>
                 </div>
 
+{{--                <div class="container">--}}
+{{--                    <div class="row">--}}
+{{--                        <div class="col-12">--}}
+
+
+{{--                            <div class="comment-form-wrap pt-5">--}}
+{{--                                <h3 class="mb-5">Leave a comment</h3>--}}
+{{--                                <form class="p-5 bg-light" method="post" action="{{ route('comments.store') }}">--}}
+{{--                                @csrf--}}
+{{--                                <div class="form-group">--}}
+{{--                                    @if(!auth()->user())--}}
+{{--                                        <label>{{ trans('comments.name') }}</label>--}}
+{{--                                        <input type="text" class="form-control" name="commentByName"--}}
+{{--                                               value="">--}}
+
+{{--                                        <label>{{ trans('comments.email') }}</label>--}}
+{{--                                        <input type="email" class="form-control" name="commentByEmail"--}}
+{{--                                               value="">--}}
+{{--                                    @endif--}}
+{{--                                    <label>{{ trans('comments.message') }}</label>--}}
+{{--                                    <textarea class="form-control" name="body"></textarea>--}}
+{{--                                    <input type="hidden" name="post_id" value="{{ $post->id }}"/>--}}
+{{--                                </div>--}}
+{{--                                <div class="form-group">--}}
+{{--                                    <input type="submit" class="btn btn-success" value="Add Comment"/>--}}
+{{--                                </div>--}}
+{{--                            </form>--}}
+{{--                            </div>--}}
+{{--                            <hr/>--}}
+{{--                            <h4>{{$post->comments->count()}} Comments</h4>--}}
+
+{{--                            @include('front.posts.commentsDisplay', ['comments' => $post->comments, 'post_id' => $post->id])--}}
+
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+
 
                 <div class="pt-5 mt-5">
-                    <h3 class="mb-5">6 Comments</h3>
+                    <h3 class="mb-5">{{$post->comments->count()}} Comments</h3>
+                    @foreach($post->comments as $comment)
                     <ul class="comment-list">
                         <li class="comment">
-                            <div class="vcard bio">
-                                <img src="images/person_1.jpg" alt="Image placeholder">
-                            </div>
                             <div class="comment-body">
-                                <h3>John Doe</h3>
-                                <div class="meta mb-3">November 13, 2019 at 2:21pm</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                <p><a href="#" class="reply">Reply</a></p>
+                                <h3>{{ $comment->commentByName }}</h3>
+                                <div class="meta mb-3">{{$comment->created_at}}</div>
+                                <p>{{$comment->body}}</p>
                             </div>
                         </li>
+                        @endforeach
 
-                        <li class="comment">
-                            <div class="vcard bio">
-                                <img src="images/person_1.jpg" alt="Image placeholder">
-                            </div>
-                            <div class="comment-body">
-                                <h3>John Doe</h3>
-                                <div class="meta mb-3">November 13, 2019 at 2:21pm</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                <p><a href="#" class="reply">Reply</a></p>
-                            </div>
-
-                            <ul class="children">
-                                <li class="comment">
-                                    <div class="vcard bio">
-                                        <img src="images/person_1.jpg" alt="Image placeholder">
-                                    </div>
-                                    <div class="comment-body">
-                                        <h3>John Doe</h3>
-                                        <div class="meta mb-3">November 13, 2019 at 2:21pm</div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                        <p><a href="#" class="reply">Reply</a></p>
-                                    </div>
-
-
-                                    <ul class="children">
-                                        <li class="comment">
-                                            <div class="vcard bio">
-                                                <img src="images/person_1.jpg" alt="Image placeholder">
-                                            </div>
-                                            <div class="comment-body">
-                                                <h3>John Doe</h3>
-                                                <div class="meta mb-3">November 13, 2019 at 2:21pm</div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                                <p><a href="#" class="reply">Reply</a></p>
-                                            </div>
-
-                                            <ul class="children">
-                                                <li class="comment">
-                                                    <div class="vcard bio">
-                                                        <img src="images/person_1.jpg" alt="Image placeholder">
-                                                    </div>
-                                                    <div class="comment-body">
-                                                        <h3>John Doe</h3>
-                                                        <div class="meta mb-3">November 13, 2019 at 2:21pm</div>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                                        <p><a href="#" class="reply">Reply</a></p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="comment">
-                            <div class="vcard bio">
-                                <img src="{{asset('images/person_1.jpg')}}" alt="Image placeholder">
-                            </div>
-                            <div class="comment-body">
-                                <h3>John Doe</h3>
-                                <div class="meta mb-3">November 13, 2019 at 2:21pm</div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                <p><a href="#" class="reply">Reply</a></p>
-                            </div>
-                        </li>
                     </ul>
                     <!-- END comment-list -->
 
                     <div class="comment-form-wrap pt-5">
                         <h3 class="mb-5">Leave a comment</h3>
-                        <form action="#" class="p-5 bg-light">
+                        <form class="p-5 bg-light" method="post" action="{{ route('comments.store') }}">
+                            @csrf
+                        @if(!auth()->user())
+
                             <div class="form-group">
                                 <label for="name">Name *</label>
-                                <input type="text" class="form-control" id="name">
+                                <input type="text" class="form-control" id="name" name="commentByName">
                             </div>
                             <div class="form-group">
                                 <label for="email">Email *</label>
-                                <input type="email" class="form-control" id="email">
+                                <input type="email" class="form-control" id="email" name="commentByEmail">
                             </div>
-                            <div class="form-group">
-                                <label for="website">Website</label>
-                                <input type="url" class="form-control" id="website">
-                            </div>
-
+                            @endif
                             <div class="form-group">
                                 <label for="message">Message</label>
-                                <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                                <textarea name="body" id="message" cols="30" rows="10" class="form-control"></textarea>
+                                <input type="hidden" name="post_id" value="{{ $post->id }}"/>
+
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
+                                <input type="submit" value="Add Comment" class="btn py-3 px-4 btn-primary">
                             </div>
 
                         </form>

@@ -2,22 +2,14 @@
 
 namespace App\Blog\Posts;
 
-
-
 use App\Blog\BaseApp\BaseModel;
 use App\Blog\Categories\Category;
 use App\Blog\Tags\Tag;
 use App\Blog\users\User;
+use App\Http\Controllers\Comments\Comment;
 
 class Post extends BaseModel
 {
-//    protected static $attachFields = [
-//
-//        'postimg' => [
-//            'sizes' => ['small' => 'crop,400x300', 'large' => 'resize,800x600'],
-//            'path' => 'uploads'
-//        ],
-//    ];
     protected $table = 'posts';
     public $timestamps = true;
     protected $fillable = [
@@ -67,6 +59,11 @@ class Post extends BaseModel
     {
         return User::with('name')->pluck('name', 'id')->toArray();
 
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 
 }
