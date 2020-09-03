@@ -19,13 +19,13 @@ class FrontController extends Controller {
 
     public function getIndex() {
         $data = [];
-        $data['posts']= $this->post->paginate(2);
+        $data['posts']= $this->post->paginate();
         $data['categories']= Category::all();
         return view($this->module, $data);
     }
 
     public function all() {
-        $data['posts'] = Post::paginate(2);
+        $data['posts'] = Post::paginate();
         $data['categories'] = Category::all();
         return view('front.posts.all-posts', $data);
 

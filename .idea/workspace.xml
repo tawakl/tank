@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_9_2_20__9_44_AM.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Front/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Front/Controllers/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,17 +154,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/front/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Blog" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views/front/layouts" />
-      <recent name="$PROJECT_DIR$/resources/views/front" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/posts" />
       <recent name="$PROJECT_DIR$/app/Blog" />
+      <recent name="$PROJECT_DIR$/database/migrations" />
+      <recent name="$PROJECT_DIR$/resources/views/admin" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/resources/views/front/posts" />
     </key>
   </component>
   <component name="RunManager">
@@ -193,6 +191,8 @@
       <workItem from="1598255115343" duration="233000" />
       <workItem from="1598955177555" duration="12502000" />
       <workItem from="1599032641688" duration="652000" />
+      <workItem from="1599035159602" duration="14891000" />
+      <workItem from="1599115450359" duration="944000" />
     </task>
     <servers />
   </component>
@@ -212,6 +212,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2377" y="188" width="986" height="717" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599043537010">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2377" y="188" width="986" height="717" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.21.1848.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599043537010" />
+    <state x="729" y="308" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599051256599">
+      <screen x="72" y="21" width="1848" height="1059" />
+    </state>
+    <state x="2603" y="293" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.21.1848.1059/1920.0.1920.1080@1920.0.1920.1080" timestamp="1599046498899" />
+    <state x="729" y="308" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.21.1848.1059/1920.0.1920.1080@72.21.1848.1059" timestamp="1599051256599" />
     <state x="2571" y="148" width="641" height="783" key="find.popup" timestamp="1598958468951">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
