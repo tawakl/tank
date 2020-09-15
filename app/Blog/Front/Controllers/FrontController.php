@@ -46,7 +46,7 @@ class FrontController extends Controller {
 
     }
     public function about() {
-        $data['testimonials'] = Testimonial::get();
+        $data['testimonials'] = Testimonial::latest()->get();
 
         return view('front.about',$data);
 
