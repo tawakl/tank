@@ -4,6 +4,7 @@ namespace App\Blog\Front\Controllers;
 
 use App\Blog\Categories\Category;
 use App\Blog\Posts\Post;
+use App\Blog\Tags\Tag;
 use App\Blog\Testimonials\Testimonial;
 use App\Http\Controllers\Controller;
 
@@ -33,6 +34,9 @@ class FrontController extends Controller {
     public function showPost($id) {
         $data['post'] = $this->post->with('author')->findOrFail($id);
         $data['categories'] = Category::all();
+        $data['tags'] = Tag::all();
+        $data['posts'] = Post::latest()->limit(2)->get();
+
         return view('front.posts.show', $data);
 
     }

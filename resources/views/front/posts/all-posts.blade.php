@@ -22,7 +22,7 @@
                                 </div>
                             </div>
                             <h3 class="heading mb-3"><a href="#">{{$post->title}}</a></h3>
-                            <p>{!! $post->description!!}</p>
+                            <p>{!! Str::limit($post->description, 120)!!}</p>
                             <p><a href="{{route('posts.show', $post->id)}}" class="btn-custom"><span class="ion-ios-arrow-round-forward mr-3"></span>Read more</a></p>
                         </div>
                     </div>
