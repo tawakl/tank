@@ -55,7 +55,7 @@
             </div>
 
             <div class="col-lg-6 d-flex">
-                <img src="/images/bg_1.jpg" width="590" height="558">
+                <img src="/images/ynwa.jpg" width="590" height="558">
             </div>
         </div>
     </div>
