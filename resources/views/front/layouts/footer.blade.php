@@ -7,11 +7,11 @@
                     <p>YNWA is the digital news channel of The Liverpool  - one of the most famous and trusted regional news brands in the world.
 
                     </p>
-                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                    </ul>
+{{--                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">--}}
+{{--                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>--}}
+{{--                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>--}}
+{{--                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>--}}
+{{--                    </ul>--}}
                 </div>
             </div>
 

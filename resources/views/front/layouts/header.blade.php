@@ -10,7 +10,7 @@
                         <div class="text">
                             <p>Liverpool Football Club is a professional football club in Liverpool, England, that competes in the Premier League, the top tier of English football. Domestically, the club has won nineteen League titles, seven FA Cups, a record eight League Cups and fifteen FA Community Shields.</p>
                             <div class="mouse">
-                                <a href="#" class="mouse-icon">
+                                <a class="mouse-icon">
                                     <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
                                 </a>
                             </div>

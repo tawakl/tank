@@ -17,13 +17,13 @@
                                 <div class="text w-100 pl-md-3">
                                     <span class="subheading">{{$post->category->title}}</span>
                                     <h2><a href="{{route('posts.show', $post->id)}}">{{$post->title}}</a></h2>
-                                    <ul class="media-social list-unstyled">
-                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                                    </ul>
+{{--                                    <ul class="media-social list-unstyled">--}}
+{{--                                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>--}}
+{{--                                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>--}}
+{{--                                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>--}}
+{{--                                    </ul>--}}
                                     <div class="meta">
-                                        <p class="mb-0"><a href="#">{{$post->created_at}}</a> </p>
+                                        <p class="mb-0">{{$post->created_at}} </p>
                                     </div>
                                 </div>
                             </div>
