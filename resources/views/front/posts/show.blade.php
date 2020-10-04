@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-lg-8 ftco-animate">
                 <p class="mb-5">
-                    <img src="{{asset('storage/'. $post->postimg)}}" alt="" class="img-fluid">
+                    <img src="{{asset('storage/app/public/'. $post->postimg)}}" alt="" class="img-fluid">
                 </p>
                 <p> {!! $post->description!!}</p>
                 <div class="tag-widget post-tag-container mb-5 mt-5">
@@ -33,7 +33,7 @@
 
                 <div class="about-author d-flex p-4 bg-light">
                     <div class="bio mr-5">
-                        <img src="{{asset('storage/'. $post->author->image)}}" alt="Image placeholder" class="img-fluid mb-4">
+                        <img src="{{asset('storage/app/public/'. $post->author->image)}}" alt="Image placeholder" class="img-fluid mb-4">
                     </div>
                     <div class="desc">
                         <h3>{{ $post->author->name}}</h3>
