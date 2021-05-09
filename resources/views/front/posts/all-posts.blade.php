@@ -9,7 +9,7 @@
             @foreach($posts as $post)
                 <div class="col-md-4  ftco-animate">
                     <div class="blog-entry justify-content-end">
-                        <a href="{{route('posts.show', $post->id)}}" class="block-20" style="background-image: url({{asset('storage/app/public/'. $post->postimg)}});">
+                        <a href="{{route('posts.show', $post->id)}}" class="block-20" style="background-image: url({{asset('storage/'. $post->postimg)}});">
                         </a>
                         <div class="text p-4 float-right d-block">
                             <div class="topper d-flex align-items-center">
