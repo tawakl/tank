@@ -7,24 +7,24 @@
     </a>
 
     <!-- Sidebar -->
-    <div class="sidebar">
-        <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
+{{--    <div class="sidebar">--}}
+{{--        <!-- Sidebar user panel (optional) -->--}}
+{{--        <div class="user-panel mt-3 pb-3 mb-3 d-flex">--}}
+{{--            <div class="image">--}}
 {{--                @if( auth()->user()->image)--}}
-                <img src="{{asset('storage/'.  auth()->user()->image )}}"
-                     style="width:70px; height:40px" class="img-circle elevation-2" alt="User Image">
+{{--                <img src="{{asset('storage/'.  auth()->user()->image )}}"--}}
+{{--                     style="width:70px; height:40px" class="img-circle elevation-2" alt="User Image">--}}
 {{--                @else--}}
 {{--                <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">--}}
 
 {{--                @endif--}}
-                <span class="ml-4 text-bold" style="color: white">{{ auth()->user()->name }}</span>
-            </div>
-            <div class="info">
-                <a href="#" class="d-block">
-                </a>
-            </div>
-        </div>
+{{--                <span class="ml-4 text-bold" style="color: white">{{ auth()->user()->name }}</span>--}}
+{{--            </div>--}}
+{{--            <div class="info">--}}
+{{--                <a href="#" class="d-block">--}}
+{{--                </a>--}}
+{{--            </div>--}}
+{{--        </div>--}}
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
@@ -37,16 +37,16 @@
                         </p>
                     </a>
                 </li>
-                @if(auth()->user()->isAdmin())
-                <li class="nav-item has-treeview menu-open">
-                    <a href="{{ route('users') }}" class="nav-link ">
-                        <i class="fas fa-users p-2"></i>
-                        <p>
-                            {{trans('navigation.users')}}
-                        </p>
-                    </a>
-                </li>
-                @endif
+{{--                @if(auth()->user()->isAdmin())--}}
+{{--                <li class="nav-item has-treeview menu-open">--}}
+{{--                    <a href="{{ route('users') }}" class="nav-link ">--}}
+{{--                        <i class="fas fa-users p-2"></i>--}}
+{{--                        <p>--}}
+{{--                            {{trans('navigation.users')}}--}}
+{{--                        </p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--                @endif--}}
                 <li class="nav-item has-treeview menu-open">
                     <a href="{{ route('categories') }}" class="nav-link ">
                         <i class="fas fa-list p-2"></i>

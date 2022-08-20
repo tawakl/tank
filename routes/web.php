@@ -22,6 +22,7 @@ Route::get('/contact', '\App\Blog\Front\Controllers\FrontController@contact')->n
 Route::get('/about', '\App\Blog\Front\Controllers\FrontController@about')->name('about');
 Route::resource('comments', 'CommentsController');
 Route::resource('contacts', 'ContactController');
+Route::get('/send-mails', 'HomeController@sendMails');
 
 
 

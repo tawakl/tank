@@ -33,14 +33,7 @@
                     <tbody>
                     @foreach($rows as $row)
                         <tr class="text-center">
-                            <td>{{$row->id}}</td>
-                            <td>{{$row->title}}</td>
-                            <td>{{$row->category->title ?? ''}}</td>
-                            <td>
-                                <img src="{{asset('storage/'. $row->postimg)}}"
-                                     style="width:200px; height:100px">
-                            </td>
-                            <td>{{$row->created_at}}</td>
+ئ
 
                             <td class="center">
 

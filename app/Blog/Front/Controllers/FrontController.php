@@ -13,16 +13,16 @@ class FrontController extends Controller {
     public $post;
 
     public function __construct(Post $post) {
-        $this->module='front.home';
+        $this->module='fronte.home';
         $this->post = $post;
 
     }
 
     public function getIndex() {
-        $data = [];
-        $data['posts']= $this->post->paginate();
-        $data['categories']= Category::all();
-        return view($this->module, $data);
+//        $data = [];
+//        $data['posts']= $this->post->paginate();
+//        $data['categories']= Category::all();
+        return view($this->module);
     }
 
     public function all() {
