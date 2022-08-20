@@ -1,6 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <!-- Title -->
     <title>Tank - Creative Portfolio Showcase HTML Website Template by Themetorium</title>
 
@@ -12,18 +15,88 @@
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-@include('fronte.layouts.css')
+    <!-- Favicon (http://www.favicon-generator.org/) -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Analytics - Global site tag (gtag.js) -->
+    <!-- Paste your Google Anaytics code here. -->
+
+    <!-- Google fonts (https://www.google.com/fonts) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Body font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- Secondary/Alter font -->
+    @include('fronte.layouts.css')
+
+
+
 </head>
 <body>
-@include('fronte.layouts.nav')
-<!-- END nav -->
+<!-- ===========
+	///// Body /////
+	================
+	* Use class "tt-boxed" to enable page boxed layout globally (affects all elements containing class "tt-wrap").
+	* Use class "tt-smooth-scroll" to enable page smooth scrolling.
+	* Use class "tt-transition" to enable page transitions.
+	* Use class "tt-magic-cursor" to enable magic cursor.
+	-->
 
-{{--@include('front.layouts.header')--}}
+<body id="body" class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor">
 
-@yield('head')
+
+<!-- *************************************
+    *********** Begin body inner *************
+    ************************************** -->
+<main id="body-inner">
+
+    <!-- Begin page transition (do not remove!!!)
+        =========================== -->
+    <div id="page-transition">
+        <div class="ptr-overlay"></div>
+        <div class="ptr-preloader">
+            <div class="ptr-prel-content">
+                <!-- Hint: You may need to change the img height and opacity to match your logo type. You can do this from the "theme.css" file (find: ".ptr-prel-image"). -->
+                <img src="{{asset('front/img/logo-light.png')}}" class="ptr-prel-image tt-logo-light" alt="Logo">
+            </div>
+            <!-- /.ptr-prel-content -->
+        </div>
+        <!-- /.ptr-preloader -->
+    </div>
+    <!-- End page transition -->
+
+    <!-- Begin magic cursor
+        ======================== -->
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+    <!-- End magic cursor -->
+
+    <!-- Begin noise background -->
+    <div class="bg-noise"></div>
+    <!-- End noise background -->
+
+
+    <!-- *****************************************
+        *********** Begin scroll container ***********
+        ****************************************** -->
+    <div id="scroll-container">
+
+        <!-- ===================
+            ///// Begin header /////
+            ========================
+            * Use class "tt-header-fixed" to set header to fixed position.
+            -->
+@include('fronte.layouts.header')
+
+{{--@yield('head')--}}
 
 @yield('content')
+    </div>
+    <!-- End scroll container -->
 
+</main>
 @include('fronte.layouts.footer')
 
 

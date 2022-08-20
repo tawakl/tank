@@ -33,8 +33,11 @@
                     <tbody>
                     @foreach($rows as $row)
                         <tr class="text-center">
-ئ
-
+                            <td>{{$row->id}}</td>
+                            <td>{{$row->title}}</td>
+                            <td>{{$row->category->title}}</td>
+                            <td>{{$row->image}}</td>
+                            <td>{{$row->created_at}}</td>
                             <td class="center">
 
                                 @if(request('deleted') != 'yes')

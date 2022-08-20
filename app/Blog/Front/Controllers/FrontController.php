@@ -13,22 +13,22 @@ class FrontController extends Controller {
     public $post;
 
     public function __construct(Post $post) {
-        $this->module='fronte.home';
+        $this->module='fronte.blog_interactive';
         $this->post = $post;
 
     }
 
-    public function getIndex() {
-//        $data = [];
+//    public function getIndex() {
+////        $data = [];
 //        $data['posts']= $this->post->paginate();
 //        $data['categories']= Category::all();
-        return view($this->module);
-    }
+//        return view($this->module);
+//    }
 
     public function all() {
         $data['posts'] = Post::paginate();
         $data['categories'] = Category::all();
-        return view('front.posts.all-posts', $data);
+        return view('fronte.blog_interactive', $data);
 
     }
     public function showPost($id) {
