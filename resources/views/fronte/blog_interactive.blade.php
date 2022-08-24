@@ -73,7 +73,7 @@
                         @foreach($posts as $post)
 
                         <article class="blog-interactive-item anim-skewinup">
-                            <a href="blog-post.html" class="bi-item-image">
+                            <a href="{{route('posts.show', $post->id)}}" class="bi-item-image">
                                 <!-- if exist -->
                                 <img src="{{asset('storage/'. $post->postimg)}}" alt="image">
                             </a>
@@ -81,12 +81,12 @@
                                 <a href="blog-archive.html">{{$post->category->title}}</a>
                                 <!-- <a href="blog-archive.html">Uncategorized</a> -->
                             </div>
-                            <h2 class="bi-item-title"><a href="blog-post.html">{{$post->title}}</a></h2>
+                            <h2 class="bi-item-title"><a href="{{route('posts.show', $post->id)}}">{{$post->title}}</a></h2>
                             <div class="bi-item-meta">
                                 <span class="published">{{$post->created_at->format('M')}}</span>
                                 <span class="published">{{$post->created_at->format('d')}}</span>
                                 <span class="published">{{$post->created_at->format('Y')}}</span>
-                                <span class="posted-by">- by <a href="blog-archive.html" title="View all posts by John Doe">John Doe</a></span>
+                                <span class="posted-by">- by <a href="blog-archive.html" title="View all posts by John Doe">{{$post->author->name}}</a></span>
                             </div>
                         </article>
                         @endforeach

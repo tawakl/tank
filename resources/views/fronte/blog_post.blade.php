@@ -9,7 +9,7 @@
                 ============================= -->
             <div class="ph-image">
                 <div class="ph-image-inner">
-                    <img src="assets/img/page-header/blog-ph/blog-ph-1.jpg" alt="Image">
+                    <img src="{{asset('storage/'. $post->postimg)}}" alt="Image">
                 </div>
             </div>
             <!-- End page header image -->
@@ -20,17 +20,19 @@
                 -->
             <div class="ph-caption">
                 <div class="ph-categories ph-appear">
-                    <a href="blog-archive.html" class="ph-category">Lifestyle</a>
+                    <a href="blog-archive.html" class="ph-category">{{$post->category->title}}</a>
                     <!-- <a href="blog-archive.html" class="ph-category">Uncategorized</a> -->
                 </div>
                 <!-- /.ph-categories -->
 
-                <h2 class="ph-caption-title ph-appear">Want to Step Up Your Skills? You Need to Read This First</h2>
+                <h2 class="ph-caption-title ph-appear">{{$post->title}}</h2>
                 <!-- You can use <br class="hide-from-lg"> to break a text line if needed -->
 
                 <div class="ph-meta ph-appear">
-                    <span class="ph-meta-published">May 26, 2021</span>
-                    <span class="ph-meta-posted-by">by: <a href="blog-archive.html" title="View all posts by John Doe">John Doe</a></span>
+                    <span class="published">{{$post->created_at->format('M')}}</span>
+                    <span class="published">{{$post->created_at->format('d')}}</span>
+                    <span class="published">{{$post->created_at->format('Y')}}</span>
+                    <span class="ph-meta-posted-by">by: <a href="blog-archive.html" title="View all posts by John Doe">{{$post->author->name}}</a></span>
                 </div>
                 <!-- /.ph-meta -->
             </div>
@@ -138,8 +140,8 @@
 
                         <!-- Begin post image -->
                         <figure class="tt-blog-post-image">
-                            <a href="assets/img/blog/single/blog-post-1.jpg" class="tt-bpi-link lg-trigger" data-exthumbnail="assets/img/blog/single/thumb/img-4.jpg" data-cursor="View">
-                                <img class="tt-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/single/blog-post-1.jpg" alt="image">
+                            <a href="{{asset('storage/'. $post->postimg)}}" class="tt-bpi-link lg-trigger" data-exthumbnail="assets/img/blog/single/thumb/img-4.jpg" data-cursor="View">
+                                <img class="tt-lazy" src="{{asset('storage/'. $post->postimg)}}" data-src="assets/img/blog/single/blog-post-1.jpg" alt="image">
                             </a>
                             <figcaption class="tt-bpi-caption">
                                 Photo by <a href="http://unsplash.com/" target="_blank" rel="noopener">Unsplash</a>
@@ -185,9 +187,9 @@
                     <div class="tt-blog-post-tags">
                         <ul>
                             <li><span>Tags:</span></li>
-                            <li><a href="blog-archive.html">#photography</a></li>
-                            <li><a href="blog-archive.html">#travel</a></li>
-                            <li><a href="blog-archive.html">#motion</a></li>
+                            @foreach($post->tags as $tag)
+                            <li><a href="blog-archive.html">#{{$tag->title}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                     <!-- End blog post tags -->
@@ -447,11 +449,9 @@
                             <div class="sidebar-widget sidebar-categories">
                                 <h3 class="sidebar-heading">Categories</h3>
                                 <ul class="list-unstyled">
-                                    <li><a href="blog-archive.html">Web Design <span title="Entries in this category">26</span></a></li>
-                                    <li><a href="blog-archive.html">Resources <span title="Entries in this category">12</span></a></li>
-                                    <li><a href="blog-archive.html">Tutorials <span title="Entries in this category">19</span></a></li>
-                                    <li><a href="blog-archive.html">Freebies <span title="Entries in this category">31</span></a></li>
-                                    <li><a href="blog-archive.html">Inspiration <span title="Entries in this category">67</span></a></li>
+                                    @foreach($categories as $category)
+                                    <li><a href="blog-archive.html">{{$category->title}} <span title="Entries in this category">{{$category->posts->count()}}</span></a></li>
+                                    @endforeach
                                 </ul>
                             </div>
                             <!-- End sidebar widget -->
@@ -541,20 +541,9 @@
                                 <h3 class="sidebar-heading">Tags</h3>
                                 <div class="sidebar-tags-list">
                                     <ul>
-                                        <li><a href="blog-archive.html">#portfolio</a></li>
-                                        <li><a href="blog-archive.html">#multipurpose</a></li>
-                                        <li><a href="blog-archive.html">#minimal</a></li>
-                                        <li><a href="blog-archive.html">#agency</a></li>
-                                        <li><a href="blog-archive.html">#creatives</a></li>
-                                        <li><a href="blog-archive.html">#freelancers</a></li>
-                                        <li><a href="blog-archive.html">#design</a></li>
-                                        <li><a href="blog-archive.html">#bootstrap</a></li>
-                                        <li><a href="blog-archive.html">#responsive</a></li>
-                                        <li><a href="blog-archive.html">#simple</a></li>
-                                        <li><a href="blog-archive.html">#creative</a></li>
-                                        <li><a href="blog-archive.html">#blog</a></li>
-                                        <li><a href="blog-archive.html">#wordpress</a></li>
-                                        <li><a href="blog-archive.html">#black &amp; white</a></li>
+                                        @foreach($tags as $tag)
+                                            <li><a href="blog-archive.html">#{{$tag->title}}</a></li>
+                                        @endforeach
                                     </ul>
                                 </div>
                                 <!-- /.sidebar-tags-list -->
@@ -639,66 +628,66 @@
     <!-- ======================
         ///// Begin tt-footer /////
         =========================== -->
-    <footer id="tt-footer">
-        <div class="tt-footer-inner">
+{{--    <footer id="tt-footer">--}}
+{{--        <div class="tt-footer-inner">--}}
 
-            <!-- Begin footer column
-                ========================= -->
-            <div class="footer-col tt-align-center-left">
-                <div class="footer-col-inner">
+{{--            <!-- Begin footer column--}}
+{{--                ========================= -->--}}
+{{--            <div class="footer-col tt-align-center-left">--}}
+{{--                <div class="footer-col-inner">--}}
 
-                    <!-- You can use whatever button or link here -->
-                    <div class="tt-btn tt-btn-link">
-                        <a href="#" class="scroll-to-top" data-hover="Back to top">Back to top</a>
-                    </div>
+{{--                    <!-- You can use whatever button or link here -->--}}
+{{--                    <div class="tt-btn tt-btn-link">--}}
+{{--                        <a href="#" class="scroll-to-top" data-hover="Back to top">Back to top</a>--}}
+{{--                    </div>--}}
 
-                </div>
-                <!-- /.footer-col-inner -->
-            </div>
-            <!-- Begin footer column -->
+{{--                </div>--}}
+{{--                <!-- /.footer-col-inner -->--}}
+{{--            </div>--}}
+{{--            <!-- Begin footer column -->--}}
 
-            <!-- Begin footer column
-                ========================= -->
-            <div class="footer-col tt-align-center order-m-last">
-                <div class="footer-col-inner">
+{{--            <!-- Begin footer column--}}
+{{--                ========================= -->--}}
+{{--            <div class="footer-col tt-align-center order-m-last">--}}
+{{--                <div class="footer-col-inner">--}}
 
-                    <div class="tt-copyright">
-                        © Copyright - <a href="https://themetorium.net" target="_blank" rel="noopener" class="tt-link">Themetorium.net</a>
-                    </div>
+{{--                    <div class="tt-copyright">--}}
+{{--                        © Copyright - <a href="https://themetorium.net" target="_blank" rel="noopener" class="tt-link">Themetorium.net</a>--}}
+{{--                    </div>--}}
 
-                </div>
-                <!-- /.footer-col-inner -->
-            </div>
-            <!-- Begin footer column -->
+{{--                </div>--}}
+{{--                <!-- /.footer-col-inner -->--}}
+{{--            </div>--}}
+{{--            <!-- Begin footer column -->--}}
 
-            <!-- Begin footer column
-                ========================= -->
-            <div class="footer-col tt-align-center-right">
-                <div class="footer-col-inner">
+{{--            <!-- Begin footer column--}}
+{{--                ========================= -->--}}
+{{--            <div class="footer-col tt-align-center-right">--}}
+{{--                <div class="footer-col-inner">--}}
 
-                    <div class="footer-social">
-                        <div class="footer-social-text"><span>Follow</span><i class="fas fa-share-alt"></i></div>
-                        <div class="social-buttons">
-                            <ul>
-                                <li><a href="https://www.facebook.com/themetorium" class="magnetic-item" target="_blank" rel="noopener">Fb.</a></li>
-                                <li><a href="https://twitter.com/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Tw.</a></li>
-                                <li><a href="https://www.youtube.com/" class="magnetic-item" target="_blank" rel="noopener">Yt.</a></li>
-                                <li><a href="https://dribbble.com/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Dr.</a></li>
-                                <li><a href="https://www.behance.net/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Be.</a></li>
-                            </ul>
-                        </div>
-                        <!-- /.social-buttons -->
-                    </div>
-                    <!-- /.footer-social -->
+{{--                    <div class="footer-social">--}}
+{{--                        <div class="footer-social-text"><span>Follow</span><i class="fas fa-share-alt"></i></div>--}}
+{{--                        <div class="social-buttons">--}}
+{{--                            <ul>--}}
+{{--                                <li><a href="https://www.facebook.com/themetorium" class="magnetic-item" target="_blank" rel="noopener">Fb.</a></li>--}}
+{{--                                <li><a href="https://twitter.com/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Tw.</a></li>--}}
+{{--                                <li><a href="https://www.youtube.com/" class="magnetic-item" target="_blank" rel="noopener">Yt.</a></li>--}}
+{{--                                <li><a href="https://dribbble.com/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Dr.</a></li>--}}
+{{--                                <li><a href="https://www.behance.net/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Be.</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                        <!-- /.social-buttons -->--}}
+{{--                    </div>--}}
+{{--                    <!-- /.footer-social -->--}}
 
-                </div>
-                <!-- /.footer-col-inner -->
-            </div>
-            <!-- Begin footer column -->
+{{--                </div>--}}
+{{--                <!-- /.footer-col-inner -->--}}
+{{--            </div>--}}
+{{--            <!-- Begin footer column -->--}}
 
-        </div>
-        <!-- /.tt-section-inner -->
-    </footer>
+{{--        </div>--}}
+{{--        <!-- /.tt-section-inner -->--}}
+{{--    </footer>--}}
     <!-- End tt-footer -->
 
 

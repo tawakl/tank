@@ -13,17 +13,17 @@ class FrontController extends Controller {
     public $post;
 
     public function __construct(Post $post) {
-        $this->module='fronte.blog_interactive';
+        $this->module='fronte.home';
         $this->post = $post;
 
     }
 
-//    public function getIndex() {
-////        $data = [];
-//        $data['posts']= $this->post->paginate();
-//        $data['categories']= Category::all();
-//        return view($this->module);
-//    }
+    public function getIndex() {
+        $data = [];
+        $data['posts']= $this->post->paginate();
+        $data['categories']= Category::all();
+        return view($this->module);
+    }
 
     public function all() {
         $data['posts'] = Post::paginate();
@@ -37,12 +37,12 @@ class FrontController extends Controller {
         $data['tags'] = Tag::all();
         $data['posts'] = Post::latest()->limit(2)->get();
 
-        return view('front.posts.show', $data);
+        return view('fronte.blog_post', $data);
 
     }
     public function contact() {
 
-        return view('front.contact');
+        return view('fronte.contact');
 
     }
     public function about() {

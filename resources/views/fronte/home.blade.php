@@ -2,22 +2,6 @@
 
 @section('content')
 <div id="content-wrap">
-
-
-    <!-- ========================
-        ///// Begin page header /////
-        =============================
-        * Use class "ph-full" to enable fullscreen size.
-        * Use class "ph-cap-sm", "ph-cap-lg", "ph-cap-xlg" or "ph-cap-xxlg" to set caption size (no class = default size).
-        * Use class "ph-center" to enable content center position.
-        * Use class "ph-bg-image" to enable page header background image (required for a portfolio single project!).
-        * Use class "ph-bg-image-is-light" if needed, it makes the elements dark and more visible if you use a very light image (effect only with class "ph-bg-image").
-        * Use class "ph-image-shadow" to enable page header background image (effect only with class "ph-bg-image").
-        * Use class "ph-image-cropped" to crop image. It fixes image dimensions (no effect for "ph-bg-image"!).
-        * Use class "ph-image-cover-*" to set image overlay opacity. For example "ph-image-cover-2" or "ph-image-cover-2-5" (up to "ph-image-cover-9-5").
-        * Use class "ph-content-parallax" to enable content parallax.
-        * Use class "ph-stroke" to enable caption title stroke style.
-        -->
     <div id="page-header" class="ph-full ph-cap-sm ph-image-cropped ph-image-cover-3 ph-content-parallax">
         <div class="page-header-inner tt-wrap">
 

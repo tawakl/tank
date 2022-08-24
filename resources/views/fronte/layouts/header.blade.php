@@ -49,11 +49,11 @@
 
 
 
-                                <li class="active"><a href="index.html">Home</a></li>
+                                <li class="active"><a href="{{route('front')}}">Home</a></li>
                                 <li><a href="portfolio-grid-portrait-mode.html">Portfolio</a></li>
                                 <li><a href="about-us.html">About</a></li>
-                                <li><a href="blog-interactive.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{route('posts.all')}}">Blog</a></li>
+                                <li><a href="{{route('contact')}}">Contact</a></li>
 
                             </ul>
                             <!-- End menu list -->

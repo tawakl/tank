@@ -29,7 +29,7 @@
                     @foreach($rows as $row)
                         <tr class="text-center">
                             <td>{{$row->id}}</td>
-                            <td>{{$row->title}}</td>
+                            <td>{{$row->title}}<span class="badge badge-primary ml-2">{{$row->posts->count()}}</span></td>
                             <td>{!! $row->description !!}</td>
                             <td class="center">
 

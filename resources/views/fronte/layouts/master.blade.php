@@ -33,22 +33,10 @@
 
 
 </head>
-<body>
-<!-- ===========
-	///// Body /////
-	================
-	* Use class "tt-boxed" to enable page boxed layout globally (affects all elements containing class "tt-wrap").
-	* Use class "tt-smooth-scroll" to enable page smooth scrolling.
-	* Use class "tt-transition" to enable page transitions.
-	* Use class "tt-magic-cursor" to enable magic cursor.
-	-->
+
 
 <body id="body" class="tt-transition tt-boxed tt-smooth-scroll tt-magic-cursor">
 
-
-<!-- *************************************
-    *********** Begin body inner *************
-    ************************************** -->
 <main id="body-inner">
 
     <!-- Begin page transition (do not remove!!!)
@@ -83,25 +71,14 @@
         ****************************************** -->
     <div id="scroll-container">
 
-        <!-- ===================
-            ///// Begin header /////
-            ========================
-            * Use class "tt-header-fixed" to set header to fixed position.
-            -->
-@include('fronte.layouts.header')
+        @include('fronte.layouts.header')
+        @yield('content')
+        @include('fronte.layouts.footer')
+        @include('fronte.layouts.js')
 
-{{--@yield('head')--}}
-
-@yield('content')
     </div>
     <!-- End scroll container -->
 
 </main>
-@include('fronte.layouts.footer')
-
-
-
-@include('fronte.layouts.js')
-
 </body>
 </html>

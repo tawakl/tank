@@ -2,22 +2,6 @@
 
 @section('content')
 <div id="content-wrap">
-
-
-    <!-- ========================
-        ///// Begin page header /////
-        =============================
-        * Use class "ph-full" to enable fullscreen size.
-        * Use class "ph-cap-sm", "ph-cap-lg", "ph-cap-xlg" or "ph-cap-xxlg" to set caption size (no class = default size).
-        * Use class "ph-center" to enable content center position.
-        * Use class "ph-bg-image" to enable page header background image (required for a portfolio single project!).
-        * Use class "ph-bg-image-is-light" if needed, it makes the elements dark and more visible if you use a very light image (effect only with class "ph-bg-image").
-        * Use class "ph-image-shadow" to enable page header background image (effect only with class "ph-bg-image").
-        * Use class "ph-image-cropped" to crop image. It fixes image dimensions (no effect for "ph-bg-image"!).
-        * Use class "ph-image-cover-*" to set image overlay opacity. For example "ph-image-cover-2" or "ph-image-cover-2-5" (up to "ph-image-cover-9-5").
-        * Use class "ph-content-parallax" to enable content parallax.
-        * Use class "ph-stroke" to enable caption title stroke style.
-        -->
     <div id="page-header" class="ph-full ph-cap-xxlg ph-center ph-image-cropped ph-image-cover-2 ph-content-parallax">
         <div class="page-header-inner tt-wrap">
 
@@ -25,7 +9,7 @@
                 ============================= -->
             <div class="ph-image">
                 <div class="ph-image-inner">
-                    <img src="assets/img/page-header/ph-3.jpg" alt="Image">
+                    <img src="{{asset('front/img/page-header/ph-3.jpg')}}" alt="Image">
                 </div>
             </div>
             <!-- End page header image -->
@@ -151,7 +135,8 @@
                             * Use class "tt-form-filled" or "tt-form-minimal" to change form style.
                             * Use class "tt-form-sm" or "tt-form-lg" to change form size (no class = default size).
                             -->
-                        <form id="tt-contact-form" class="tt-form-minimal anim-fadeinup">
+                        <form method="post" action="{{ route('contacts.store') }}" id="tt-contact-form" class="tt-form-minimal anim-fadeinup">
+                            @csrf
 
                             <!-- Begin hidden required fields (https://github.com/agragregra/uniMail) -->
                             <input type="hidden" name="project_name" value="yourwebsiteaddress.com">
