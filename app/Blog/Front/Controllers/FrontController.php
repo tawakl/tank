@@ -32,12 +32,24 @@ class FrontController extends Controller {
 
     }
     public function showPost($id) {
-        $data['post'] = $this->post->with('author')->findOrFail($id);
-        $data['categories'] = Category::all();
-        $data['tags'] = Tag::all();
-        $data['posts'] = Post::latest()->limit(2)->get();
+//        $data['post'] = $this->post->with('author')->findOrFail($id);
+//        $data['categories'] = Category::all();
+//        $data['tags'] = Tag::all();
+//        $data['posts'] = Post::latest()->limit(2)->get();
+//        $data['previous'] = Post::where('id', '<', $data['post']->id)->max('id');
+//        $data['next'] = Post::where('id', '>', $data['post']->id)->min('id');
 
-        return view('fronte.blog_post', $data);
+
+        $post = Post::with('author')->findOrFail($id);
+        $previous = Post::where('id', '<', $post->id)->orderBy('id','desc')->first();
+        $next = Post::where('id', '>', $post->id)->orderBy('id','desc')->first();
+        $categories = Category::all();
+        $tags = Tag::all();
+        return view( 'fronte.blog_post', compact( 'post', 'next', 'previous','categories','tags' ));
+
+
+
+//        return view('fronte.blog_post', $data);
 
     }
     public function contact() {

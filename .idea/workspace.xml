@@ -25,14 +25,7 @@
     <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Blog/Front/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Front/Controllers/FrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fronte/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/about.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fronte/blog_interactive.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/blog_interactive.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/fronte/blog_post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/blog_post.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fronte/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/contact.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fronte/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fronte/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fronte/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/layouts/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -326,7 +319,7 @@
       <workItem from="1660996322242" duration="15041000" />
       <workItem from="1661079577063" duration="40000" />
       <workItem from="1661236237858" duration="117000" />
-      <workItem from="1661339375092" duration="11777000" />
+      <workItem from="1661339375092" duration="17105000" />
     </task>
     <servers />
   </component>

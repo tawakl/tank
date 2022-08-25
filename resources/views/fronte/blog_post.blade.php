@@ -217,15 +217,20 @@
 
                 <!-- Begin blog post nav
                     ======================== -->
+{{--                {{dd($previous)}}--}}
                 <div class="tt-blog-post-nav">
+                    @if($previous)
                     <div class="tt-bp-nav-col tt-bp-nav-left">
                         <div class="tt-bp-nav-text"><span><i class="fas fa-angle-left"></i></span>Prew Post</div>
-                        <h4 class="tt-bp-nav-title"><a href="">Secrets to Getting Your Project to Complete Quickly and Efficiently</a></h4>
+                        <h4 class="tt-bp-nav-title"><a href="{{route( 'posts.show', $previous->id ) }}">{{ $previous->title }}</a></h4>
                     </div>
+                    @endif
+                @if($next)
                     <div class="tt-bp-nav-col tt-bp-nav-right">
                         <div class="tt-bp-nav-text">Next Post<span><i class="fas fa-angle-right"></i></span></div>
-                        <h4 class="tt-bp-nav-title"><a href="">Why Some People Almost Always Save Money With This Method</a></h4>
+                        <h4 class="tt-bp-nav-title"><a href="{{route( 'posts.show', $next->id ) }}">{{ $next->title }}</a></h4>
                     </div>
+                    @endif
                 </div>
                 <!-- End blog post nav -->
 
