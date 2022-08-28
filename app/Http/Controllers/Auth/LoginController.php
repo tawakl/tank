@@ -41,29 +41,4 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function redirectToProvider()
-    {
-        return Socialite::driver('github')->redirect();
-    }
-
-    /**
-     * Obtain the user information from GitHub.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function handleProviderCallback()
-    {
-        $githubUser = Socialite::driver('github')->user();
-        $user = User::where('provider_id',$githubUser->getId())->first();
-        if (!$user){
-        $user=User::create([
-            'email' => $githubUser->getEmail(),
-            'name' => $githubUser->getName(),
-            'provider_id' => $githubUser->getId(),
-        ]);
-        }
-        // $user->token;
-        Auth::login($user , true);
-        return redirect($this->redirectTo);
-    }
 }

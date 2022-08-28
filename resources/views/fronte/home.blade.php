@@ -761,69 +761,22 @@
 
                         <!-- Begin swiper wrapper (required) -->
                         <div class="swiper-wrapper">
+                            @foreach($testimonials as $testimonial)
 
                             <!-- Begin swiper slide
                                 ======================== -->
                             <div class="swiper-slide font-alter">
                                 <div class="tt-ts-item">
                                     <div class="tt-ts-text">
-                                        "One of the best template I've ever had. I love it! It's fully customizable, well coded, fast and responsive - fitting for all kind of devices."
+                                        {{$testimonial->description}}
                                     </div>
-                                    <div class="tt-ts-subtext">- Wironimo</div>
+                                    <div class="tt-ts-subtext">
+                                        {{$testimonial->title}}
+                                        </div>
                                 </div>
                             </div>
                             <!-- End swiper slide -->
-
-                            <!-- Begin swiper slide
-                                ======================== -->
-                            <div class="swiper-slide font-alter">
-                                <div class="tt-ts-item">
-                                    <div class="tt-ts-text">
-                                        "Brilliant template. Tons of options, many concepts, design flexibility, code quality, explanatory comments in each section for easy styling."
-                                    </div>
-                                    <div class="tt-ts-subtext">- Gneto</div>
-                                </div>
-                            </div>
-                            <!-- End swiper slide -->
-
-                            <!-- Begin swiper slide
-                                ======================== -->
-                            <div class="swiper-slide font-alter">
-                                <div class="tt-ts-item">
-                                    <div class="tt-ts-text">
-                                        "Easy to customize, plenty of choices to display your portfolio, fast loading times. Excellent support."
-                                    </div>
-                                    <div class="tt-ts-subtext">- Brendak</div>
-                                </div>
-                            </div>
-                            <!-- End swiper slide -->
-
-                            <!-- Begin swiper slide
-                                ======================== -->
-                            <div class="swiper-slide font-alter">
-                                <div class="tt-ts-item">
-                                    <div class="tt-ts-text">
-                                        "Very nice design and well organised and commented code. Also good customer service."
-                                    </div>
-                                    <div class="tt-ts-subtext">- Gazzzzz</div>
-                                </div>
-                            </div>
-                            <!-- End swiper slide -->
-
-                            <!-- Begin swiper slide
-                                ======================== -->
-                            <div class="swiper-slide font-alter">
-                                <div class="tt-ts-item">
-                                    <div class="tt-ts-text">
-                                        "I founded a bug on Iphone and Ipad and the author fixed very quickly. I appreciated his efforts and his quickness in solving the problem."
-                                    </div>
-                                    <div class="tt-ts-subtext">- Admanente</div>
-                                </div>
-                            </div>
-                            <!-- End swiper slide -->
-
-                        </div>
-                        <!-- End swiper wrapper -->
+                            @endforeach
 
                     </div>
                     <!-- End swiper container -->
@@ -916,65 +869,33 @@
                         * Use class "tt-form-filled" or "tt-form-minimal" to change form style.
                         * Use class "tt-form-sm" or "tt-form-lg" to change form size (no class = default size).
                         -->
-                <form id="tt-contact-form" class="tt-form-minimal anim-fadeinup">
-
-                    <!-- Begin hidden required fields (https://github.com/agragregra/uniMail) -->
-                    <input type="hidden" name="project_name" value="yourwebsiteaddress.com">
-                    <!-- Change value to your site name -->
-                    <input type="hidden" name="admin_email" value="your@email.com">
-                    <!-- Change value to your valid email address (where a message will be sent) -->
-                    <input type="hidden" name="form_subject" value="Message from yourwebsiteaddress.com">
-                    <!-- Change value to your own message subject -->
-                    <!-- End Hidden Required Fields -->
-
+                <form method="post" action="{{ route('contacts.store') }}" class="tt-form-minimal anim-fadeinup">
+                    @csrf
                     <div class="tt-row">
                         <div class="tt-col-md-6">
-
                             <div class="tt-form-group">
                                 <label>Name <span class="required">*</span></label>
-                                <input class="tt-form-control" type="text" name="Name" placeholder="" required>
+                                <input type="text" class="tt-form-control" placeholder="" name="name">
                             </div>
-
                         </div>
-                        <!-- /.tt-col -->
-
                         <div class="tt-col-md-6">
 
                             <div class="tt-form-group">
                                 <label>Email address <span class="required">*</span></label>
-                                <input class="tt-form-control" type="email" name="Email" placeholder="" required>
+                                <input type="text" class="tt-form-control" placeholder="" name="email">
                             </div>
-
                         </div>
-                        <!-- /.tt-col -->
                     </div>
-                    <!-- /.tt-row -->
-
                     <div class="tt-form-group">
                         <label>Subject <span class="required">*</span></label>
-                        <input class="tt-form-control" type="text" name="Subject" placeholder="" required>
+                        <input type="text" class="tt-form-control" placeholder="" name="subject">
                     </div>
-
-                    <div class="tt-form-group">
-                        <label>Select an option <span class="required">*</span></label>
-                        <select class="tt-form-control" name="option" required>
-                            <option value="" disabled selected>Please choose an option</option>
-                            <option value="Say Hello">Say hello</option>
-                            <option value="New Project">New project</option>
-                            <option value="Feedback">Feedback</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-
                     <div class="tt-form-group">
                         <label>Message <span class="required">*</span></label>
-                        <textarea class="tt-form-control" rows="6" name="Message" placeholder="" required></textarea>
+                        <textarea name="body" id="" cols="30" rows="7" class="tt-form-control" placeholder=""></textarea>
                     </div>
-
-                    <small class="tt-form-text"><em>Fields marked with an asterisk (*) are required!</em></small>
-
-                    <div class="tt-btn tt-btn-light-outline margin-top-40">
-                        <button type="submit" data-hover="Send Message">Send Message</button>
+                    <div class="tt-btn tt-btn-light-outline margin-top-40 tt-form-group">
+                        <button type="submit" value="submit" data-hover="Send Message">Send Message</button>
                     </div>
                 </form>
                 <!-- End form -->
@@ -988,71 +909,7 @@
     </div>
     <!-- End page content -->
 
-
-    <!-- ======================
-        ///// Begin tt-footer /////
-        =========================== -->
-    <footer id="tt-footer">
-        <div class="tt-footer-inner">
-
-            <!-- Begin footer column
-                ========================= -->
-            <div class="footer-col tt-align-center-left">
-                <div class="footer-col-inner">
-
-                    <!-- You can use whatever button or link here -->
-                    <div class="tt-btn tt-btn-link">
-                        <a href="#" class="scroll-to-top" data-hover="Back to top">Back to top</a>
-                    </div>
-
-                </div>
-                <!-- /.footer-col-inner -->
-            </div>
-            <!-- Begin footer column -->
-
-            <!-- Begin footer column
-                ========================= -->
-            <div class="footer-col tt-align-center order-m-last">
-                <div class="footer-col-inner">
-
-                    <div class="tt-copyright">
-                        © Copyright - <a href="https://themetorium.net" target="_blank" rel="noopener" class="tt-link">Themetorium.net</a>
-                    </div>
-
-                </div>
-                <!-- /.footer-col-inner -->
-            </div>
-            <!-- Begin footer column -->
-
-            <!-- Begin footer column
-                ========================= -->
-            <div class="footer-col tt-align-center-right">
-                <div class="footer-col-inner">
-
-                    <div class="footer-social">
-                        <div class="footer-social-text"><span>Follow</span><i class="fas fa-share-alt"></i></div>
-                        <div class="social-buttons">
-                            <ul>
-                                <li><a href="https://www.facebook.com/themetorium" class="magnetic-item" target="_blank" rel="noopener">Fb.</a></li>
-                                <li><a href="https://twitter.com/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Tw.</a></li>
-                                <li><a href="https://www.youtube.com/" class="magnetic-item" target="_blank" rel="noopener">Yt.</a></li>
-                                <li><a href="https://dribbble.com/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Dr.</a></li>
-                                <li><a href="https://www.behance.net/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Be.</a></li>
-                            </ul>
-                        </div>
-                        <!-- /.social-buttons -->
-                    </div>
-                    <!-- /.footer-social -->
-
-                </div>
-                <!-- /.footer-col-inner -->
-            </div>
-            <!-- Begin footer column -->
-
-        </div>
-        <!-- /.tt-section-inner -->
-    </footer>
-    <!-- End tt-footer -->
+        
 
 
 </div>

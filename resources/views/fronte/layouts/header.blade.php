@@ -7,7 +7,7 @@
             <!-- Begin logo
                 ================ -->
             <div class="tt-logo">
-                <a href="index.html">
+                <a href="{{route('front')}}">
                     <!-- Hint: You may need to change the img height to match your logo type. You can do this from the "theme.css" file (find: ".tt-logo img"). -->
                     <img src="{{asset('front/img/logo-light.png')}}" class="tt-logo-light magnetic-item" alt="Logo">
                     <!-- logo light -->
@@ -51,7 +51,7 @@
 
                                 <li class="active"><a href="{{route('front')}}">Home</a></li>
                                 <li><a href="portfolio-grid-portrait-mode.html">Portfolio</a></li>
-                                <li><a href="about-us.html">About</a></li>
+                                <li><a href="{{route('about')}}">About</a></li>
                                 <li><a href="{{route('posts.all')}}">Blog</a></li>
                                 <li><a href="{{route('contact')}}">Contact</a></li>
 

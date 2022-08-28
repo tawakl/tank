@@ -135,66 +135,33 @@
                             * Use class "tt-form-filled" or "tt-form-minimal" to change form style.
                             * Use class "tt-form-sm" or "tt-form-lg" to change form size (no class = default size).
                             -->
-                        <form method="post" action="{{ route('contacts.store') }}" id="tt-contact-form" class="tt-form-minimal anim-fadeinup">
+                        <form method="post" action="{{ route('contacts.store') }}" class="tt-form-minimal anim-fadeinup">
                             @csrf
-
-                            <!-- Begin hidden required fields (https://github.com/agragregra/uniMail) -->
-                            <input type="hidden" name="project_name" value="yourwebsiteaddress.com">
-                            <!-- Change value to your site name -->
-                            <input type="hidden" name="admin_email" value="your@email.com">
-                            <!-- Change value to your valid email address (where a message will be sent) -->
-                            <input type="hidden" name="form_subject" value="Message from yourwebsiteaddress.com">
-                            <!-- Change value to your own message subject -->
-                            <!-- End Hidden Required Fields -->
-
                             <div class="tt-row">
                                 <div class="tt-col-md-6">
-
-                                    <div class="tt-form-group">
-                                        <label>Name <span class="required">*</span></label>
-                                        <input class="tt-form-control" type="text" name="Name" placeholder="" required>
-                                    </div>
-
+                            <div class="tt-form-group">
+                                <label>Name <span class="required">*</span></label>
+                                <input type="text" class="tt-form-control" placeholder="" name="name">
+                            </div>
                                 </div>
-                                <!-- /.tt-col -->
-
                                 <div class="tt-col-md-6">
 
-                                    <div class="tt-form-group">
-                                        <label>Email address <span class="required">*</span></label>
-                                        <input class="tt-form-control" type="email" name="Email" placeholder="" required>
-                                    </div>
-
-                                </div>
-                                <!-- /.tt-col -->
+                                <div class="tt-form-group">
+                                <label>Email address <span class="required">*</span></label>
+                                <input type="text" class="tt-form-control" placeholder="" name="email">
                             </div>
-                            <!-- /.tt-row -->
-
+                                </div>
+                            </div>
                             <div class="tt-form-group">
                                 <label>Subject <span class="required">*</span></label>
-                                <input class="tt-form-control" type="text" name="Subject" placeholder="" required>
+                                <input type="text" class="tt-form-control" placeholder="" name="subject">
                             </div>
-
-                            <div class="tt-form-group">
-                                <label>Select an option <span class="required">*</span></label>
-                                <select class="tt-form-control" name="option" required>
-                                    <option value="" disabled selected>Please choose an option</option>
-                                    <option value="Say Hello">Say hello</option>
-                                    <option value="New Project">New project</option>
-                                    <option value="Feedback">Feedback</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
-
                             <div class="tt-form-group">
                                 <label>Message <span class="required">*</span></label>
-                                <textarea class="tt-form-control" rows="6" name="Message" placeholder="" required></textarea>
+                                <textarea name="body" id="" cols="30" rows="7" class="tt-form-control" placeholder=""></textarea>
                             </div>
-
-                            <small class="tt-form-text"><em>Fields marked with an asterisk (*) are required!</em></small>
-
-                            <div class="tt-btn tt-btn-light-outline margin-top-40">
-                                <button type="submit" data-hover="Send Message">Send Message</button>
+                            <div class="tt-btn tt-btn-light-outline margin-top-40 tt-form-group">
+                                <button type="submit" value="submit" data-hover="Send Message">Send Message</button>
                             </div>
                         </form>
                         <!-- End form -->

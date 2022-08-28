@@ -25,7 +25,16 @@
     <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Blog/Front/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Front/Controllers/FrontController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Users/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Users/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sections/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sections/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sections/right_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sections/right_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/fronte/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/about.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/fronte/blog_post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/blog_post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/fronte/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/fronte/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/fronte/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,6 +228,13 @@
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-backup" />
       <path value="$PROJECT_DIR$/vendor/spatie/db-dumper" />
       <path value="$PROJECT_DIR$/vendor/spatie/temporary-directory" />
+      <path value="$PROJECT_DIR$/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/league/config" />
+      <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/dflydev/dot-access-data" />
     </include_path>
   </component>
   <component name="ProjectId" id="1fa4i637EvtYmt1XumVxE7BkQri" />
@@ -227,18 +243,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/ahmed/Documents/caAli/public/storage",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ahmed/Documents/caAli/public/storage&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/storage" />

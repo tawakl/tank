@@ -217,7 +217,6 @@
 
                 <!-- Begin blog post nav
                     ======================== -->
-{{--                {{dd($previous)}}--}}
                 <div class="tt-blog-post-nav">
                     @if($previous)
                     <div class="tt-bp-nav-col tt-bp-nav-left">
@@ -239,122 +238,34 @@
                     ========================= -->
                 <div id="tt-blog-post-comments">
 
-                    <h4 class="tt-bpc-heading">5 comments:</h4>
+                    <h4 class="tt-bpc-heading">{{$post->comments->count()}} Comments</h4>
 
                     <!-- Begin tt-Comments list
                         ============================ -->
                     <ul class="tt-comments-list">
+                        @foreach($post->comments as $comment)
 
                         <!-- Begin tt-comment -->
                         <li class="tt-comment">
                             <a href="#" class="tt-comment-avatar">
-                                <img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/avatar.jpg" class="tt-lazy" alt="image">
+                                <img src="{{asset('front/img/low-qlt-thumb.jpg')}}" data-src="{{asset('front/img/blog/avatar.jpg')}}" class="tt-lazy" alt="image">
                             </a>
                             <div class="tt-comment-body">
                                 <div class="tt-comment-meta">
-                                    <h4 class="tt-comment-heading"><a href="#">David Bradley</a></h4>
-                                    <span class="tt-comment-time">May 26, 2021 at 10:24am</span>
+                                    <h4 class="tt-comment-heading"><a href="#">{{ $comment->commentByName }}</a></h4>
+                                    <span class="tt-comment-time">{{$comment->created_at}}</span>
                                 </div>
-                                <span class="tt-comment-reply"><a href="#">Reply</a></span>
+{{--                                <span class="tt-comment-reply"><a href="#">Reply</a></span>--}}
                                 <div class="tt-comment-text">
-                                    <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees
-                                        but rooms think may. Wicket do manner others seemed enable rather in. Excellent own discovery unfeeling.</p>
+                                    <p>{{$comment->body}}</p>
                                 </div>
                                 <!-- /.tt-comment-text -->
                             </div>
                             <!-- /.tt-comment-body -->
                         </li>
                         <!-- End tt-comment -->
+                        @endforeach
 
-                        <!-- Begin tt-comment -->
-                        <li class="tt-comment">
-                            <a href="#" class="tt-comment-avatar">
-                                <img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/avatar.jpg" class="tt-lazy" alt="image">
-                            </a>
-                            <div class="tt-comment-body">
-                                <div class="tt-comment-meta">
-                                    <h4 class="tt-comment-heading"><a href="#">Katie Ryan</a></h4>
-                                    <span class="tt-comment-time">May 26, 2021 at 10:24am</span>
-                                </div>
-                                <span class="tt-comment-reply"><a href="#">Reply</a></span>
-                                <div class="tt-comment-text">
-                                    <p>Unfeeling so rapturous discovery he exquisite. Reasonably so middletons or impression by terminated. Old pleasure required removing elegance him had. Down she bore sing saw calm high. Of an or game gate
-                                        west face shed. ﻿no great but music too old found arose.</p>
-                                </div>
-                                <!-- /.tt-comment-text -->
-
-                                <!-- Begin tt comments list
-                                    ============================ -->
-                                <ul class="tt-comments-list">
-
-                                    <!-- Begin tt-comment -->
-                                    <li class="tt-comment">
-                                        <a href="#" class="tt-comment-avatar">
-                                            <img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/avatar.jpg" class="tt-lazy" alt="image">
-                                        </a>
-                                        <div class="tt-comment-body">
-                                            <div class="tt-comment-meta">
-                                                <h4 class="tt-comment-heading"><a href="#">John Doe</a></h4>
-                                                <span class="tt-comment-time">May 26, 2021 at 10:24am</span>
-                                            </div>
-                                            <span class="tt-comment-reply"><a href="#">Reply</a></span>
-                                            <div class="tt-comment-text">
-                                                <p>Still court no small think death so an wrote. Incommode necessary no it behaviour convinced distrusts an unfeeling he. Could death since do we hoped is in. Exquisite no my attention extensive.
-                                                    The determine conveying moonlight age. Avoid for see marry sorry child.</p>
-                                            </div>
-                                            <!-- /.tt-comment-text -->
-                                        </div>
-                                        <!-- /.tt-comment-body -->
-                                    </li>
-                                    <!-- End tt-comment -->
-
-                                    <!-- Begin tt-comment -->
-                                    <li class="tt-comment">
-                                        <a href="#" class="tt-comment-avatar">
-                                            <img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/avatar.jpg" class="tt-lazy" alt="image">
-                                        </a>
-                                        <div class="tt-comment-body">
-                                            <div class="tt-comment-meta">
-                                                <h4 class="tt-comment-heading"><a href="#">Katie Ryan</a></h4>
-                                                <span class="tt-comment-time">May 26, 2021 at 10:24am</span>
-                                            </div>
-                                            <span class="tt-comment-reply"><a href="#">Reply</a></span>
-                                            <div class="tt-comment-text">
-                                                <p>For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention.</p>
-                                            </div>
-                                            <!-- /.tt-comment-text -->
-                                        </div>
-                                        <!-- /.tt-comment-body -->
-                                    </li>
-                                    <!-- End tt-comment -->
-
-                                </ul>
-                                <!-- End tt comments list -->
-
-                            </div>
-                            <!-- /.tt-comment-body -->
-                        </li>
-                        <!-- End tt-comment -->
-
-                        <!-- Begin tt-comment -->
-                        <li class="tt-comment">
-                            <a href="#" class="tt-comment-avatar">
-                                <img src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/blog/avatar.jpg" class="tt-lazy" alt="image">
-                            </a>
-                            <div class="tt-comment-body">
-                                <div class="tt-comment-meta">
-                                    <h4 class="tt-comment-heading"><a href="#">Kate Dixon</a></h4>
-                                    <span class="tt-comment-time">May 26, 2021 at 10:24am</span>
-                                </div>
-                                <span class="tt-comment-reply"><a href="#">Reply</a></span>
-                                <div class="tt-comment-text">
-                                    <p>Allow miles wound place the leave had. To sitting subject no improve studied limited. Ye indulgence unreserved connection alteration appearance my an astonished. Up as seen sent make he they of.</p>
-                                </div>
-                                <!-- /.tt-comment-text -->
-                            </div>
-                            <!-- /.tt-comment-body -->
-                        </li>
-                        <!-- End tt-comment -->
 
                     </ul>
                     <!-- End tt-Comments list -->
@@ -364,59 +275,40 @@
                         * Use class "tt-form-filled" or "tt-form-minimal" to change form style.
                         * Use class "tt-form-sm" or "tt-form-lg" to change form size (no class = default size).
                         -->
-                    <form id="tt-post-comment-form" class="tt-form-minimal anim-fadeinup">
+
+
+
+                    <form id="tt-post-comment-form" class="tt-form-minimal anim-fadeinup" method="post" action="{{ route('comments.store') }}">
+                        @csrf
                         <h4 class="tt-post-comment-form-heading">Leave a Comment:</h4>
-                        <div class="tt-row">
-                            <div class="tt-col-lg-6">
+                        @if(!auth()->user())
+                            <div class="tt-row">
+                                <div class="tt-col-lg-6">
+                            <div class="tt-form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" class="tt-form-control" id="name" name="commentByName">
+                            </div>
+                                </div>
+                                <div class="tt-col-lg-6">
 
                                 <div class="tt-form-group">
-                                    <label>Name <span class="required">*</span></label>
-                                    <input class="tt-form-control" id="84990245" type="text" placeholder="">
-                                </div>
-
+                                <label for="email">Email *</label>
+                                <input type="email" class="tt-form-control" id="email" name="commentByEmail">
                             </div>
-                            <!-- /.col -->
-
-                            <div class="tt-col-lg-6">
-
-                                <div class="tt-form-group">
-                                    <label>Email address <span class="small text-gray">(Optional)</span></label>
-                                    <input class="tt-form-control" id="19833520" type="email" placeholder="">
                                 </div>
-
                             </div>
-                            <!-- /.col -->
-                        </div>
-                        <!-- /.row -->
-
+                        @endif
                         <div class="tt-form-group">
-                            <label>Comment <span class="required">*</span></label>
-                            <textarea class="tt-form-control" id="30945381" rows="6" placeholder=""></textarea>
+                            <label for="message">Message</label>
+                            <textarea name="body" id="message" cols="30" rows="7" class="tt-form-control"></textarea>
+                            <input type="hidden" name="post_id" value="{{ $post->id }}"/>
+
                         </div>
-
-                        <small class="tt-form-text">Fields marked with an asterisk (*) are required!</small>
-
-                        <!-- Begin post comment reminder -->
-                        <div class="tt-post-comment-reminder">
-                            <div class="tt-form-check tt-form-check-inline">
-                                <input type="checkbox" id="notify-me-new-comment">
-                                <label for="notify-me-new-comment">Email me when this comment receives a reply.</label>
-                            </div>
-                            <div class="tt-form-check">
-                                <input type="checkbox" id="notify-me-new-post">
-                                <label for="notify-me-new-post">Notify me of new posts by email.</label>
-                            </div>
-                        </div>
-                        <!-- End post comment reminder -->
-
-                        <!-- Begin post comment submit button -->
                         <div class="tt-btn tt-btn-light-outline margin-top-40">
-                            <button type="submit" data-hover="Post Comment">Post Comment</button>
+                            <button type="submit" value="submit" data-hover="Post Comment">Post Comment</button>
                         </div>
-                        <!-- End post comment submit button -->
 
                     </form>
-                    <!-- End post comment form -->
 
                 </div>
                 <!-- End post comments -->

@@ -9,7 +9,7 @@
                 ============================= -->
             <div class="ph-image">
                 <div class="ph-image-inner">
-                    <img src="assets/img/page-header/ph-4.jpg" alt="Image">
+                    <img src="{{asset('front/img/page-header/ph-4.jpg')}}" alt="Image">
                 </div>
             </div>
             <!-- End page header image -->
@@ -150,7 +150,7 @@
                             <div class="swiper-slide">
                                 <div class="tt-content-carousel-item">
                                     <figure class="cover-opacity-1">
-                                        <img class="tt-cc-image anim-image-parallax swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/misc/misc-1.jpg" alt="Image">
+                                        <img class="tt-cc-image anim-image-parallax swiper-lazy" src="{{asset('front/img/low-qlt-thumb.jpg')}}" data-src="{{asset('front/img/misc/misc-1.jpg')}}" alt="Image">
                                         <!-- <figcaption>Image Caption</figcaption> -->
                                     </figure>
                                 </div>
@@ -163,7 +163,7 @@
                             <div class="swiper-slide">
                                 <div class="tt-content-carousel-item">
                                     <figure class="cover-opacity-1">
-                                        <img class="tt-cc-image anim-image-parallax swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/misc/misc-2.jpg" alt="Image">
+                                        <img class="tt-cc-image anim-image-parallax swiper-lazy" src="{{asset('front/img/low-qlt-thumb.jpg')}}" data-src="{{asset('front/img/misc/misc-2.jpg')}}" alt="Image">
                                         <!-- <figcaption>Image Caption</figcaption> -->
                                     </figure>
                                 </div>
@@ -176,9 +176,9 @@
                             <div class="swiper-slide">
                                 <div class="tt-content-carousel-item">
                                     <figure class="cover-opacity-1">
-                                        <video class="tt-cc-video" loop muted preload="metadata" poster="assets/vids/office-team.jpg">
-                                            <source src="assets/vids/office-team.mp4" type="video/mp4">
-                                            <source src="assets/vids/office-team.webm" type="video/webm">
+                                        <video class="tt-cc-video" loop muted preload="metadata" poster="{{asset('front/vids/office-team.webm')}}">
+                                            <source src="{{asset('front/vids/office-team.webm')}}" type="video/mp4">
+                                            <source src="{{asset('front/vids/office-team.webm')}}" type="video/webm">
                                         </video>
                                     </figure>
                                 </div>
@@ -191,7 +191,7 @@
                             <div class="swiper-slide">
                                 <div class="tt-content-carousel-item">
                                     <figure class="cover-opacity-1">
-                                        <img class="tt-cc-image anim-image-parallax swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/misc/misc-3.jpg" alt="Image">
+                                        <img class="tt-cc-image anim-image-parallax swiper-lazy" src="{{asset('front/img/low-qlt-thumb.jpg')}}" data-src="assets/img/misc/misc-3.jpg" alt="Image">
                                         <!-- <figcaption>Image Caption</figcaption> -->
                                     </figure>
                                 </div>
@@ -204,7 +204,7 @@
                             <div class="swiper-slide">
                                 <div class="tt-content-carousel-item">
                                     <figure class="cover-opacity-1">
-                                        <img class="tt-cc-image anim-image-parallax swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/misc/misc-4.jpg" alt="Image">
+                                        <img class="tt-cc-image anim-image-parallax swiper-lazy" src="{{asset('front/img/low-qlt-thumb.jpg')}}" data-src="assets/img/misc/misc-4.jpg" alt="Image">
                                         <!-- <figcaption>Image Caption</figcaption> -->
                                     </figure>
                                 </div>
@@ -217,7 +217,7 @@
                             <div class="swiper-slide">
                                 <div class="tt-content-carousel-item">
                                     <figure class="cover-opacity-1">
-                                        <img class="tt-cc-image anim-image-parallax swiper-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/misc/misc-5.jpg" alt="Image">
+                                        <img class="tt-cc-image anim-image-parallax swiper-lazy" src="{{asset('front/img/low-qlt-thumb.jpg')}}" data-src="assets/img/misc/misc-5.jpg" alt="Image">
                                         <!-- <figcaption>Image Caption</figcaption> -->
                                     </figure>
                                 </div>
@@ -385,66 +385,20 @@
 
                         <!-- Begin swiper wrapper (required) -->
                         <div class="swiper-wrapper">
+                            @foreach($testimonials as $testimonial)
 
                             <!-- Begin swiper slide
                                 ======================== -->
                             <div class="swiper-slide font-alter">
                                 <div class="tt-ts-item">
                                     <div class="tt-ts-text">
-                                        "One of the best template I've ever had. I love it! It's fully customizable, well coded, fast and responsive - fitting for all kind of devices."
+                                        {{$testimonial->description}}
                                     </div>
-                                    <div class="tt-ts-subtext">- Wironimo</div>
+                                    <div class="tt-ts-subtext">- {{$testimonial->title}}</div>
                                 </div>
                             </div>
                             <!-- End swiper slide -->
-
-                            <!-- Begin swiper slide
-                                ======================== -->
-                            <div class="swiper-slide font-alter">
-                                <div class="tt-ts-item">
-                                    <div class="tt-ts-text">
-                                        "Brilliant template. Tons of options, many concepts, design flexibility, code quality, explanatory comments in each section for easy styling."
-                                    </div>
-                                    <div class="tt-ts-subtext">- Gneto</div>
-                                </div>
-                            </div>
-                            <!-- End swiper slide -->
-
-                            <!-- Begin swiper slide
-                                ======================== -->
-                            <div class="swiper-slide font-alter">
-                                <div class="tt-ts-item">
-                                    <div class="tt-ts-text">
-                                        "Easy to customize, plenty of choices to display your portfolio, fast loading times. Excellent support."
-                                    </div>
-                                    <div class="tt-ts-subtext">- Brendak</div>
-                                </div>
-                            </div>
-                            <!-- End swiper slide -->
-
-                            <!-- Begin swiper slide
-                                ======================== -->
-                            <div class="swiper-slide font-alter">
-                                <div class="tt-ts-item">
-                                    <div class="tt-ts-text">
-                                        "Very nice design and well organised and commented code. Also good customer service."
-                                    </div>
-                                    <div class="tt-ts-subtext">- Gazzzzz</div>
-                                </div>
-                            </div>
-                            <!-- End swiper slide -->
-
-                            <!-- Begin swiper slide
-                                ======================== -->
-                            <div class="swiper-slide font-alter">
-                                <div class="tt-ts-item">
-                                    <div class="tt-ts-text">
-                                        "I founded a bug on Iphone and Ipad and the author fixed very quickly. I appreciated his efforts and his quickness in solving the problem."
-                                    </div>
-                                    <div class="tt-ts-subtext">- Admanente</div>
-                                </div>
-                            </div>
-                            <!-- End swiper slide -->
+                            @endforeach
 
                         </div>
                         <!-- End swiper wrapper -->
@@ -584,34 +538,34 @@
                     -->
                 <ul class="tt-logo-wall cl-col-44 anim-fadeinup">
                     <li>
-                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-1.png" alt="Client"></a>
+                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="{{asset('front/img/clients/client-1.png')}}" alt="Client"></a>
                     </li>
                     <li>
-                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-2.png" alt="Client"></a>
+                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="{{asset('front/img/clients/client-2.png')}}" alt="Client"></a>
                     </li>
                     <li>
-                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-3.png" alt="Client"></a>
+                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="{{asset('front/img/clients/client-3.png')}}" alt="Client"></a>
                     </li>
                     <li>
-                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-4.png" alt="Client"></a>
+                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="{{asset('front/img/clients/client-4.png')}}" alt="Client"></a>
                     </li>
                     <li>
-                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-5.png" alt="Client"></a>
+                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="{{asset('front/img/clients/client-5.png')}}" alt="Client"></a>
                     </li>
                     <li>
-                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-6.png" alt="Client"></a>
+                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="{{asset('front/img/clients/client-6.png')}}" alt="Client"></a>
                     </li>
                     <li>
-                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-7.png" alt="Client"></a>
+                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="{{asset('front/img/clients/client-7.png')}}" alt="Client"></a>
                     </li>
                     <li>
-                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-8.png" alt="Client"></a>
+                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="{{asset('front/img/clients/client-8.png')}}" alt="Client"></a>
                     </li>
                     <li>
-                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-9.png" alt="Client"></a>
+                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="{{asset('front/img/clients/client-9.png')}}" alt="Client"></a>
                     </li>
                     <li>
-                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="assets/img/clients/client-10.png" alt="Client"></a>
+                        <a href="https://1.envato.market/tank" class="cursor-alter" target="_blank" rel="noopener"><img src="{{asset('front/img/clients/client-10.png')}}" alt="Client"></a>
                     </li>
 
                     <!-- Use the below example if you want a list without links -->
@@ -649,11 +603,10 @@
 
                     <!-- Use if destination page contains page header image -->
                     <div class="tt-pn-image">
-                        <img src="assets/img/page-header/ph-1.jpg" alt="image">
+                        <img src="{{asset('front/img/page-header/ph-1.jpg')}}" alt="image">
                     </div>
                 </div>
                 <!-- End page nav -->
-
             </div>
             <!-- /.tt-section-inner -->
         </div>
@@ -662,72 +615,6 @@
 
     </div>
     <!-- End page content -->
-
-
-    <!-- ======================
-        ///// Begin tt-footer /////
-        =========================== -->
-    <footer id="tt-footer">
-        <div class="tt-footer-inner">
-
-            <!-- Begin footer column
-                ========================= -->
-            <div class="footer-col tt-align-center-left">
-                <div class="footer-col-inner">
-
-                    <!-- You can use whatever button or link here -->
-                    <div class="tt-btn tt-btn-link">
-                        <a href="#" class="scroll-to-top" data-hover="Back to top">Back to top</a>
-                    </div>
-
-                </div>
-                <!-- /.footer-col-inner -->
-            </div>
-            <!-- Begin footer column -->
-
-            <!-- Begin footer column
-                ========================= -->
-            <div class="footer-col tt-align-center order-m-last">
-                <div class="footer-col-inner">
-
-                    <div class="tt-copyright">
-                        © Copyright - <a href="https://themetorium.net" target="_blank" rel="noopener" class="tt-link">Themetorium.net</a>
-                    </div>
-
-                </div>
-                <!-- /.footer-col-inner -->
-            </div>
-            <!-- Begin footer column -->
-
-            <!-- Begin footer column
-                ========================= -->
-            <div class="footer-col tt-align-center-right">
-                <div class="footer-col-inner">
-
-                    <div class="footer-social">
-                        <div class="footer-social-text"><span>Follow</span><i class="fas fa-share-alt"></i></div>
-                        <div class="social-buttons">
-                            <ul>
-                                <li><a href="https://www.facebook.com/themetorium" class="magnetic-item" target="_blank" rel="noopener">Fb.</a></li>
-                                <li><a href="https://twitter.com/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Tw.</a></li>
-                                <li><a href="https://www.youtube.com/" class="magnetic-item" target="_blank" rel="noopener">Yt.</a></li>
-                                <li><a href="https://dribbble.com/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Dr.</a></li>
-                                <li><a href="https://www.behance.net/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Be.</a></li>
-                            </ul>
-                        </div>
-                        <!-- /.social-buttons -->
-                    </div>
-                    <!-- /.footer-social -->
-
-                </div>
-                <!-- /.footer-col-inner -->
-            </div>
-            <!-- Begin footer column -->
-
-        </div>
-        <!-- /.tt-section-inner -->
-    </footer>
-    <!-- End tt-footer -->
 
 
 </div>

@@ -33,8 +33,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('login/github', [LoginController::class, 'redirectToProvider']);
-Route::get('login/github/callback', [LoginController::class, 'handleProviderCallback']);
+//Route::get('login/github', [LoginController::class, 'redirectToProvider']);
+//Route::get('login/github/callback', [LoginController::class, 'handleProviderCallback']);
 
 Route::group(['middleware' => 'auth'], function () {
     require base_path('app/Blog/Users/Routes/web.php');

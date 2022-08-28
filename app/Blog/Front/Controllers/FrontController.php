@@ -20,9 +20,10 @@ class FrontController extends Controller {
 
     public function getIndex() {
         $data = [];
-        $data['posts']= $this->post->paginate();
-        $data['categories']= Category::all();
-        return view($this->module);
+        $posts= $this->post->paginate();
+        $categories= Category::all();
+        $testimonials = Testimonial::latest()->get();
+        return view( 'fronte.home', compact( 'testimonials', 'categories', 'posts'));
     }
 
     public function all() {
@@ -32,14 +33,6 @@ class FrontController extends Controller {
 
     }
     public function showPost($id) {
-//        $data['post'] = $this->post->with('author')->findOrFail($id);
-//        $data['categories'] = Category::all();
-//        $data['tags'] = Tag::all();
-//        $data['posts'] = Post::latest()->limit(2)->get();
-//        $data['previous'] = Post::where('id', '<', $data['post']->id)->max('id');
-//        $data['next'] = Post::where('id', '>', $data['post']->id)->min('id');
-
-
         $post = Post::with('author')->findOrFail($id);
         $previous = Post::where('id', '<', $post->id)->orderBy('id','desc')->first();
         $next = Post::where('id', '>', $post->id)->orderBy('id','desc')->first();
@@ -60,7 +53,7 @@ class FrontController extends Controller {
     public function about() {
         $data['testimonials'] = Testimonial::latest()->get();
 
-        return view('front.about',$data);
+        return view('fronte.about',$data);
 
     }
 

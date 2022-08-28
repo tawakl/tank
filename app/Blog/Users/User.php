@@ -48,12 +48,12 @@ class User extends Authenticatable
         return $this->role == 'admin';
     }
 
-    public function setPasswordAttribute($value)
-    {
-        if (trim($value)) {
-            $this->attributes['password'] = bcrypt(trim($value));
-        }
-    }
+//    public function setPasswordAttribute($value)
+//    {
+//        if (trim($value)) {
+//            $this->attributes['password'] = bcrypt(trim($value));
+//        }
+//    }
     public function posts(){
         return $this->hasMany(Post::class);
     }
