@@ -20,6 +20,8 @@ Route::get('/all-posts', '\App\Blog\Front\Controllers\FrontController@all')->nam
 Route::get('/post/{id}', '\App\Blog\Front\Controllers\FrontController@showPost')->name('posts.show');
 Route::get('/contact', '\App\Blog\Front\Controllers\FrontController@contact')->name('contact');
 Route::get('/about', '\App\Blog\Front\Controllers\FrontController@about')->name('about');
+Route::get('/portfolios', '\App\Blog\Front\Controllers\FrontController@portfolios')->name('portfolios');
+Route::get('/portfolio-grid-portrait-mode', '\App\Blog\Front\Controllers\FrontController@portfolioGrid')->name('portfolio-grid');
 
 
 
@@ -40,6 +42,9 @@ Route::group(['middleware' => 'auth'], function () {
     require base_path('app/Blog/Testimonials/Routes/web.php');
     Route::resource('comments', 'CommentsController');
     Route::resource('contacts', 'ContactController');
+    Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+        \UniSharp\LaravelFilemanager\Lfm::routes();
+    });
 
 });
 

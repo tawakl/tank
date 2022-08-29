@@ -50,7 +50,7 @@
 
 
                                 <li class="active"><a href="{{route('front')}}">Home</a></li>
-                                <li><a href="portfolio-grid-portrait-mode.html">Portfolio</a></li>
+                                <li><a href="{{route('portfolio-grid')}}">Portfolio</a></li>
                                 <li><a href="{{route('about')}}">About</a></li>
                                 <li><a href="{{route('posts.all')}}">Blog</a></li>
                                 <li><a href="{{route('contact')}}">Contact</a></li>

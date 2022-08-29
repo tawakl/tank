@@ -102,176 +102,176 @@
                         ===========================
                         * Use class "tt-ss-right" to align sidebar to right.
                         -->
-                    <div class="tt-sliding-sidebar-wrap">
-                        <div class="tt-sliding-sidebar">
-                            <div class="tt-sliding-sidebar-inner">
+{{--                    <div class="tt-sliding-sidebar-wrap">--}}
+{{--                        <div class="tt-sliding-sidebar">--}}
+{{--                            <div class="tt-sliding-sidebar-inner">--}}
 
-                                <!-- Begin sidebar widget -->
-                                <div class="sidebar-widget sidebar-search">
-                                    <h3 class="sidebar-heading">Search</h3>
+{{--                                <!-- Begin sidebar widget -->--}}
+{{--                                <div class="sidebar-widget sidebar-search">--}}
+{{--                                    <h3 class="sidebar-heading">Search</h3>--}}
 
-                                    <!-- Begin form (Note: for design purposes only!)
-                                        ================
-                                        * Use class "tt-form-filled" or "tt-form-minimal" to change form style.
-                                        * Use class "tt-form-sm" or "tt-form-lg" to change form size (no class = default size).
-                                        -->
-                                    <form>
-                                        <div class="tt-form-btn-inside">
-                                            <input class="tt-form-control" type="text" id="search" placeholder="Type something & hit enter" required>
-                                            <button type="submit"><i class="fas fa-search"></i></button>
-                                        </div>
-                                    </form>
-                                    <!-- End form -->
+{{--                                    <!-- Begin form (Note: for design purposes only!)--}}
+{{--                                        ================--}}
+{{--                                        * Use class "tt-form-filled" or "tt-form-minimal" to change form style.--}}
+{{--                                        * Use class "tt-form-sm" or "tt-form-lg" to change form size (no class = default size).--}}
+{{--                                        -->--}}
+{{--                                    <form>--}}
+{{--                                        <div class="tt-form-btn-inside">--}}
+{{--                                            <input class="tt-form-control" type="text" id="search" placeholder="Type something & hit enter" required>--}}
+{{--                                            <button type="submit"><i class="fas fa-search"></i></button>--}}
+{{--                                        </div>--}}
+{{--                                    </form>--}}
+{{--                                    <!-- End form -->--}}
 
-                                </div>
-                                <!-- End sidebar widget -->
+{{--                                </div>--}}
+{{--                                <!-- End sidebar widget -->--}}
 
-                                <!-- Begin sidebar widget -->
-                                <div class="sidebar-widget sidebar-categories">
-                                    <h3 class="sidebar-heading">Categories</h3>
-                                    <ul class="list-unstyled">
-                                        <li><a href="blog-archive.html">Web Design <span title="Entries in this category">26</span></a></li>
-                                        <li><a href="blog-archive.html">Resources <span title="Entries in this category">12</span></a></li>
-                                        <li><a href="blog-archive.html">Tutorials <span title="Entries in this category">19</span></a></li>
-                                        <li><a href="blog-archive.html">Freebies <span title="Entries in this category">31</span></a></li>
-                                        <li><a href="blog-archive.html">Inspiration <span title="Entries in this category">67</span></a></li>
-                                    </ul>
-                                </div>
-                                <!-- End sidebar widget -->
+{{--                                <!-- Begin sidebar widget -->--}}
+{{--                                <div class="sidebar-widget sidebar-categories">--}}
+{{--                                    <h3 class="sidebar-heading">Categories</h3>--}}
+{{--                                    <ul class="list-unstyled">--}}
+{{--                                        <li><a href="blog-archive.html">Web Design <span title="Entries in this category">26</span></a></li>--}}
+{{--                                        <li><a href="blog-archive.html">Resources <span title="Entries in this category">12</span></a></li>--}}
+{{--                                        <li><a href="blog-archive.html">Tutorials <span title="Entries in this category">19</span></a></li>--}}
+{{--                                        <li><a href="blog-archive.html">Freebies <span title="Entries in this category">31</span></a></li>--}}
+{{--                                        <li><a href="blog-archive.html">Inspiration <span title="Entries in this category">67</span></a></li>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                                <!-- End sidebar widget -->--}}
 
-                                <!-- Begin sidebar widget -->
-                                <div class="sidebar-widget sidebar-post-list">
-                                    <!-- Can be "Recent Posts" or "Popular Posts" etc. -->
-                                    <h3 class="sidebar-heading">Popular Posts</h3>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <div class="sidebar-post-data">
-                                                <h5 class="sidebar-post-title"><a href="blog-post.html">Why Some People Almost Always Save Money With This Method</a></h5>
-                                                <!-- <span class="sidebar-post-author">By: <a href="">John Doe</a></span> -->
-                                                <span class="sidebar-post-date">May 14, 2021</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="sidebar-post-data">
-                                                <h5 class="sidebar-post-title"><a href="blog-post.html">Want to Step Up Your Skills? You Need to Read This First</a></h5>
-                                                <!-- <span class="sidebar-post-author">By: <a href="">John Doe</a></span> -->
-                                                <span class="sidebar-post-date">May 12, 2021</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="sidebar-post-data">
-                                                <h5 class="sidebar-post-title"><a href="blog-post.html">Secrets to Getting Your Project to Complete Quickly and Efficiently</a></h5>
-                                                <!-- <span class="sidebar-post-author">By: <a href="">Henry Harrison</a></span> -->
-                                                <span class="sidebar-post-date">May 17, 2021</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="sidebar-post-data">
-                                                <h5 class="sidebar-post-title"><a href="blog-post.html">How to Win Friends and Influence People?</a></h5>
-                                                <!-- <span class="sidebar-post-author">By: <a href="">Henry Harrison</a></span> -->
-                                                <span class="sidebar-post-date">May 21, 2021</span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- End sidebar widget -->
+{{--                                <!-- Begin sidebar widget -->--}}
+{{--                                <div class="sidebar-widget sidebar-post-list">--}}
+{{--                                    <!-- Can be "Recent Posts" or "Popular Posts" etc. -->--}}
+{{--                                    <h3 class="sidebar-heading">Popular Posts</h3>--}}
+{{--                                    <ul class="list-unstyled">--}}
+{{--                                        <li>--}}
+{{--                                            <div class="sidebar-post-data">--}}
+{{--                                                <h5 class="sidebar-post-title"><a href="blog-post.html">Why Some People Almost Always Save Money With This Method</a></h5>--}}
+{{--                                                <!-- <span class="sidebar-post-author">By: <a href="">John Doe</a></span> -->--}}
+{{--                                                <span class="sidebar-post-date">May 14, 2021</span>--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                        <li>--}}
+{{--                                            <div class="sidebar-post-data">--}}
+{{--                                                <h5 class="sidebar-post-title"><a href="blog-post.html">Want to Step Up Your Skills? You Need to Read This First</a></h5>--}}
+{{--                                                <!-- <span class="sidebar-post-author">By: <a href="">John Doe</a></span> -->--}}
+{{--                                                <span class="sidebar-post-date">May 12, 2021</span>--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                        <li>--}}
+{{--                                            <div class="sidebar-post-data">--}}
+{{--                                                <h5 class="sidebar-post-title"><a href="blog-post.html">Secrets to Getting Your Project to Complete Quickly and Efficiently</a></h5>--}}
+{{--                                                <!-- <span class="sidebar-post-author">By: <a href="">Henry Harrison</a></span> -->--}}
+{{--                                                <span class="sidebar-post-date">May 17, 2021</span>--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                        <li>--}}
+{{--                                            <div class="sidebar-post-data">--}}
+{{--                                                <h5 class="sidebar-post-title"><a href="blog-post.html">How to Win Friends and Influence People?</a></h5>--}}
+{{--                                                <!-- <span class="sidebar-post-author">By: <a href="">Henry Harrison</a></span> -->--}}
+{{--                                                <span class="sidebar-post-date">May 21, 2021</span>--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                                <!-- End sidebar widget -->--}}
 
-                                <!-- Begin sidebar widget -->
-                                <div class="sidebar-widget sidebar-comments-list">
-                                    <h3 class="sidebar-heading">Recent Comments</h3>
-                                    <ul class="list-unstyled">
-                                        <li class="sidebar-comment">
-                                            <div class="sidebar-comment-meta">
-                                                <div class="sidebar-comment-data">
-                                                    <span class="sidebar-comment-author"><a href="">John Doe</a></span>
-                                                    <span class="sidebar-comment-date">May 14, 2021</span>
-                                                </div>
-                                            </div>
-                                            <div class="sidebar-comment-text">
-                                                <a href="">Aliquet praesent tempor ac dolor aliquet. Risus mi vitae hendrerit orci vitae amet lacus tertis ...</a>
-                                            </div>
-                                        </li>
+{{--                                <!-- Begin sidebar widget -->--}}
+{{--                                <div class="sidebar-widget sidebar-comments-list">--}}
+{{--                                    <h3 class="sidebar-heading">Recent Comments</h3>--}}
+{{--                                    <ul class="list-unstyled">--}}
+{{--                                        <li class="sidebar-comment">--}}
+{{--                                            <div class="sidebar-comment-meta">--}}
+{{--                                                <div class="sidebar-comment-data">--}}
+{{--                                                    <span class="sidebar-comment-author"><a href="">John Doe</a></span>--}}
+{{--                                                    <span class="sidebar-comment-date">May 14, 2021</span>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="sidebar-comment-text">--}}
+{{--                                                <a href="">Aliquet praesent tempor ac dolor aliquet. Risus mi vitae hendrerit orci vitae amet lacus tertis ...</a>--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
 
-                                        <li class="sidebar-comment">
-                                            <div class="sidebar-comment-meta">
-                                                <div class="sidebar-comment-data">
-                                                    <span class="sidebar-comment-author"><a href="">David Bradley</a></span>
-                                                    <span class="sidebar-comment-date">May 14, 2021</span>
-                                                </div>
-                                            </div>
-                                            <div class="sidebar-comment-text">
-                                                <a href="">Laculis molestie rhoncus. Amet maecenas ut orci id dui. Et dui morbi. Non mauris nautis trettis ...</a>
-                                            </div>
-                                        </li>
+{{--                                        <li class="sidebar-comment">--}}
+{{--                                            <div class="sidebar-comment-meta">--}}
+{{--                                                <div class="sidebar-comment-data">--}}
+{{--                                                    <span class="sidebar-comment-author"><a href="">David Bradley</a></span>--}}
+{{--                                                    <span class="sidebar-comment-date">May 14, 2021</span>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="sidebar-comment-text">--}}
+{{--                                                <a href="">Laculis molestie rhoncus. Amet maecenas ut orci id dui. Et dui morbi. Non mauris nautis trettis ...</a>--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
 
-                                        <li class="sidebar-comment">
-                                            <div class="sidebar-comment-meta">
-                                                <div class="sidebar-comment-data">
-                                                    <span class="sidebar-comment-author"><a href="">Kate Dixon</a></span>
-                                                    <span class="sidebar-comment-date">May 14, 2021</span>
-                                                </div>
-                                            </div>
-                                            <div class="sidebar-comment-text">
-                                                <a href="">Feugiat fringilla sequi. Anunc adipiscing nisl lorem morbi tincidunt gravida vistrim nocktac fitset ...</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- End sidebar widget -->
+{{--                                        <li class="sidebar-comment">--}}
+{{--                                            <div class="sidebar-comment-meta">--}}
+{{--                                                <div class="sidebar-comment-data">--}}
+{{--                                                    <span class="sidebar-comment-author"><a href="">Kate Dixon</a></span>--}}
+{{--                                                    <span class="sidebar-comment-date">May 14, 2021</span>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="sidebar-comment-text">--}}
+{{--                                                <a href="">Feugiat fringilla sequi. Anunc adipiscing nisl lorem morbi tincidunt gravida vistrim nocktac fitset ...</a>--}}
+{{--                                            </div>--}}
+{{--                                        </li>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                                <!-- End sidebar widget -->--}}
 
-                                <!-- Begin sidebar widget -->
-                                <div class="sidebar-widget sidebar-tags">
-                                    <h3 class="sidebar-heading">Tags</h3>
-                                    <div class="sidebar-tags-list">
-                                        <ul>
-                                            <li><a href="blog-archive.html">#portfolio</a></li>
-                                            <li><a href="blog-archive.html">#multipurpose</a></li>
-                                            <li><a href="blog-archive.html">#minimal</a></li>
-                                            <li><a href="blog-archive.html">#agency</a></li>
-                                            <li><a href="blog-archive.html">#creatives</a></li>
-                                            <li><a href="blog-archive.html">#freelancers</a></li>
-                                            <li><a href="blog-archive.html">#design</a></li>
-                                            <li><a href="blog-archive.html">#bootstrap</a></li>
-                                            <li><a href="blog-archive.html">#responsive</a></li>
-                                            <li><a href="blog-archive.html">#simple</a></li>
-                                            <li><a href="blog-archive.html">#creative</a></li>
-                                            <li><a href="blog-archive.html">#blog</a></li>
-                                            <li><a href="blog-archive.html">#wordpress</a></li>
-                                            <li><a href="blog-archive.html">#black &amp; white</a></li>
-                                        </ul>
-                                    </div>
-                                    <!-- /.sidebar-tags-list -->
-                                </div>
-                                <!-- End sidebar widget -->
+{{--                                <!-- Begin sidebar widget -->--}}
+{{--                                <div class="sidebar-widget sidebar-tags">--}}
+{{--                                    <h3 class="sidebar-heading">Tags</h3>--}}
+{{--                                    <div class="sidebar-tags-list">--}}
+{{--                                        <ul>--}}
+{{--                                            <li><a href="blog-archive.html">#portfolio</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#multipurpose</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#minimal</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#agency</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#creatives</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#freelancers</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#design</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#bootstrap</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#responsive</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#simple</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#creative</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#blog</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#wordpress</a></li>--}}
+{{--                                            <li><a href="blog-archive.html">#black &amp; white</a></li>--}}
+{{--                                        </ul>--}}
+{{--                                    </div>--}}
+{{--                                    <!-- /.sidebar-tags-list -->--}}
+{{--                                </div>--}}
+{{--                                <!-- End sidebar widget -->--}}
 
-                                <!-- Begin sidebar widget -->
-                                <div class="sidebar-widget sidebar-meta">
-                                    <h3 class="sidebar-heading">Meta</h3>
-                                    <ul class="list-unstyled">
-                                        <li><a href="">Log In</a></li>
-                                        <li><a href="">Entries RSS</a></li>
-                                        <li><a href="">Comments RSS</a></li>
-                                        <li><a href="https://themetorium.net" target="_blank" rel="noopener" class="tt-link">Themetorium.net</a></li>
-                                    </ul>
-                                </div>
-                                <!-- End sidebar widget -->
+{{--                                <!-- Begin sidebar widget -->--}}
+{{--                                <div class="sidebar-widget sidebar-meta">--}}
+{{--                                    <h3 class="sidebar-heading">Meta</h3>--}}
+{{--                                    <ul class="list-unstyled">--}}
+{{--                                        <li><a href="">Log In</a></li>--}}
+{{--                                        <li><a href="">Entries RSS</a></li>--}}
+{{--                                        <li><a href="">Comments RSS</a></li>--}}
+{{--                                        <li><a href="https://themetorium.net" target="_blank" rel="noopener" class="tt-link">Themetorium.net</a></li>--}}
+{{--                                    </ul>--}}
+{{--                                </div>--}}
+{{--                                <!-- End sidebar widget -->--}}
 
-                            </div>
-                            <!-- /.tt-sliding-sidebar-inner -->
-                        </div>
-                        <!-- /.tt-sliding-sidebar -->
+{{--                            </div>--}}
+{{--                            <!-- /.tt-sliding-sidebar-inner -->--}}
+{{--                        </div>--}}
+{{--                        <!-- /.tt-sliding-sidebar -->--}}
 
-                        <!-- Begin sliding sidebar trigger -->
-                        <div class="tt-sliding-sidebar-trigger">
-                            <span class="tt-ss-icon"><i class="fas fa-align-justify"></i></span>
-                            <span class="tt-ss-icon-close"><i class="fas fa-times"></i></span>
-                        </div>
-                        <!-- End sliding sidebar trigger -->
+{{--                        <!-- Begin sliding sidebar trigger -->--}}
+{{--                        <div class="tt-sliding-sidebar-trigger">--}}
+{{--                            <span class="tt-ss-icon"><i class="fas fa-align-justify"></i></span>--}}
+{{--                            <span class="tt-ss-icon-close"><i class="fas fa-times"></i></span>--}}
+{{--                        </div>--}}
+{{--                        <!-- End sliding sidebar trigger -->--}}
 
-                        <!-- Close overlay -->
-                        <div class="tt-sliding-sidebar-close cursor-close"></div>
+{{--                        <!-- Close overlay -->--}}
+{{--                        <div class="tt-sliding-sidebar-close cursor-close"></div>--}}
 
-                    </div>
+{{--                    </div>--}}
                     <!-- End sliding sidebar -->
 
 
@@ -315,7 +315,7 @@
                         * Use class "tt-pn-scroll" to enable hover title scroll. Note: If "tt-pn-hover-title" text is wider than "tt-pn-link" then it scrolls by default. The longer the text, the faster it scrolls.
                         -->
                     <div class="tt-page-nav tt-pn-scroll">
-                        <a href="contact.html" class="tt-pn-link anim-fadeinup">
+                        <a href="{{route('contact')}}" class="tt-pn-link anim-fadeinup">
                             <div class="tt-pn-title">Let's talk</div>
                             <div class="tt-pn-hover-title">Let's talk</div>
                         </a>
@@ -325,7 +325,7 @@
 
                         <!-- Use if destination page contains page header image -->
                         <div class="tt-pn-image">
-                            <img src="assets/img/page-header/ph-3.jpg" alt="image">
+                            <img src="{{asset('front/img/page-header/ph-3.jpg')}}" alt="image">
                         </div>
                     </div>
                     <!-- End page nav -->
@@ -340,70 +340,6 @@
         <!-- End page content -->
 
 
-        <!-- ======================
-            ///// Begin tt-footer /////
-            =========================== -->
-        <footer id="tt-footer">
-            <div class="tt-footer-inner">
-
-                <!-- Begin footer column
-                    ========================= -->
-                <div class="footer-col tt-align-center-left">
-                    <div class="footer-col-inner">
-
-                        <!-- You can use whatever button or link here -->
-                        <div class="tt-btn tt-btn-link">
-                            <a href="#" class="scroll-to-top" data-hover="Back to top">Back to top</a>
-                        </div>
-
-                    </div>
-                    <!-- /.footer-col-inner -->
-                </div>
-                <!-- Begin footer column -->
-
-                <!-- Begin footer column
-                    ========================= -->
-                <div class="footer-col tt-align-center order-m-last">
-                    <div class="footer-col-inner">
-
-                        <div class="tt-copyright">
-                            © Copyright - <a href="https://themetorium.net" target="_blank" rel="noopener" class="tt-link">Themetorium.net</a>
-                        </div>
-
-                    </div>
-                    <!-- /.footer-col-inner -->
-                </div>
-                <!-- Begin footer column -->
-
-                <!-- Begin footer column
-                    ========================= -->
-                <div class="footer-col tt-align-center-right">
-                    <div class="footer-col-inner">
-
-                        <div class="footer-social">
-                            <div class="footer-social-text"><span>Follow</span><i class="fas fa-share-alt"></i></div>
-                            <div class="social-buttons">
-                                <ul>
-                                    <li><a href="https://www.facebook.com/themetorium" class="magnetic-item" target="_blank" rel="noopener">Fb.</a></li>
-                                    <li><a href="https://twitter.com/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Tw.</a></li>
-                                    <li><a href="https://www.youtube.com/" class="magnetic-item" target="_blank" rel="noopener">Yt.</a></li>
-                                    <li><a href="https://dribbble.com/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Dr.</a></li>
-                                    <li><a href="https://www.behance.net/Themetorium" class="magnetic-item" target="_blank" rel="noopener">Be.</a></li>
-                                </ul>
-                            </div>
-                            <!-- /.social-buttons -->
-                        </div>
-                        <!-- /.footer-social -->
-
-                    </div>
-                    <!-- /.footer-col-inner -->
-                </div>
-                <!-- Begin footer column -->
-
-            </div>
-            <!-- /.tt-section-inner -->
-        </footer>
-        <!-- End tt-footer -->
 
 
     </div>

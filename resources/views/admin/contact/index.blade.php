@@ -29,7 +29,7 @@
                             <td>{{$row->name}}</td>
                             <td>{{$row->email}}</td>
                             <td>{{$row->subject}}</td>
-                            <td>{!! Str::limit($row->body, 30)!!}</td>
+                            <td>{!! Str::limit($row->body, 30)!!}...</td>
                             <td class="center">
 
                             <a class="btn btn-success btn-xs" href="contacts/{{$row->id}}" title="{{trans('app.view')}}">
@@ -43,7 +43,8 @@
                 </table>
             </div>
             {{ $rows->links() }}
-        @else
+
+            @else
             <br>
                 <p class="text-center text-bold"> {{trans("users.There is no results")}}</p>
 

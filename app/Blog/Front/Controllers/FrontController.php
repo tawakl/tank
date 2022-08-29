@@ -50,6 +50,16 @@ class FrontController extends Controller {
         return view('fronte.contact');
 
     }
+    public function portfolioGrid() {
+
+        return view('fronte.portfolio-grid-portrait-mode');
+
+    }
+    public function portfolios() {
+
+        return view('fronte.portfolio_interactive');
+
+    }
     public function about() {
         $data['testimonials'] = Testimonial::latest()->get();
 

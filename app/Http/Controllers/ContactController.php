@@ -21,7 +21,7 @@ class ContactController extends Controller
     {
         $data['module'] = $this->module;
         $data['page_title'] = trans('tags.List contact');
-        $data['rows'] = $this->model->latest()->paginate();
+        $data['rows'] = $this->model->latest()->paginate(12);
         return view('admin.'.$this->module . '.index', $data);
     }
 

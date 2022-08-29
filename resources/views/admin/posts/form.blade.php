@@ -5,12 +5,12 @@
 @include('form.input',['name'=>'title','type'=>'text','attributes'=>$attributes])
 
 @include('form.input',[
-'name'=>'description',
+    'name'=>'description',
 'value'=>$row->description,
 'type'=>'textarea',
 'attributes'=>[
     'class'=>'form-control dateTimePicker',
-    'id'=>'summary-ckeditor',
+    'id'=>'article_content',
     'label'=>trans('post.description'),
     'placeholder'=>trans('post.description'),
     ]
@@ -68,4 +68,6 @@
 
 <script>
     CKEDITOR.replace( 'description' );
+    @include('admin.layouts.tinyMCE_config')
+    @include("admin.layouts.filemanger_scripts");
 </script>
