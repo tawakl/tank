@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Contacts\Contact;
 use App\Http\Controllers\Contacts\Requests\CreateContactsRequest;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -29,8 +30,28 @@ class ContactController extends Controller
         $inputs = $request->all();
 
         Contact::create($inputs);
+        \Mail::send('contact_email',
+            array(
+                'name' => $request->get('name'),
+                'email' => $request->get('email'),
+                'subject' => $request->get('subject'),
+                'user_message' => $request->get('body'),
+            ), function($message) use ($request)
+            {
+                $message->from($request->email);
+                $message->to('tawakl.at@gmail.com')
+                   ->subject($request->get('subject'));
 
-        return back();
+            });
+        return back()->with('success', 'Thank you for contact us!');;
+    }
+
+    public function show($id)
+    {
+        $data['module'] = $this->module;
+        $data['page_title'] = trans('tags.view contact');
+        $data['row'] = $this->model->findOrFail($id);
+        return view('admin.'.$this->module . '.view', $data);
     }
 
 

@@ -30,11 +30,4 @@ class HomeController extends Controller
         return view('admin.layouts.master');
     }
 
-    protected function sendMails()
-    {
-        $emails =User::chunk(50,function ($data){
-            dispatch(new SendMAils($data));
-        });
-        return 'done';
-    }
 }

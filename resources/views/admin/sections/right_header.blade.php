@@ -13,13 +13,13 @@
         <!-- Notifications Dropdown Menu -->
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
-                @if( auth()->user()->image)
-                <img src="{{asset('storage/'.  auth()->user()->image )}}" class="img-circle elevation-1" style="width: 1.9rem">
-                  {{ auth()->user()->name }}
-                @else
+{{--                @if( auth()->user()->image)--}}
+                <img src="" class="img-circle elevation-1" style="width: 1.9rem">
+{{--                  {{ auth()->user()->name }}--}}
+{{--                @else--}}
                 <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-1" alt="User Image" style="width: 1.9rem">
 
-                @endif
+{{--                @endif--}}
                 <span class=" fa fa-angle-down"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">

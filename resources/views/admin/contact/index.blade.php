@@ -20,6 +20,7 @@
                         <th class="text-center">email</th>
                         <th class="text-center">subject</th>
                         <th class="text-center">message</th>
+                        <th class="text-center">action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -28,8 +29,13 @@
                             <td>{{$row->name}}</td>
                             <td>{{$row->email}}</td>
                             <td>{{$row->subject}}</td>
-                            <td>{{$row->body}}</td>
+                            <td>{!! Str::limit($row->body, 30)!!}</td>
+                            <td class="center">
 
+                            <a class="btn btn-success btn-xs" href="contacts/{{$row->id}}" title="{{trans('app.view')}}">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>

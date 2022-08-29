@@ -20,9 +20,6 @@ Route::get('/all-posts', '\App\Blog\Front\Controllers\FrontController@all')->nam
 Route::get('/post/{id}', '\App\Blog\Front\Controllers\FrontController@showPost')->name('posts.show');
 Route::get('/contact', '\App\Blog\Front\Controllers\FrontController@contact')->name('contact');
 Route::get('/about', '\App\Blog\Front\Controllers\FrontController@about')->name('about');
-Route::resource('comments', 'CommentsController');
-Route::resource('contacts', 'ContactController');
-Route::get('/send-mails', 'HomeController@sendMails');
 
 
 
@@ -33,9 +30,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::get('login/github', [LoginController::class, 'redirectToProvider']);
-//Route::get('login/github/callback', [LoginController::class, 'handleProviderCallback']);
-
 Route::group(['middleware' => 'auth'], function () {
     require base_path('app/Blog/Users/Routes/web.php');
     require base_path('app/Blog/Categories/Routes/web.php');
@@ -44,7 +38,8 @@ Route::group(['middleware' => 'auth'], function () {
     require base_path('app/Blog/Tags/Routes/web.php');
     require base_path('app/Blog/Profile/Routes/web.php');
     require base_path('app/Blog/Testimonials/Routes/web.php');
-
+    Route::resource('comments', 'CommentsController');
+    Route::resource('contacts', 'ContactController');
 
 });
 
