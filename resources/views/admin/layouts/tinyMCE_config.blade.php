@@ -19,7 +19,7 @@
         convert_urls: false,
         remove_script_host : true,
         height: 500,
-        width: 1050,
+        width: 1040,
         min_height: 100,
         min_width: 400,
         templates: [

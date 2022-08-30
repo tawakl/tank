@@ -67,7 +67,7 @@
                     <a href="{{ route('tags') }}" class="nav-link ">
                         <i class="fa fa-address-book p-2"></i>
                         <p>
-                            {{trans('navigation.tags')}}
+                            Tags
                         </p>
                     </a>
                 </li>
@@ -75,7 +75,7 @@
                     <a href="{{ route('profile.get.edit') }}" class="nav-link ">
                         <i class="fa fa-address-book p-2"></i>
                         <p>
-                            {{trans('navigation.profile')}}
+                            Profile
                         </p>
                     </a>
                 </li>
@@ -83,7 +83,7 @@
                     <a href="{{ route('contacts.index') }}" class="nav-link ">
                         <i class="fa fa-address-book p-2"></i>
                         <p>
-                            {{trans('navigation.contacts')}}
+                            Contacts
                         </p>
                     </a>
                 </li>
@@ -91,7 +91,7 @@
                     <a href="{{ route('testimonials') }}" class="nav-link ">
                         <i class="fa fa-address-book p-2"></i>
                         <p>
-                            {{trans('navigation.testimonials')}}
+                            Testimonials
                         </p>
                     </a>
                 </li>
@@ -100,6 +100,5 @@
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
-    </div>
     <!-- /.sidebar -->
 </aside>

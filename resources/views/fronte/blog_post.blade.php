@@ -154,12 +154,14 @@
                     <div class="tt-blog-post-share">
                         <div class="tt-bps-text">Share:</div>
                         <div class="social-buttons">
-                            <ul>
+                            {!! Share::page(request()->fullUrl(), null, [], '<ul class="ul_social">', '</ul>')
+                            ->facebook()
+                            ->twitter()
+                            ->linkedin()
+                            ->whatsapp()
 
-                                <li><a href="#https://www.facebook.com/sharer/sharer.php?u=https://laracasts.com/&display=popup" class="magnetic-item" rel="noopener" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#0" class="magnetic-item" rel="noopener" title="Share on Twitter"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#0" class="magnetic-item" rel="noopener" title="Share on Pinterest"><i class="fab fa-pinterest"></i></a></li>
-                            </ul>
+
+                            !!}
                         </div>
                         <!-- /.social-buttons -->
                     </div>
@@ -474,6 +476,6 @@
 
     </div>
     <!-- End page content -->
-    
+
 </div>
 @endsection

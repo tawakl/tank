@@ -1,3 +1,4 @@
+<div class="m-2">
 <div class="form-group">
     @include('form.input',[
     'name'=>'title',
@@ -40,7 +41,7 @@
     <button class="btn btn-primary" type="submit">save</button>
 </div>
 
-
+</div>
 
 {{--@section('styles')--}}
     {{--@parent--}}

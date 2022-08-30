@@ -1,3 +1,4 @@
+<div class="m-2">
 @php
     $attributes=['class'=>'form-control','label'=>trans('post.title'),'placeholder'=>trans('post.title')];
 @endphp
@@ -25,7 +26,7 @@
  'placeholder'=>trans('post.Picture'),
  ]])
 
-
+<br>
 @include('form.select',[
     'name'=>'category_id',
     'options'=>$row->getCategories(),
@@ -36,6 +37,7 @@
         ]
     ]
 )
+<br>
 @include('form.select',[
     'name'=>'author_id',
     'options'=>$row->getAuthors(),
@@ -46,6 +48,7 @@
         ]
     ]
 )
+<br>
 @if(count($tags))
 
     @include('form.multiselect',[
@@ -61,13 +64,13 @@
 )
 @endif
 
-@include('form.boolean',['value'=> $row->is_active ?? null,'name'=>'is_active','attributes'=>['label'=>trans('post.Is active') ,'required'=>1]])
+{{--@include('form.boolean',['value'=> $row->is_active ?? null,'name'=>'is_active','attributes'=>['label'=>trans('post.Is active') ,'required'=>1]])--}}
 
-
+</div>
 
 
 <script>
-    CKEDITOR.replace( 'description' );
+    // CKEDITOR.replace( 'description' )
     @include('admin.layouts.tinyMCE_config')
-    @include("admin.layouts.filemanger_scripts");
+    @include("admin.layouts.filemanger_scripts")
 </script>
