@@ -27,7 +27,7 @@ class FrontController extends Controller {
     }
 
     public function all() {
-        $data['posts'] = Post::paginate();
+        $data['posts'] = Post::paginate(3);
         $data['categories'] = Category::all();
         return view('fronte.blog_interactive', $data);
 

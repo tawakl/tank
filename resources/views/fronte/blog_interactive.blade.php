@@ -279,19 +279,22 @@
                         =========================
                         * Use class "tt-pagin-center" to align center.
                         -->
+
                     <div class="tt-pagination tt-pagin-center margin-top-xlg-100 anim-fadeinup">
-                        <div class="tt-pagin-prev">
-                            <a href="" class="tt-pagin-item magnetic-item"><i class="fas fa-chevron-left"></i></a>
-                        </div>
-                        <div class="tt-pagin-numbers">
-                            <a href="#0" class="tt-pagin-item magnetic-item active">1</a>
-                            <a href="" class="tt-pagin-item magnetic-item">2</a>
-                            <a href="" class="tt-pagin-item magnetic-item">3</a>
-                            <a href="" class="tt-pagin-item magnetic-item">4</a>
-                        </div>
-                        <div class="tt-pagin-next">
-                            <a href="" class="tt-pagin-item tt-pagin-next magnetic-item"><i class="fas fa-chevron-right"></i></a>
-                        </div>
+                        {{ $posts->links('vendor.pagination.default') }}
+
+                        {{--                        <div class="tt-pagin-prev">--}}
+{{--                            <a href="" class="tt-pagin-item magnetic-item"><i class="fas fa-chevron-left"></i></a>--}}
+{{--                        </div>--}}
+{{--                        <div class="tt-pagin-numbers">--}}
+{{--                            <a href="#0" class="tt-pagin-item magnetic-item active">1</a>--}}
+{{--                            <a href="" class="tt-pagin-item magnetic-item">2</a>--}}
+{{--                            <a href="" class="tt-pagin-item magnetic-item">3</a>--}}
+{{--                            <a href="" class="tt-pagin-item magnetic-item">4</a>--}}
+{{--                        </div>--}}
+{{--                        <div class="tt-pagin-next">--}}
+{{--                            <a href="" class="tt-pagin-item tt-pagin-next magnetic-item"><i class="fas fa-chevron-right"></i></a>--}}
+{{--                        </div>--}}
                     </div>
                     <!-- End tt-pagination -->
 
