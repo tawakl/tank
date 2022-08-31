@@ -15,10 +15,7 @@ return [
     |--------------------------------------------------------------------------
      */
 
-
-
     'use_package_routes'       => false,
-
 
     /*
     |--------------------------------------------------------------------------
@@ -40,9 +37,7 @@ return [
 
     'allow_shared_folder'      => true,
 
-    'shared_folder_name'       => 'all',
-    'base_directory' => 'public',
-
+    'shared_folder_name'       => 'shares',
 
     /*
     |--------------------------------------------------------------------------
@@ -53,25 +48,44 @@ return [
     'folder_categories'        => [
         'file'  => [
             'folder_name'  => 'files',
-            'startup_view' => 'grid',
-            'max_size'     => 500000000000000000, // size in KB
+            'startup_view' => 'list',
+            'max_size'     => 50000, // size in KB
+            'thumb' => true,
+            'thumb_width' => 80,
+            'thumb_height' => 80,
             'valid_mime'   => [
+                'image/jpeg',
+                'image/pjpeg',
+                'image/png',
+                'image/gif',
                 'application/pdf',
+                'text/plain',
             ],
         ],
         'image' => [
             'folder_name'  => 'photos',
             'startup_view' => 'grid',
-            'max_size'     => 1000000, // size in KB
+            'max_size'     => 50000, // size in KB
+            'thumb' => true,
+            'thumb_width' => 80,
+            'thumb_height' => 80,
             'valid_mime'   => [
-                'image/jpg',
                 'image/jpeg',
+                'image/pjpeg',
                 'image/png',
                 'image/gif',
-                'image/svg+xml',
-                'image/svg'
             ],
         ],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Pagination
+    |--------------------------------------------------------------------------
+     */
+
+    'paginator' => [
+        'perPage' => 30,
     ],
 
     /*
@@ -83,6 +97,8 @@ return [
     'disk'                     => 'public',
 
     'rename_file'              => true,
+
+    'rename_duplicates'        => false,
 
     'alphanumeric_filename'    => true,
 
@@ -97,6 +113,12 @@ return [
     // setting it to false show `error-file-exist` error and stop upload
     'over_write_on_duplicate'  => false,
 
+    // mimetypes of executables to prevent from uploading
+    'disallowed_mimetypes' => ['text/x-php', 'text/html', 'text/plain'],
+
+    // Item Columns
+    'item_columns' => ['name', 'url', 'time', 'icon', 'is_file', 'is_image', 'thumb_url'],
+
     /*
     |--------------------------------------------------------------------------
     | Thumbnail
@@ -109,14 +131,10 @@ return [
     'thumb_folder_name'        => 'thumbs',
 
     // Create thumbnails automatically only for listed types.
-    'raster_mimetypes' => [
-        'image/jpg',
+    'raster_mimetypes'         => [
         'image/jpeg',
+        'image/pjpeg',
         'image/png',
-        'image/gif',
-        'image/svg+xml',
-        'image/svg',
-        'text/plain',
     ],
 
     'thumb_img_width'          => 200, // px
@@ -139,7 +157,6 @@ return [
         'gif'  => 'GIF Image',
         'jpg'  => 'JPEG Image',
         'jpeg' => 'JPEG Image',
-        'svg' => 'SVG Image',
         'png'  => 'PNG Image',
         'ppt'  => 'Microsoft PowerPoint',
         'pptx' => 'Microsoft PowerPoint',
@@ -157,6 +174,6 @@ return [
     | directives are not supported.
      */
     'php_ini_overrides'        => [
-
+        'memory_limit' => '256M',
     ],
 ];

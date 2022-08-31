@@ -1,5 +1,5 @@
 <script>
-    var route_prefix = "{{$target ?? url('/admin/laravel-filemanager')}}";
+    var route_prefix = "{{$target ?? url('/laravel-filemanager')}}";
 </script>
 <script src="https://cdn.tiny.cloud/1/xmijoht0f7ok5jrcyi5edggd475hfzd86dbvw4urzf3f4ps9/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <script src="https://cdn.tiny.cloud/1/xmijoht0f7ok5jrcyi5edggd475hfzd86dbvw4urzf3f4ps9/tinymce/5/jquery.tinymce.min.js" referrerpolicy="origin"></script>
@@ -22,6 +22,8 @@
         width: 1040,
         min_height: 100,
         min_width: 400,
+        deprecation_warnings: false,
+
         templates: [
 
         ],

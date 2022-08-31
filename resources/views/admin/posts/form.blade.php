@@ -4,7 +4,7 @@
 @endphp
 
 @include('form.input',['name'=>'title','type'=>'text','attributes'=>$attributes])
-
+    <br>
 @include('form.input',[
     'name'=>'description',
 'value'=>$row->description,
@@ -16,7 +16,7 @@
     'placeholder'=>trans('post.description'),
     ]
 ])
-
+    <br>
 @include('form.file',[
  'name'=>'postimg',
  'value'=> $row->postimg,
@@ -68,9 +68,3 @@
 
 </div>
 
-
-<script>
-    // CKEDITOR.replace( 'description' )
-    @include('admin.layouts.tinyMCE_config')
-    @include("admin.layouts.filemanger_scripts")
-</script>

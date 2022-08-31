@@ -6,6 +6,7 @@
 <!-- Core JS -->
 <script src="{{asset('front/vendor/jquery/jquery.min.js')}}"></script>
 <!-- jquery JS (https://jquery.com) -->
+<script src="{{asset('front/vendor/jquery.mousewheel.min.js')}}"></script>
 
 <!-- Libs and Plugins JS -->
 <script src="{{asset('front/vendor/gsap/gsap.min.js')}}"></script>
@@ -27,7 +28,6 @@
 <!-- Isotope Packery Mode JS (https://isotope.metafizzy.co/layout-modes/packery.html) -->
 <script src="{{asset('front/vendor/lightgallery/js/lightgallery-all.min.js')}}"></script>
 <!-- lightGallery Plugins JS (http://sachinchoolur.github.io/lightGallery) -->
-<script src="{{asset('front/vendor/jquery.mousewheel.min.js')}}"></script>
 <!-- A jQuery plugin that adds cross browser mouse wheel support (https://github.com/jquery/jquery-mousewheel) -->
 
 <!-- Theme master JS -->
