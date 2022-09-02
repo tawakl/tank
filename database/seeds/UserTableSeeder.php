@@ -12,12 +12,17 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        $user= DB::table('users')->where('email','admin@admin.com')->first();
+        \App\Blog\Testimonials\Testimonial::create([
+            'name' => 'ali',
+            'description'=>'الراجل ده ميه الميه وشغله عالي اوي'
+        ]);
+
+        $user= DB::table('users')->where('email','ali@ali.com')->first();
 
         if (!$user){
             \App\Blog\users\User::create([
-                'name' => 'admin',
-                'email'=>'admin@admin.com',
+                'name' => 'ali',
+                'email'=>'ali@ali.com',
                 'mobile_number'=>'01211440047',
                 'password'=>\Illuminate\Support\Facades\Hash::make('password'),
                 'role' => 'admin'

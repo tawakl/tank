@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 @section('title')
     <h6 class="slim-pagetitle">
-        {{ trans('app.Edit Testimonials') }}
+        Edit Testimonials
     </h6>
 @endsection
 @section('content')

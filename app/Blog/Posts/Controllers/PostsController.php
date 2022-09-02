@@ -61,7 +61,7 @@ class PostsController extends Controller
         if ($request->tags) {
             $row->tags()->attach($request->tags);
         }
-        flash('app.Update successfully')->success();
+        flash('app.Created successfully')->success();
         return redirect( '/' . $this->module );
 
     }

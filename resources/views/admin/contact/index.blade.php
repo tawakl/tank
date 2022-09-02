@@ -35,6 +35,16 @@
                             <a class="btn btn-success btn-xs" href="contacts/{{$row->id}}" title="{{trans('app.view')}}">
                                 <i class="fa fa-eye"></i>
                             </a>
+                                {!! Form::open([
+                                     'action' => ['\App\Http\Controllers\ContactController@destroy',$row->id],
+                                     'method' => 'delete',
+                                     'class' =>'d-inline',
+
+
+                                      ]) !!}
+                                <button type="submit" class="btn btn-danger btn-xs delete-btn "><i
+                                        class="fa fa-trash"></i></button>
+                                {!! Form::close() !!}
                             </td>
                         </tr>
                     @endforeach

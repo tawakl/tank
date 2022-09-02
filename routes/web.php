@@ -22,6 +22,7 @@ Route::get('/contact', '\App\Blog\Front\Controllers\FrontController@contact')->n
 Route::get('/about', '\App\Blog\Front\Controllers\FrontController@about')->name('about');
 Route::get('/portfolios', '\App\Blog\Front\Controllers\FrontController@portfolios')->name('portfolios');
 Route::get('/portfolio-grid-portrait-mode', '\App\Blog\Front\Controllers\FrontController@portfolioGrid')->name('portfolio-grid');
+Route::get('/service/{id}', '\App\Blog\Front\Controllers\FrontController@showService')->name('service.show');
 
 
 
@@ -35,7 +36,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'auth'], function () {
     require base_path('app/Blog/Users/Routes/web.php');
     require base_path('app/Blog/Categories/Routes/web.php');
-    require base_path('app/Blog/Posts/Routes/web.php');
+    require base_path('app/Blog/Services/Routes/web.php');
     require base_path('app/Blog/Posts/Routes/web.php');
     require base_path('app/Blog/Tags/Routes/web.php');
     require base_path('app/Blog/Profile/Routes/web.php');

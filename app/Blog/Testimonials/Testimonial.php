@@ -9,7 +9,10 @@ class Testimonial extends BaseModel
 
     protected $table = 'testimonials';
     public $timestamps = true;
-    protected $fillable = ['title','description','testimonialimg'];
+    protected $fillable = [
+        'name',
+        'description'
+    ];
 
 
 }

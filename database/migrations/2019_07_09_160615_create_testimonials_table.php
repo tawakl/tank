@@ -16,9 +16,8 @@ class CreateTestimonialsTable extends Migration
         Schema::create('testimonials', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->string('title');
+            $table->string('name');
             $table->text('description');
-            $table->string('testimonialimg')->nullable();
 
         });
     }

@@ -4,6 +4,7 @@ namespace App\Blog\Front\Controllers;
 
 use App\Blog\Categories\Category;
 use App\Blog\Posts\Post;
+use App\Blog\Services\Service;
 use App\Blog\Tags\Tag;
 use App\Blog\Testimonials\Testimonial;
 use App\Http\Controllers\Controller;
@@ -22,8 +23,9 @@ class FrontController extends Controller {
         $data = [];
         $posts= $this->post->paginate();
         $categories= Category::all();
+        $services= Service::all();
         $testimonials = Testimonial::latest()->get();
-        return view( 'fronte.home', compact( 'testimonials', 'categories', 'posts'));
+        return view( 'fronte.home', compact( 'testimonials', 'categories', 'services','posts'));
     }
 
     public function all() {
@@ -40,9 +42,11 @@ class FrontController extends Controller {
         $tags = Tag::all();
         return view( 'fronte.blog_post', compact( 'post', 'next', 'previous','categories','tags' ));
 
+    }
+    public function showService($id) {
+        $service = Service::FindOrFail($id);
 
-
-//        return view('fronte.blog_post', $data);
+        return view( 'fronte.service', compact( 'service'));
 
     }
     public function contact() {

@@ -1,7 +1,7 @@
 @extends('admin.layouts.master')
 @section('title')
     <h6 class="slim-pagetitle">
-        {{ trans('app.Create Testimonials') }}
+        Create Testimonials
     </h6>
 @endsection
 @inject('model','App\Blog\Testimonials\Testimonial')

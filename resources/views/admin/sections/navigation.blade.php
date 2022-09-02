@@ -56,10 +56,18 @@
                     </a>
                 </li>
                 <li class="nav-item has-treeview menu-open">
+                    <a href="{{ route('services') }}" class="nav-link ">
+                        <i class="fas fa-list p-2"></i>
+                        <p>
+                            services
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview menu-open">
                     <a href="{{ route('posts') }}" class="nav-link ">
                         <i class="fa fa-address-book p-2"></i>
                         <p>
-                            {{trans('navigation.posts')}}
+                            posts
                         </p>
                     </a>
                 </li>

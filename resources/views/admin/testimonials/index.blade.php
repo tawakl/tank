@@ -19,17 +19,17 @@
                     <thead>
                     <tr>
                         <th class="text-center">#</th>
-                        <th class="text-center">{{trans('testimonial.name')}}</th>
-                        <th class="text-center">{{trans('testimonial.description')}}</th>
-                        <th class="text-center">{{trans('testimonial.created_at')}}</th>
-                        <th class="text-center">{{trans('testimonial.action')}}</th>
+                        <th class="text-center">name</th>
+                        <th class="text-center">description</th>
+                        <th class="text-center">created_at</th>
+                        <th class="text-center">action</th>
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($records as $record)
                         <tr class="text-center">
                             <td>{{$record->id}}</td>
-                            <td>{{$record->title}}</td>
+                            <td>{{$record->name}}</td>
                             <td>{!! $record->description !!}</td>
                             <td>{{$record->created_at}}</td>
                             <td class="w_20">

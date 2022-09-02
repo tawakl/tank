@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Blog\Testimonials\Requests;
+namespace App\Blog\Services\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateTestimonialsRequest extends FormRequest
+class ServicesRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,12 @@ class CreateTestimonialsRequest extends FormRequest
     public function rules()
     {
         return [
-                'name' => 'required',
-                'description' => 'required',
+
         ];
+    }
+    public function getImageData()
+    {
+        $directory_path = explode('/' . basename($this->input('image_url')), $this->input('image_url'))[0];
+        return  basename($directory_path)."/".basename($this->input('image_url'));
     }
 }

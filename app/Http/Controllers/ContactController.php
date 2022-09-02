@@ -54,5 +54,18 @@ class ContactController extends Controller
         return view('admin.'.$this->module . '.view', $data);
     }
 
+    public function destroy($id)
+    {
+        $row = Contact::findOrFail($id);
+        $row->delete();
+        if($row)
+        {
+            return redirect( '/' . 'contacts');
+        }
+
+        return redirect( '/' . 'contacts');
+
+    }
+
 
 }
