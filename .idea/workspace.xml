@@ -23,27 +23,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Categories/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Categories/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Categories/Requests/CreateCategoriesRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Categories/Requests/CreateCategoriesRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Categories/Requests/UpdateCategoriesRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Categories/Requests/UpdateCategoriesRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Blog/Front/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Front/Controllers/FrontController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Blog/Posts/Controllers/PostsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Posts/Controllers/PostsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Blog/Testimonials/Controllers/TestimonialsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Testimonials/Controllers/TestimonialsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Blog/Testimonials/Requests/CreateTestimonialsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Testimonials/Requests/CreateTestimonialsRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Blog/Testimonials/Testimonial.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Testimonials/Testimonial.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_07_09_160615_create_testimonials_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_07_09_160615_create_testimonials_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/contact/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/contact/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Blog/Profile/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Profile/Controllers/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/front/css/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/css/theme.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/categories/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/posts/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/profile/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/profile/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/sections/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sections/navigation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/testimonials/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/testimonials/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sections/right_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sections/right_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/fronte/blog_interactive.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/blog_interactive.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/fronte/blog_post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/blog_post.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/fronte/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/fronte/service.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/service.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/vendor/pagination/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/pagination/default.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,7 +351,7 @@
       <workItem from="1661763882906" duration="728000" />
       <workItem from="1661772597125" duration="1520000" />
       <workItem from="1661777324674" duration="10842000" />
-      <workItem from="1661806508191" duration="47410000" />
+      <workItem from="1661806508191" duration="57208000" />
     </task>
     <servers />
   </component>

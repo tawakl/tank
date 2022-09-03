@@ -78,15 +78,18 @@
                                 <img src="{{asset('storage/'. $post->postimg)}}" alt="image">
                             </a>
                             <div class="bi-item-categories">
-                                <a href="blog-archive.html">{{$post->category->title}}</a>
+                                {{$post->category->title}}
                                 <!-- <a href="blog-archive.html">Uncategorized</a> -->
                             </div>
                             <h2 class="bi-item-title"><a href="{{route('posts.show', $post->id)}}">{{$post->title}}</a></h2>
                             <div class="bi-item-meta">
-                                <span class="published">{{$post->created_at->format('M')}}</span>
-                                <span class="published">{{$post->created_at->format('d')}}</span>
-                                <span class="published">{{$post->created_at->format('Y')}}</span>
-                                <span class="posted-by">- by <a href="blog-archive.html" title="View all posts by John Doe">{{$post->author->name}}</a></span>
+                                <span class="published">
+                                    {{$post->created_at->format('M')}}
+                                    {{$post->created_at->format('d')}},
+                                    {{$post->created_at->format('Y')}}
+                                </span>
+
+                                <span class="posted-by">- by {{$post->author->name}}</span>
                             </div>
                         </article>
                         @endforeach
@@ -283,19 +286,21 @@
                     <div class="tt-pagination tt-pagin-center margin-top-xlg-100 anim-fadeinup">
                         {{ $posts->links('vendor.pagination.default') }}
 
-                        {{--                        <div class="tt-pagin-prev">--}}
+{{--                                                <div class="tt-pagin-prev">--}}
 {{--                            <a href="" class="tt-pagin-item magnetic-item"><i class="fas fa-chevron-left"></i></a>--}}
 {{--                        </div>--}}
+
 {{--                        <div class="tt-pagin-numbers">--}}
 {{--                            <a href="#0" class="tt-pagin-item magnetic-item active">1</a>--}}
 {{--                            <a href="" class="tt-pagin-item magnetic-item">2</a>--}}
 {{--                            <a href="" class="tt-pagin-item magnetic-item">3</a>--}}
 {{--                            <a href="" class="tt-pagin-item magnetic-item">4</a>--}}
 {{--                        </div>--}}
+
 {{--                        <div class="tt-pagin-next">--}}
 {{--                            <a href="" class="tt-pagin-item tt-pagin-next magnetic-item"><i class="fas fa-chevron-right"></i></a>--}}
 {{--                        </div>--}}
-                    </div>
+{{--                    </div>--}}
                     <!-- End tt-pagination -->
 
                 </div>

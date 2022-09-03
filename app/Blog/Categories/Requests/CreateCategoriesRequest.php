@@ -25,7 +25,6 @@ class CreateCategoriesRequest extends FormRequest
     {
         return [
             'title' => 'required|max:250',
-            'description' => 'required'
         ];
     }
 }

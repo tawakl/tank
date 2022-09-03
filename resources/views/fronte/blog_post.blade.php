@@ -20,7 +20,7 @@
                 -->
             <div class="ph-caption">
                 <div class="ph-categories ph-appear">
-                    <a href="blog-archive.html" class="ph-category">{{$post->category->title}}</a>
+                    {{$post->category->title}}
                     <!-- <a href="blog-archive.html" class="ph-category">Uncategorized</a> -->
                 </div>
                 <!-- /.ph-categories -->
@@ -29,10 +29,13 @@
                 <!-- You can use <br class="hide-from-lg"> to break a text line if needed -->
 
                 <div class="ph-meta ph-appear">
-                    <span class="published">{{$post->created_at->format('M')}}</span>
-                    <span class="published">{{$post->created_at->format('d')}}</span>
-                    <span class="published">{{$post->created_at->format('Y')}}</span>
-                    <span class="ph-meta-posted-by">by: <a href="blog-archive.html" title="View all posts by John Doe">{{$post->author->name}}</a></span>
+                    <span class="published">
+                        {{$post->created_at->format('M')}}
+                        {{$post->created_at->format('d')}},
+                        {{$post->created_at->format('Y')}}
+                    </span>
+
+                    <span class="ph-meta-posted-by">by: {{$post->author->name}}</span>
                 </div>
                 <!-- /.ph-meta -->
             </div>
@@ -87,11 +90,14 @@
                     <div class="ph-share-subtitle ph-share-appear">Share this article with your friends</div>
 
                     <div class="social-buttons ph-share-appear">
-                        <ul>
-                            <li><a href="#0" class="magnetic-item" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#0" class="magnetic-item" title="Share on Twitter"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#0" class="magnetic-item" title="Share on Pinterest"><i class="fab fa-pinterest"></i></a></li>
-                        </ul>
+                            {!! Share::page(request()->fullUrl(), null, [], '<ul class="ul_social">', '</ul>')
+                            ->facebook()
+                            ->twitter()
+                            ->linkedin()
+                            ->whatsapp()
+
+
+                            !!}
                     </div>
                     <!-- /.social-buttons -->
 

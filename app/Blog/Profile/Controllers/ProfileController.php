@@ -5,6 +5,7 @@ namespace App\Blog\Profile\Controllers;
 use App\Blog\Profile\Requests\ProfileRequest;
 use App\Blog\users\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller {
     public $model;
@@ -18,18 +19,22 @@ class ProfileController extends Controller {
 
     public function getEdit() {
         $data['row']=$this->model->findOrFail(auth()->user()->id);
-        $data['page_title']=trans('profile.Edit Account');
+        $data['page_title']='Edit Account';
         $data['layout']='master';
         return view('admin.'.$this->module.'.edit', $data);
     }
 
     public function postEdit(ProfileRequest $request) {
-        $row=$this->model->findOrFail(auth()->user()->id);
-        if($row->update([$request->except(['password_confirmation']),
-            $row->image = $request->image->store('profileImages','public')])) {
-            flash(trans('app.Update successfully'))->success();
-            return back();
-        }
+        $data['module'] = $this->module;
+        $row = $this->model->findOrFail(auth()->user()->id);
+        $row->name = $request->name;
+        $row->email = $request->email;
+        $row->mobile_number = $request->mobile_number;
+        $row->password =Hash::make( $request->password);
+
+        $row->update();
+        flash(trans('app.Update successfully'))->success();
+        return back();
     }
 
     public function getLogout() {

@@ -14,21 +14,21 @@
         <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
 {{--                @if( auth()->user()->image)--}}
-                <img src="" class="img-circle elevation-1" style="width: 1.9rem">
-{{--                  {{ auth()->user()->name }}--}}
+{{--                <img src="{{asset('storage/'. auth()->user()->image)}}" class="img-circle elevation-1" style="width: 1.9rem">--}}
+                  {{ auth()->user()->name }}
 {{--                @else--}}
-                <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-1" alt="User Image" style="width: 1.9rem">
+{{--                <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-1" alt="User Image" style="width: 1.9rem">--}}
 
 {{--                @endif--}}
                 <span class=" fa fa-angle-down"></span>
             </a>
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <a href="#" class="dropdown-item">
-                    <i class="fa fa-user-circle"></i> {{trans('app.My Profile')}}
+                <a href="/profile/edit" class="dropdown-item">
+                    <i class="fa fa-user-circle"></i> My Profile
                 </a>
                 <div class="dropdown-divider"></div>
                 <a href="/profile/logout" class="dropdown-item">
-                    <i class="fa fa-sign-out-alt "></i> {{trans('app.logout')}}
+                    <i class="fa fa-sign-out-alt "></i> logout
                 </a>
             </div>
         </li>

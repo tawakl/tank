@@ -54,7 +54,7 @@ class PostsController extends Controller
         $row->description = $request->description;
         $row->category_id = $request->category_id;
         $row->author_id = $request->author_id;
-        $row->postimg = $request->postimg->store('uploads','public');
+        $row->postimg = $request->postimg->store('images','public');
         $row->postimg = $request->getImageData();
 
         $row->save();

@@ -96,59 +96,6 @@
                         -->
                         <div class="tt-grid ttgr-layout-3 ttgr-portrait ttgr-shifted ttgr-gap-4">
 
-                            <!-- Begin tt-Ggrid top content
-                            ================================ -->
-                            <div class="tt-grid-top">
-
-                                <!-- Begin tt-Ggrid categories/filter
-                                ====================================== -->
-                                <div class="tt-grid-categories">
-
-                                    <!-- Begin tt-Ggrid categories trigger
-                                    =======================================
-                                    * Use class "ttgr-cat-fixed" to enable categories trigger fixed position.
-                                    -->
-                                    <div class="ttgr-cat-trigger-wrap ttgr-cat-fixed">
-                                        <a href="#portfolio-grid" class="ttgr-cat-trigger not-hide-cursor" data-offset="150">
-                                            <div class="ttgr-cat-text">
-                                                <span data-hover="Open">Filter</span>
-                                            </div>
-                                            <div class="ttgr-cat-icon">
-                                                <span class="magnetic-item"><i class="fas fa-layer-group"></i></span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <!-- End tt-Ggrid categories trigger -->
-
-                                    <!-- Begin tt-Ggrid categories nav
-                                    =================================== -->
-                                    <div class="ttgr-cat-nav">
-                                        <div class="ttgr-cat-list-holder cursor-close">
-                                            <div class="ttgr-cat-list-inner">
-                                                <div class="ttgr-cat-list-content">
-                                                    <ul class="ttgr-cat-list">
-                                                        <li class="ttgr-cat-close">Close <i class="fas fa-times"></i></li>
-                                                        <!-- For mobile devices! -->
-                                                        <li class="ttgr-cat-item"><a href="#" class="active">Show All</a></li>
-                                                        <li class="ttgr-cat-item"><a href="#" data-filter=".branding">Branding</a></li>
-                                                        <li class="ttgr-cat-item"><a href="#" data-filter=".people">People</a></li>
-                                                        <li class="ttgr-cat-item"><a href="#" data-filter=".nature">Nature</a></li>
-                                                        <li class="ttgr-cat-item"><a href="#" data-filter=".creative">Creative</a></li>
-                                                    </ul>
-                                                </div>
-                                                <!-- /.ttgr-cat-links-content -->
-                                            </div>
-                                            <!-- /.ttgr-cat-links-inner -->
-                                        </div>
-                                        <!-- /.ttgr-cat-links-holder -->
-                                    </div>
-                                    <!-- End tt-Ggrid categories nav -->
-
-                                </div>
-                                <!-- End tt-Ggrid categories/filter-->
-
-                            </div>
-                            <!-- End tt-Grid top content -->
 
 
                             <!-- Begin tt-Grid items wrap

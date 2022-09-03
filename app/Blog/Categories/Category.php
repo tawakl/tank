@@ -13,7 +13,6 @@ class Category extends BaseModel
     protected $fillable =
         [
             'title',
-            'description'
         ];
 
 

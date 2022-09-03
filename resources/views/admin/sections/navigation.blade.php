@@ -3,10 +3,10 @@
     <a href="/home" class="brand-link">
         <img src="{{asset('admin/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
              style="opacity: .8">
-        <span class="brand-text font-weight-light">{{trans('app.blog')}}</span>
+        <span class="brand-text font-weight-light">CE ALI</span>
     </a>
 
-    <!-- Sidebar -->
+{{--    <!-- Sidebar -->--}}
 {{--    <div class="sidebar">--}}
 {{--        <!-- Sidebar user panel (optional) -->--}}
 {{--        <div class="user-panel mt-3 pb-3 mb-3 d-flex">--}}
@@ -37,16 +37,16 @@
                         </p>
                     </a>
                 </li>
-{{--                @if(auth()->user()->isAdmin())--}}
-{{--                <li class="nav-item has-treeview menu-open">--}}
-{{--                    <a href="{{ route('users') }}" class="nav-link ">--}}
-{{--                        <i class="fas fa-users p-2"></i>--}}
-{{--                        <p>--}}
-{{--                            {{trans('navigation.users')}}--}}
-{{--                        </p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                @endif--}}
+                @if(auth()->user()->isAdmin())
+                <li class="nav-item has-treeview menu-open">
+                    <a href="{{ route('users') }}" class="nav-link ">
+                        <i class="fas fa-users p-2"></i>
+                        <p>
+                            {{trans('navigation.users')}}
+                        </p>
+                    </a>
+                </li>
+                @endif
                 <li class="nav-item has-treeview menu-open">
                     <a href="{{ route('categories') }}" class="nav-link ">
                         <i class="fas fa-list p-2"></i>

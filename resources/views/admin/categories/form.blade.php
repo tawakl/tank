@@ -5,24 +5,24 @@
 
 @include('form.input',['name'=>'title','type'=>'text','attributes'=>$attributes])
 
-    <br>
-    <div class="form-group">
-            @include('form.input',[
-            'name'=>'description',
-            'value'=>$row->description,
-            'type'=>'textarea',
-            'attributes'=>[
-                'class'=>'form-control',
-                'id'=>'article_content',
-                'label'=>trans('categories.description'),
-                'placeholder'=>trans('categories.description'),
-                ]
-            ])
+{{--    <br>--}}
+{{--    <div class="form-group">--}}
+{{--            @include('form.input',[--}}
+{{--            'name'=>'description',--}}
+{{--            'value'=>$row->description,--}}
+{{--            'type'=>'textarea',--}}
+{{--            'attributes'=>[--}}
+{{--                'class'=>'form-control',--}}
+{{--                'id'=>'article_content',--}}
+{{--                'label'=>trans('categories.description'),--}}
+{{--                'placeholder'=>trans('categories.description'),--}}
+{{--                ]--}}
+{{--            ])--}}
 
-    </div>
+{{--    </div>--}}
 </div>
-<script>
-    // CKEDITOR.replace( 'description' )
-    @include('admin.layouts.tinyMCE_config')
-    @include("admin.layouts.filemanger_scripts")
-</script>
+{{--<script>--}}
+{{--    // CKEDITOR.replace( 'description' )--}}
+{{--    @include('admin.layouts.tinyMCE_config')--}}
+{{--    @include("admin.layouts.filemanger_scripts")--}}
+{{--</script>--}}

@@ -64,14 +64,14 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group row mb-0">
-                            <label class="col-md-8"> or login with:</label>
-                            <div class="col-md-8 offset-md-4">
+{{--                        <div class="form-group row mb-0">--}}
+{{--                            <label class="col-md-8"> or login with:</label>--}}
+{{--                            <div class="col-md-8 offset-md-4">--}}
 
-                                   <a href="login/github"><i class="fa fa-github"></i>{{ __('github') }}</a>
+{{--                                   <a href="login/github"><i class="fa fa-github"></i>{{ __('github') }}</a>--}}
 
-                            </div>
-                        </div>
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </form>
                 </div>
             </div>

@@ -2,7 +2,7 @@
 @section('title')
     <h6 class="slim-pagetitle">
 
-        {{trans('app.List Categories')}}
+        List Categories
 
     </h6>
 @endsection
@@ -21,7 +21,7 @@
                     <tr>
                         <th class="text-center">#</th>
                         <th class="text-center">Name</th>
-                        <th class="text-center">Description</th>
+{{--                        <th class="text-center">Description</th>--}}
                         <th class="text-center">Action</th>
                     </tr>
                     </thead>
@@ -30,7 +30,7 @@
                         <tr class="text-center">
                             <td>{{$row->id}}</td>
                             <td>{{$row->title}}<span class="badge badge-primary ml-2">{{$row->posts->count()}}</span></td>
-                            <td>{!! $row->description !!}</td>
+{{--                            <td>{!! $row->description !!}</td>--}}
                             <td class="center">
 
                                 @if(request('deleted') != 'yes')
