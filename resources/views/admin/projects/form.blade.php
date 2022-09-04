@@ -23,7 +23,7 @@
 'type'=>'textarea',
 'attributes'=>[
     'class'=>'form-control dateTimePicker',
-    'id'=>'article_content',
+    'id'=>'description',
     'label'=>'about',
     'placeholder'=>'about',
     ]
@@ -35,7 +35,7 @@
 'type'=>'textarea',
 'attributes'=>[
     'class'=>'form-control dateTimePicker',
-    'id'=>'article_content',
+    'id'=>'description1',
     'label'=>'mission',
     'placeholder'=>'mission',
     ]
@@ -74,4 +74,8 @@
 
 
 </div>
+<script>
+    CKEDITOR.replace( 'description' )
+    CKEDITOR.replace( 'description1' )
+</script>
 
