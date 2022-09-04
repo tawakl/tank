@@ -25,7 +25,11 @@
     <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Blog/Front/Controllers/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Front/Controllers/FrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fronte/blog_post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/blog_post.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/sections/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/sections/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/fronte/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/fronte/portfolio_interactive.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/portfolio_interactive.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/fronte/single_project.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/single_project.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +242,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/ahmed/Documents/caAli/database/seeds",
+    "last_opened_file_path": "/home/ahmed/Documents/caAli/resources/views/admin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -249,11 +253,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/admin" />
+      <recent name="$PROJECT_DIR$/app/Blog" />
       <recent name="$PROJECT_DIR$/database/seeds" />
       <recent name="$PROJECT_DIR$/resources/views/fronte" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/services" />
-      <recent name="$PROJECT_DIR$/resources/views/admin" />
     </key>
   </component>
   <component name="RunManager">
@@ -332,7 +336,7 @@
       <workItem from="1661763882906" duration="728000" />
       <workItem from="1661772597125" duration="1520000" />
       <workItem from="1661777324674" duration="10842000" />
-      <workItem from="1661806508191" duration="63837000" />
+      <workItem from="1661806508191" duration="75418000" />
     </task>
     <servers />
   </component>
@@ -349,5 +353,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Blog/Projects/Controllers/ProjectsController.php</url>
+          <line>41</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

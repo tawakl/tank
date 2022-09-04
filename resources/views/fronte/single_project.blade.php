@@ -2,26 +2,6 @@
 
 @section('content')
 <div id="content-wrap">
-
-
-        <!-- ========================
-            ///// Begin page header /////
-            =============================
-            * ATENTION: This page header is slightly different from the default page header!
-            It contains some extra elements and classes specifically for a portfolio single project.
-            =============================
-            * Use class "ph-full" to enable fullscreen size.
-            * Use class "ph-cap-sm", "ph-cap-lg", "ph-cap-xlg" or "ph-cap-xxlg" to set caption size (no class = default size).).
-            * Use class "ph-center" to enable content center position.
-            * Use class "ph-bg-image" to enable page header background image (required for a portfolio single project!).
-            * Use class "ph-bg-image-is-light" if needed, it makes the elements dark and more visible if you use a very light image (effect only with class "ph-bg-image").
-            * Use class "ph-image-shadow" to enable page header background image (effect only with class "ph-bg-image").
-            * Use class "ph-image-cropped" to crop image. It fixes image dimensions (no effect for "ph-bg-image"!).
-            * Use class "ph-image-cover-*" to set image overlay opacity. For example "ph-image-cover-2" or "ph-image-cover-2-5" (up to "ph-image-cover-9-5").
-            * Use class "ph-content-parallax" to enable content parallax.
-            * Use class "ph-stroke" to enable caption title stroke style.
-            * Use class "ph-inline" to enable content inline position (for a single project page only! No effect with class "ph-center"!).
-            -->
         <div id="page-header" class="ph-full ph-bg-image ph-image-shadow ph-image-cover-5 ph-content-parallax">
             <div class="page-header-inner tt-wrap">
 
@@ -32,9 +12,9 @@
                         <!-- <img src="assets/img/page-header/project-ph/project-ph-2.jpg" alt="Image"> -->
 
                         <div class="ph-video-wrap">
-                            <video class="ph-video" loop muted autoplay preload="metadata" poster="assets/vids/fashion-week.jpg">
-                                <source src="assets/vids/fashion-week.mp4" type="video/mp4">
-                                <source src="assets/vids/fashion-week.webm" type="video/webm">
+                            <video class="ph-video" loop muted autoplay preload="metadata" poster="{{asset('storage/'. $portfolio->coverImg)}}">
+{{--                                <source src="{{asset('front/vids/fashion-week.mp4')}}" type="video/mp4">--}}
+{{--                                <source src="{{asset('front/vids/fashion-week.webm')}}" type="video/webm">--}}
                             </video>
                         </div>
                     </div>
@@ -47,12 +27,12 @@
                     -->
                 <div class="ph-caption">
                     <div class="ph-categories ph-appear">
-                        <div class="ph-category" style="">People</div>
+                        <div class="ph-category" style="">{{$portfolio->category->title}}</div>
                         <!-- <div class="ph-category">Varia</div> -->
                     </div>
                     <!-- /.ph-categories -->
 
-                    <h2 class="ph-caption-title ph-appear">Fashion Week</h2>
+                    <h2 class="ph-caption-title ph-appear">{{$portfolio->title}}</h2>
                     <!-- You can use <br class="hide-from-lg"> to break a text line if needed -->
                     <!-- <h4 class="ph-caption-subtitle ph-appear">Subtitle</h4> -->
                 </div>
@@ -67,20 +47,20 @@
                     <ul>
                         <li>
                             <div class="pi-list-heading">Client</div>
-                            <div class="pi-list-cont">Themetorium</div>
+                            <div class="pi-list-cont">{{$portfolio->client}}</div>
                         </li>
-                        <li>
-                            <div class="pi-list-heading">Year</div>
-                            <div class="pi-list-cont">2021</div>
-                        </li>
-                        <li>
-                            <div class="pi-list-heading">Role</div>
-                            <div class="pi-list-cont">Visualization</div>
-                            <!-- Describe in a few words -->
-                        </li>
+{{--                        <li>--}}
+{{--                            <div class="pi-list-heading">Year</div>--}}
+{{--                            <div class="pi-list-cont">2021</div>--}}
+{{--                        </li>--}}
+{{--                        <li>--}}
+{{--                            <div class="pi-list-heading">Role</div>--}}
+{{--                            <div class="pi-list-cont">Visualization</div>--}}
+{{--                            <!-- Describe in a few words -->--}}
+{{--                        </li>--}}
                         <li>
                             <div class="pi-list-heading">Website</div>
-                            <div class="pi-list-cont"><a href="https://themetorium.net" target="_blank" rel="noopener">Visit site<span class="pi-list-icon"><i class="fas fa-arrow-right"></i></span></a></div>
+                            <div class="pi-list-cont"><a href="{{$portfolio->websiteUrl}}" target="_blank" rel="noopener">Visit site<span class="pi-list-icon"><i class="fas fa-arrow-right"></i></span></a></div>
                         </li>
                     </ul>
                 </div>
@@ -136,9 +116,9 @@
 
                         <div class="social-buttons ph-share-appear">
                             <ul>
-                                <li><a href="#0" class="magnetic-item" title="Share on Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#0" class="magnetic-item" title="Share on Twitter"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#0" class="magnetic-item" title="Share on Pinterest"><i class="fab fa-pinterest"></i></a></li>
+                                @foreach($social as $key => $value )
+                                    <li><a href="{{$value}}" target="_blank" class="magnetic-item" rel="noopener" title="Share on {{ucfirst($key)}}"> <i class="fab fa-{{$key}}"></i></a></li>
+                                @endforeach
                             </ul>
                         </div>
                         <!-- /.social-buttons -->
@@ -187,12 +167,8 @@
                             <!-- End tt-Heading -->
 
                             <div class="anim-fadeinup text-gray">
-                                <p>Pleased him another was settled for. Moreover end horrible endeavor entrance any families. Income appear extent on of thrown in admire. Stanhill on we if vicinity material in. Saw him smallest you provided ecstatic
-                                    supplied. Garret wanted expect remain as mr. Covered parlors concern we express in visited to do.</p>
+                                <p>{!! $portfolio->about!!}</p>
 
-                                <!-- <div class="tt-btn tt-btn-link no-margin">
-                                        <a href="dummy-page.html" data-hover="Explore More">Explore More</a>
-                                    </div> -->
                             </div>
 
                         </div>
@@ -232,7 +208,7 @@
 										</video>">
 
                             <figure class="cover-opacity-2">
-                                <img class="anim-image-parallax tt-lazy" src="assets/img/low-qlt-thumb.jpg" data-src="assets/img/portfolio/single-project/project-3/project-3-1.jpg" alt="image">
+                                <img class="anim-image-parallax tt-lazy" src="{{asset('storage/'. $portfolio->projectImg)}}" data-src="assets/img/portfolio/single-project/project-3/project-3-1.jpg" alt="image">
                                 <!-- <figcaption>
                                         Image Caption
                                     </figcaption> -->
@@ -284,8 +260,7 @@
                             <!-- End tt-Heading -->
 
                             <div class="anim-fadeinup text-gray">
-                                <p>Cause dried no solid no an small so still widen. Ten weather evident smiling bed against she examine its. Rendered far opinions two yet moderate sex striking. Sufficient motionless compliment by stimulated assistance
-                                    at. Convinced resolving extensive agreeable in it on as remainder. Cordially say affection met who propriety him.</p>
+                                <p>{!!$portfolio->mission!!}</p>
                             </div>
 
                         </div>
@@ -331,16 +306,17 @@
 
                                 <!-- Begin tt-Grid item
                                     ======================== -->
+                                @foreach($galleries as $gallery)
                                 <div class="tt-grid-item isotope-item">
                                     <div class="ttgr-item-inner">
 
                                         <!-- Begin tt-Gallery item
                                             =========================== -->
-                                        <a href="assets/img/portfolio/single-project/project-3/project-3-2.jpg" class="tt-gallery-item lg-trigger" data-cursor="View">
+                                        <a href="{{asset('storage/'. $gallery->image)}}" class="tt-gallery-item lg-trigger" data-cursor="View">
                                             <div class="tt-gallery-item-inner">
                                                 <div class="tt-gallery-image-wrap anim-zoomin">
                                                     <figure class="tt-gallery-image ttgr-height">
-                                                        <img src="assets/img/portfolio/single-project/project-3/project-3-2.jpg" alt="image">
+                                                        <img src="{{asset('storage/'. $gallery->image)}}" alt="image">
                                                     </figure>
                                                     <!-- /.tt-gallery-image -->
                                                 </div>
@@ -354,136 +330,7 @@
                                     <!-- /.ttgr-item-inner -->
                                 </div>
                                 <!-- End tt-Grid item -->
-
-                                <!-- Begin tt-Grid item
-                                    ======================== -->
-                                <div class="tt-grid-item isotope-item">
-                                    <div class="ttgr-item-inner">
-
-                                        <!-- Begin tt-Gallery item
-                                            =========================== -->
-                                        <a href="assets/img/portfolio/single-project/project-3/project-3-3.jpg" class="tt-gallery-item lg-trigger" data-cursor="View">
-                                            <div class="tt-gallery-item-inner">
-                                                <div class="tt-gallery-image-wrap anim-zoomin">
-                                                    <figure class="tt-gallery-image ttgr-height">
-                                                        <img src="assets/img/portfolio/single-project/project-3/project-3-3.jpg" alt="image">
-                                                    </figure>
-                                                    <!-- /.tt-gallery-image -->
-                                                </div>
-                                                <!-- /.tt-gallery-image-wrap -->
-                                            </div>
-                                            <!-- /.tt-gallery-item-inner -->
-                                        </a>
-                                        <!-- End tt-Gallery item -->
-
-                                    </div>
-                                    <!-- /.ttgr-item-inner -->
-                                </div>
-                                <!-- End tt-Grid item -->
-
-                                <!-- Begin tt-Grid item
-                                    ======================== -->
-                                <div class="tt-grid-item isotope-item">
-                                    <div class="ttgr-item-inner">
-
-                                        <!-- Begin tt-Gallery item
-                                            =========================== -->
-                                        <a href="assets/img/portfolio/single-project/project-3/project-3-4.jpg" class="tt-gallery-item lg-trigger" data-cursor="View" data-sub-html="Yes, you can use image captions. :)">
-                                            <div class="tt-gallery-item-inner">
-                                                <div class="tt-gallery-image-wrap anim-zoomin">
-                                                    <figure class="tt-gallery-image ttgr-height">
-                                                        <img src="assets/img/portfolio/single-project/project-3/project-3-4.jpg" alt="image">
-                                                    </figure>
-                                                    <!-- /.tt-gallery-image -->
-                                                </div>
-                                                <!-- /.tt-gallery-image-wrap -->
-                                            </div>
-                                            <!-- /.tt-gallery-item-inner -->
-                                        </a>
-                                        <!-- End tt-Gallery item -->
-
-                                    </div>
-                                    <!-- /.ttgr-item-inner -->
-                                </div>
-                                <!-- End tt-Grid item -->
-
-                                <!-- Begin tt-Grid item
-                                    ======================== -->
-                                <div class="tt-grid-item isotope-item">
-                                    <div class="ttgr-item-inner">
-
-                                        <!-- Begin tt-Gallery item
-                                            =========================== -->
-                                        <a href="assets/img/portfolio/single-project/project-3/project-3-5.jpg" class="tt-gallery-item lg-trigger" data-cursor="View">
-                                            <div class="tt-gallery-item-inner">
-                                                <div class="tt-gallery-image-wrap anim-zoomin">
-                                                    <figure class="tt-gallery-image ttgr-height">
-                                                        <img src="assets/img/portfolio/single-project/project-3/project-3-5.jpg" alt="image">
-                                                    </figure>
-                                                    <!-- /.tt-gallery-image -->
-                                                </div>
-                                                <!-- /.tt-gallery-image-wrap -->
-                                            </div>
-                                            <!-- /.tt-gallery-item-inner -->
-                                        </a>
-                                        <!-- End tt-Gallery item -->
-
-                                    </div>
-                                    <!-- /.ttgr-item-inner -->
-                                </div>
-                                <!-- End tt-Grid item -->
-
-                                <!-- Begin tt-Grid item
-                                    ======================== -->
-                                <div class="tt-grid-item isotope-item">
-                                    <div class="ttgr-item-inner">
-
-                                        <!-- Begin tt-Gallery item
-                                            =========================== -->
-                                        <a href="assets/img/portfolio/single-project/project-3/project-3-6.jpg" class="tt-gallery-item lg-trigger" data-cursor="View">
-                                            <div class="tt-gallery-item-inner">
-                                                <div class="tt-gallery-image-wrap anim-zoomin">
-                                                    <figure class="tt-gallery-image ttgr-height">
-                                                        <img src="assets/img/portfolio/single-project/project-3/project-3-6.jpg" alt="image">
-                                                    </figure>
-                                                    <!-- /.tt-gallery-image -->
-                                                </div>
-                                                <!-- /.tt-gallery-image-wrap -->
-                                            </div>
-                                            <!-- /.tt-gallery-item-inner -->
-                                        </a>
-                                        <!-- End tt-Gallery item -->
-
-                                    </div>
-                                    <!-- /.ttgr-item-inner -->
-                                </div>
-                                <!-- End tt-Grid item -->
-
-                                <!-- Begin tt-Grid item
-                                    ======================== -->
-                                <div class="tt-grid-item isotope-item">
-                                    <div class="ttgr-item-inner">
-
-                                        <!-- Begin tt-Gallery item
-                                            =========================== -->
-                                        <a href="assets/img/portfolio/single-project/project-3/project-3-7.jpg" class="tt-gallery-item lg-trigger" data-cursor="View">
-                                            <div class="tt-gallery-item-inner">
-                                                <div class="tt-gallery-image-wrap anim-zoomin">
-                                                    <figure class="tt-gallery-image ttgr-height">
-                                                        <img src="assets/img/portfolio/single-project/project-3/project-3-7.jpg" alt="image">
-                                                    </figure>
-                                                    <!-- /.tt-gallery-image -->
-                                                </div>
-                                                <!-- /.tt-gallery-image-wrap -->
-                                            </div>
-                                            <!-- /.tt-gallery-item-inner -->
-                                        </a>
-                                        <!-- End tt-Gallery item -->
-
-                                    </div>
-                                    <!-- /.ttgr-item-inner -->
-                                </div>
-                                <!-- End tt-Grid item -->
+                                @endforeach
 
                             </div>
                             <!-- End tt-Grid items wrap  -->
@@ -514,7 +361,7 @@
                         * Use class "tt-pn-scroll" to enable hover title scroll. Note: If "tt-pn-hover-title" text is wider than "tt-pn-link" then it scrolls by default. The longer the text, the faster it scrolls.
                         -->
                     <div class="tt-page-nav tt-pn-scroll">
-                        <a href="single-project-3.html" class="tt-pn-link anim-fadeinup">
+                        <a href="{{route( 'portfolios.show', $next->id ) }}" class="tt-pn-link anim-fadeinup">
                             <div class="tt-pn-title">Next Project</div>
                             <div class="tt-pn-hover-title">Mystery Forest</div>
                         </a>
@@ -524,7 +371,7 @@
 
                         <!-- Use if destination page contains page header image -->
                         <div class="tt-pn-image">
-                            <img src="assets/img/portfolio/portfolio-3.jpg" alt="image">
+                            <img src="{{asset('storage/'. $next->coverImg)}}" alt="image">
                         </div>
                     </div>
                     <!-- End page nav -->
@@ -537,8 +384,6 @@
 
         </div>
         <!-- End page content -->
-
-
 
 
     </div>

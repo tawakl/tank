@@ -59,7 +59,23 @@
                     <a href="{{ route('services') }}" class="nav-link ">
                         <i class="fas fa-list p-2"></i>
                         <p>
-                            services
+                            Services
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview menu-open">
+                    <a href="{{ route('galleries') }}" class="nav-link ">
+                        <i class="fas fa-list p-2"></i>
+                        <p>
+                            Galleries
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item has-treeview menu-open">
+                    <a href="{{ route('projects') }}" class="nav-link ">
+                        <i class="fas fa-list p-2"></i>
+                        <p>
+                            Projects
                         </p>
                     </a>
                 </li>
@@ -67,7 +83,7 @@
                     <a href="{{ route('posts') }}" class="nav-link ">
                         <i class="fa fa-address-book p-2"></i>
                         <p>
-                            posts
+                            Posts
                         </p>
                     </a>
                 </li>

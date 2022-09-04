@@ -3,7 +3,9 @@
 namespace App\Blog\Front\Controllers;
 
 use App\Blog\Categories\Category;
+use App\Blog\Galleries\Gallery;
 use App\Blog\Posts\Post;
+use App\Blog\Projects\Project;
 use App\Blog\Services\Service;
 use App\Blog\Tags\Tag;
 use App\Blog\Testimonials\Testimonial;
@@ -26,7 +28,8 @@ class FrontController extends Controller {
         $categories= Category::all();
         $services= Service::all();
         $testimonials = Testimonial::latest()->get();
-        return view( 'fronte.home', compact( 'testimonials', 'categories', 'services','posts'));
+        $portfolios = Project::all();
+        return view( 'fronte.home', compact( 'testimonials','portfolios', 'categories', 'services','posts'));
     }
 
     public function all() {
@@ -49,6 +52,7 @@ class FrontController extends Controller {
         return view( 'fronte.blog_post', compact( 'post','social', 'next', 'previous','categories','tags' ));
 
     }
+
     public function showService($id) {
         $service = Service::FindOrFail($id);
 
@@ -66,8 +70,21 @@ class FrontController extends Controller {
 
     }
     public function portfolios() {
+        $portfolios = Project::all();
+        return view('fronte.portfolio_interactive',compact( 'portfolios'));
 
-        return view('fronte.portfolio_interactive');
+    }
+    public function showPortfolios($id) {
+        $portfolio = Project::findOrFail($id);
+        $categories = Category::all();
+        $galleries = Gallery::where('project_id','=', $portfolio->id)->get();
+        $next = Project::where('id', '<>', $portfolio->id)->orderBy('id','desc')->first();
+        $social = Share::page(request()->fullUrl(), null)
+            ->facebook()
+            ->twitter()
+            ->linkedin()
+            ->whatsapp()->getRawLinks();
+        return view( 'fronte.single_project', compact( 'portfolio','next','galleries','social','categories' ));
 
     }
     public function about() {
