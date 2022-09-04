@@ -8,6 +8,7 @@ use App\Blog\Services\Service;
 use App\Blog\Tags\Tag;
 use App\Blog\Testimonials\Testimonial;
 use App\Http\Controllers\Controller;
+use Share;
 
 class FrontController extends Controller {
     public $module;
@@ -40,7 +41,12 @@ class FrontController extends Controller {
         $next = Post::where('id', '>', $post->id)->orderBy('id','desc')->first();
         $categories = Category::all();
         $tags = Tag::all();
-        return view( 'fronte.blog_post', compact( 'post', 'next', 'previous','categories','tags' ));
+        $social = Share::page(request()->fullUrl(), null)
+            ->facebook()
+            ->twitter()
+            ->linkedin()
+            ->whatsapp()->getRawLinks();
+        return view( 'fronte.blog_post', compact( 'post','social', 'next', 'previous','categories','tags' ));
 
     }
     public function showService($id) {

@@ -90,14 +90,11 @@
                     <div class="ph-share-subtitle ph-share-appear">Share this article with your friends</div>
 
                     <div class="social-buttons ph-share-appear">
-                            {!! Share::page(request()->fullUrl(), null, [], '<ul class="ul_social">', '</ul>')
-                            ->facebook()
-                            ->twitter()
-                            ->linkedin()
-                            ->whatsapp()
-
-
-                            !!}
+                        <ul>
+                            @foreach($social as $key => $value )
+                                <li><a href="{{$value}}" target="_blank" class="magnetic-item" rel="noopener" title="Share on {{ucfirst($key)}}"> <i class="fab fa-{{$key}}"></i></a></li>
+                            @endforeach
+                        </ul>
                     </div>
                     <!-- /.social-buttons -->
 
@@ -160,14 +157,11 @@
                     <div class="tt-blog-post-share">
                         <div class="tt-bps-text">Share:</div>
                         <div class="social-buttons">
-                            {!! Share::page(request()->fullUrl(), null, [], '<ul class="ul_social">', '</ul>')
-                            ->facebook()
-                            ->twitter()
-                            ->linkedin()
-                            ->whatsapp()
-
-
-                            !!}
+                            <ul>
+                            @foreach($social as $key => $value )
+                                <li><a href="{{$value}}" target="_blank" class="magnetic-item" rel="noopener" title="Share on {{ucfirst($key)}}"> <i class="fab fa-{{$key}}"></i></a></li>
+                            @endforeach
+                            </ul>
                         </div>
                         <!-- /.social-buttons -->
                     </div>
