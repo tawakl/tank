@@ -191,7 +191,7 @@
                     * Use class "tt-pn-scroll" to enable hover title scroll. Note: If "tt-pn-hover-title" text is wider than "tt-pn-link" then it scrolls by default. The longer the text, the faster it scrolls.
                     -->
                 <div class="tt-page-nav tt-pn-scroll">
-                    <a href="portfolio-interactive.html" class="tt-pn-link anim-fadeinup">
+                    <a href="{{route('portfolios')}}" class="tt-pn-link anim-fadeinup">
                         <div class="tt-pn-title">Portfolio</div>
                         <div class="tt-pn-hover-title">Portfolio</div>
                     </a>
@@ -201,7 +201,7 @@
 
                     <!-- Use if destination page contains page header image -->
                     <div class="tt-pn-image">
-                        <img src="assets/img/page-header/ph-1.jpg" alt="image">
+                        <img src="{{asset('front/img/page-header/ph-1.jpg')}} alt="image">
                     </div>
                 </div>
                 <!-- End page nav -->

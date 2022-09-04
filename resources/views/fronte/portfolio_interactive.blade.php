@@ -9,7 +9,7 @@
                     ============================= -->
                 <div class="ph-image">
                     <div class="ph-image-inner">
-                        <img src="assets/img/page-header/ph-1.jpg" alt="Image">
+                        <img src="{{asset('front/img/page-header/ph-1.jpg')}}" alt="Image">
                     </div>
                 </div>
                 <!-- End page header image -->
@@ -87,11 +87,12 @@
                             ======================================
                             * Adjust the "data-scroll-speed" attribute to find a suitable scrolling speed (no effect on mobile devices!).
                             -->
+                        @foreach($portfolios as $portfolio )
+
                         <div class="portfolio-interactive-item anim-skewinup" data-scroll-speed="3">
-                            @foreach($portfolios as $portfolio )
                             <a href="{{route('portfolios.show', $portfolio->id)}}" class="pi-item-title-link">
-                                <h2 class="pi-item-title">Victorian Girls</h2>
-                                <div class="pi-item-hover-title">Victorian Girls</div>
+                                <h2 class="pi-item-title">{{$portfolio->title}}</h2>
+                                <div class="pi-item-hover-title">{{$portfolio->title}}</div>
                             </a>
                             <div class="pi-item-category-wrap">
                                 <div class="pi-item-category">{{$portfolio->category->title}}</div>
@@ -100,8 +101,9 @@
                             <figure class="pi-item-image cover-opacity-2">
                                 <img src="{{asset('storage/'. $portfolio->coverImg)}}" alt="image">
                             </figure>
-                            @endforeach
                         </div>
+                        @endforeach
+
                         <!-- End portfolio interactive item -->
 
 

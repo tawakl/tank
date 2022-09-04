@@ -38,7 +38,9 @@
                             <td>{{$row->title}}</td>
                             <td>{{$row->category->title}}</td>
                             <td>{{$row->client}}</td>
-                            <td>{{$row->websiteUrl}}</td>
+                            <td>
+                                <a href="{{$row->websiteUrl}}" target="_blank" rel="noopener">{{$row->websiteUrl}}<span class="pi-list-icon"></span></a>
+                            </td>
                             <td>{{$row->created_at}}</td>
                             <td class="center">
 

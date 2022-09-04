@@ -65,8 +65,8 @@ class FrontController extends Controller {
 
     }
     public function portfolioGrid() {
-
-        return view('fronte.portfolio-grid-portrait-mode');
+        $portfolios = Project::all();
+        return view('fronte.portfolio-grid-portrait-mode',compact( 'portfolios'));
 
     }
     public function portfolios() {
