@@ -5,7 +5,7 @@
 <head>
 
     <!-- Title -->
-    <title>Tank - Creative Portfolio Showcase HTML Website Template by Themetorium</title>
+    <title>CE ALI OMAR</title>
 
     <!-- Meta -->
     <meta charset="utf-8">

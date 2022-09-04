@@ -135,7 +135,7 @@
                     <!-- Begin blog post content -->
                     <div class="tt-blog-post-content">
 
-                        <h3>Heading</h3>
+{{--                        <h3>Heading</h3>--}}
 
                         {!! $post->description !!}
 
