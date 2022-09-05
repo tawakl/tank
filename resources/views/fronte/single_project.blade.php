@@ -12,7 +12,7 @@
                         <!-- <img src="assets/img/page-header/project-ph/project-ph-2.jpg" alt="Image"> -->
 
                         <div class="ph-video-wrap">
-                            <video class="ph-video" loop muted autoplay preload="metadata" poster="{{asset('storage/'. $portfolio->coverImg)}}">
+                            <video class="ph-video" loop muted autoplay preload="metadata" poster="{{url('public/Image/'. $portfolio->coverImg)}}">
 {{--                                <source src="{{asset('front/vids/fashion-week.mp4')}}" type="video/mp4">--}}
 {{--                                <source src="{{asset('front/vids/fashion-week.webm')}}" type="video/webm">--}}
                             </video>
@@ -208,7 +208,7 @@
 										</video>">
 
                             <figure class="cover-opacity-2">
-                                <img class="anim-image-parallax tt-lazy" src="{{asset('storage/'. $portfolio->projectImg)}}" data-src="assets/img/portfolio/single-project/project-3/project-3-1.jpg" alt="image">
+                                <img class="anim-image-parallax tt-lazy" src="{{url('public/Image/'. $portfolio->projectImg)}}" data-src="assets/img/portfolio/single-project/project-3/project-3-1.jpg" alt="image">
                                 <!-- <figcaption>
                                         Image Caption
                                     </figcaption> -->
@@ -312,11 +312,11 @@
 
                                         <!-- Begin tt-Gallery item
                                             =========================== -->
-                                        <a href="{{asset('storage/'. $gallery->image)}}" class="tt-gallery-item lg-trigger" data-cursor="View">
+                                        <a href="{{url('public/Image/'. $gallery->image)}}" class="tt-gallery-item lg-trigger" data-cursor="View">
                                             <div class="tt-gallery-item-inner">
                                                 <div class="tt-gallery-image-wrap anim-zoomin">
                                                     <figure class="tt-gallery-image ttgr-height">
-                                                        <img src="{{asset('storage/'. $gallery->image)}}" alt="image">
+                                                        <img src="{{url('public/Image/'. $gallery->image)}}" alt="image">
                                                     </figure>
                                                     <!-- /.tt-gallery-image -->
                                                 </div>
@@ -371,7 +371,7 @@
 
                         <!-- Use if destination page contains page header image -->
                         <div class="tt-pn-image">
-                            <img src="{{asset('storage/'. $next->coverImg)}}" alt="image">
+                            <img src="{{url('public/Image/'. $next->coverImg)}}" alt="image">
                         </div>
                     </div>
                     <!-- End page nav -->

@@ -19,7 +19,7 @@
             'type'=>'textarea',
             'attributes'=>[
                 'class'=>'form-control',
-                'id'=>'article_content',
+                'id'=>'description',
                 'label'=>'description',
                 'placeholder'=>'description',
                 ]
@@ -37,7 +37,6 @@
      ]])
 </div>
 <script>
-    // CKEDITOR.replace( 'description' )
-    @include('admin.layouts.tinyMCE_config')
-    @include("admin.layouts.filemanger_scripts")
+    CKEDITOR.replace( 'description' )
+
 </script>

@@ -10,7 +10,7 @@
             ============================= -->
             <div class="ph-image">
                 <div class="ph-image-inner">
-                    <img src="{{asset('storage/'. $service->image)}}" alt="Image">
+                    <img src="{{url('public/Image/'. $service->image)}}" alt="Image">
                 </div>
             </div>
             <!-- End page header image -->
@@ -81,8 +81,8 @@
                 * Use prepared helper class "max-width-*" to add custom width if needed. Example: "max-width-800". More info about helper classes can be found in the file "helper.css".
                 -->
                 <div class="tt-heading tt-heading-lg">
-                    <h3 class="tt-heading-subtitle text-gray">Subtitle</h3>
-                    <h2 class="tt-heading-title">Your Content</h2>
+                    <h3 class="tt-heading-subtitle text-gray">{!!  $service->subtext!!}</h3>
+                    <h2 class="tt-heading-title">{!!  $service->title!!}</h2>
                     <!-- <h3 class="tt-heading-subtitle text-gray">Subtitle</h3> -->
                 </div>
                 <!-- End tt-Heading -->
@@ -108,7 +108,7 @@
                 * Use class "tt-pn-scroll" to enable hover title scroll. Note: If "tt-pn-hover-title" text is wider than "tt-pn-link" then it scrolls by default. The longer the text, the faster it scrolls.
                 -->
                 <div class="tt-page-nav tt-pn-scroll">
-                    <a href="portfolio-grid-modern.html" class="tt-pn-link anim-fadeinup">
+                    <a href="{{route('portfolio-grid')}}" class="tt-pn-link anim-fadeinup">
                         <div class="tt-pn-title">Portfolio</div>
                         <div class="tt-pn-hover-title">Portfolio</div>
                     </a> <!-- /.tt-pn-link -->
@@ -117,7 +117,7 @@
 
                     <!-- Use if destination page contains page header image -->
                     <div class="tt-pn-image">
-                        <img src="assets/img/page-header/ph-1.jpg" alt="image">
+                        <img src="{{asset('front/img/page-header/ph-1.jpg')}}" alt="image">
                     </div>
                 </div>
                 <!-- End page nav -->

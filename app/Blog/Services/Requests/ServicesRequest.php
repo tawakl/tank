@@ -27,9 +27,5 @@ class ServicesRequest extends FormRequest
 
         ];
     }
-    public function getImageData()
-    {
-        $directory_path = explode('/' . basename($this->input('image_url')), $this->input('image_url'))[0];
-        return  basename($directory_path)."/".basename($this->input('image_url'));
-    }
+
 }

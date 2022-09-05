@@ -45,9 +45,12 @@ class ServicesController extends Controller
         $row->title = $request->title;
         $row->subtext = $request->subtext;
         $row->description = $request->description;
-        $row->image = $request->image->store('uploads','public');
-        $row->image = $request->getImageData();
-
+        if($request->file('image')) {
+            $file = $request->file('image');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('public/Image'), $filename);
+            $row['image'] = $filename;
+        }
         $row->save();
         flash('app.Created successfully')->success();
         return redirect( '/' . $this->module );
@@ -68,8 +71,11 @@ class ServicesController extends Controller
         $row->title = $request->title;
         $row->subtext = $request->subtext;
         $row->description = $request->description;
-        if ($request->hasFile('image')) {
-            $row->image = $request->image->store('uploads', 'public');
+        if($request->file('image')) {
+            $file = $request->file('image');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('public/Image'), $filename);
+            $row['image'] = $filename;
         }
         $row->update();
         return redirect( '/' . $this->module );

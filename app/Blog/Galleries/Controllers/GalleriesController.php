@@ -52,7 +52,13 @@ class GalleriesController extends Controller
 
         $row = new Gallery();
         $row->project_id = $request->project_id;
-        $row->image = $request->image->store('images','public');
+//        $row->image = $request->image->store('images','public');
+        if($request->file('image')) {
+            $file = $request->file('image');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('public/Image'), $filename);
+            $row['image'] = $filename;
+        }
         $row->save();
 
         flash('app.Created successfully')->success();
@@ -74,8 +80,11 @@ class GalleriesController extends Controller
     public function postEdit(UpdateGalleriesRequest $request , $id) {
         $data['module'] = $this->module;
         $row = $this->model->findOrFail($id);
-        if ($request->hasFile('image')) {
-            $row->image = $request->image->store('images', 'public');
+        if($request->file('image')) {
+            $file = $request->file('image');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('public/Image'), $filename);
+            $row['image'] = $filename;
         }
         $row->update();
         return redirect( '/' . $this->module );

@@ -33,7 +33,10 @@
                     @foreach($rows as $row)
                         <tr class="text-center">
                             <td>{{$row->id}}</td>
-                            <td>{{$row->image}}</td>
+                            <td>
+                                <img src="{{ url('public/Image/'.$row->image) }}"
+                                     style="height: 100px; width: 150px;">
+                            </td>
                             <td>{{$row->project->title}}</td>
                             <td>{{$row->created_at}}</td>
                             <td class="center">

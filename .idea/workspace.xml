@@ -24,6 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/galleries/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/galleries/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/services/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/services/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/fronte/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +240,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/ahmed/Documents/caAli/resources/views/admin",
+    "last_opened_file_path": "/home/ahmed/Documents/caAli/public/storage",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -247,11 +251,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/storage" />
       <recent name="$PROJECT_DIR$/resources/views/admin" />
       <recent name="$PROJECT_DIR$/app/Blog" />
       <recent name="$PROJECT_DIR$/database/seeds" />
       <recent name="$PROJECT_DIR$/resources/views/fronte" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunManager">
@@ -330,7 +334,7 @@
       <workItem from="1661763882906" duration="728000" />
       <workItem from="1661772597125" duration="1520000" />
       <workItem from="1661777324674" duration="10842000" />
-      <workItem from="1661806508191" duration="76381000" />
+      <workItem from="1661806508191" duration="81603000" />
     </task>
     <servers />
   </component>

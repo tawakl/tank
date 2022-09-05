@@ -58,8 +58,18 @@ class ProjectsController extends Controller
         $row->mission = $request->mission;
         $row->about = $request->about;
         $row->category_id = $request->category_id;
-        $row->coverImg = $request->coverImg->store('images','public');
-        $row->projectImg = $request->projectImg->store('images','public');
+        if($request->file('coverImg')) {
+            $file = $request->file('coverImg');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('public/Image'), $filename);
+            $row['coverImg'] = $filename;
+        }
+        if($request->file('projectImg')) {
+            $file = $request->file('projectImg');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('public/Image'), $filename);
+            $row['projectImg'] = $filename;
+        }
 
         $row->save();
 
@@ -88,11 +98,17 @@ class ProjectsController extends Controller
         $row->mission = $request->mission;
         $row->about = $request->about;
 
-        if ($request->hasFile('coverImg')) {
-            $row->coverImg = $request->coverImg->store('images', 'public');
+        if($request->file('coverImg')) {
+            $file = $request->file('coverImg');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('public/Image'), $filename);
+            $row['coverImg'] = $filename;
         }
-        if ($request->hasFile('projectImg')) {
-            $row->projectImg = $request->projectImg->store('images', 'public');
+        if($request->file('projectImg')) {
+            $file = $request->file('projectImg');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('public/Image'), $filename);
+            $row['projectImg'] = $filename;
         }
         $row->update();
         return redirect( '/' . $this->module );

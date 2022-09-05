@@ -99,7 +99,7 @@
                                 <!-- <div class="pi-item-category">Varia</div> -->
                             </div>
                             <figure class="pi-item-image cover-opacity-2">
-                                <img src="{{asset('storage/'. $portfolio->coverImg)}}" alt="image">
+                                <img src="{{url('public/Image/'. $portfolio->coverImg)}}" alt="image">
                             </figure>
                         </div>
                         @endforeach
@@ -141,7 +141,7 @@
 
                         <!-- Use if destination page contains page header image -->
                         <div class="tt-pn-image">
-                            <img src="assets/img/page-header/ph-3.jpg" alt="image">
+                            <img src="{{asset('front/img/page-header/ph-3.jpg')}}" alt="image">
                         </div>
                     </div>
                     <!-- End page nav -->

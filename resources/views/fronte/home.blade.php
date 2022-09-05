@@ -118,7 +118,7 @@
                                                 <div class="pgi-image-holder cover-opacity-2">
                                                     <div class="pgi-image-inner anim-zoomin">
                                                         <figure class="pgi-image ttgr-height">
-                                                            <img src="{{asset('storage/'. $portfolio->coverImg)}}" alt="image">
+                                                            <img src="{{url('public/Image/'.$portfolio->coverImg)}}" alt="image">
                                                         </figure>
                                                         <!-- /.pgi-image -->
                                                     </div>

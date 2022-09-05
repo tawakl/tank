@@ -30,7 +30,7 @@
 
                                 <!-- Use class "cover-opacity-*" to set an image overlay if needed. For example "cover-opacity-2". More info in the file "helper.css". -->
                                 <figure class="tt-pci-image-wrap cover-opacity-2">
-                                    <img class="tt-pci-image swiper-lazy" src="{{asset('storage/'. $portfolio->coverImg)}}" data-src="{{asset('storage/'. $portfolio->coverImg)}}" alt="Image">
+                                    <img class="tt-pci-image swiper-lazy" src="{{url('public/Image/'. $portfolio->coverImg)}}" data-src="{{url('public/Image/'. $portfolio->coverImg)}}" alt="Image">
                                 </figure>
                                 <!-- /.tt-pci-image-wrap -->
 

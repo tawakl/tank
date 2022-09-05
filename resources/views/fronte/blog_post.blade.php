@@ -9,7 +9,7 @@
                 ============================= -->
             <div class="ph-image">
                 <div class="ph-image-inner">
-                    <img src="{{asset('storage/'. $post->postimg)}}" alt="Image">
+                    <img src="{{url('public/Image/'. $post->postimg)}}" alt="Image">
                 </div>
             </div>
             <!-- End page header image -->

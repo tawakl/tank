@@ -54,8 +54,12 @@ class PostsController extends Controller
         $row->description = $request->description;
         $row->category_id = $request->category_id;
         $row->author_id = $request->author_id;
-        $row->postimg = $request->postimg->store('images','public');
-
+        if($request->file('postimg')) {
+            $file = $request->file('postimg');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('public/Image'), $filename);
+            $row['postimg'] = $filename;
+        }
         $row->save();
         if ($request->tags) {
             $row->tags()->attach($request->tags);
@@ -84,8 +88,11 @@ class PostsController extends Controller
         if ($request->tags) {
             $row->tags()->sync($request->tags);
         }
-        if ($request->hasFile('postimg')) {
-            $row->postimg = $request->postimg->store('images', 'public');
+        if($request->file('postimg')) {
+            $file = $request->file('postimg');
+            $filename = date('YmdHi') . $file->getClientOriginalName();
+            $file->move(public_path('public/Image'), $filename);
+            $row['postimg'] = $filename;
         }
         $row->update();
         return redirect( '/' . $this->module );

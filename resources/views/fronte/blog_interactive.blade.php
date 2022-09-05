@@ -75,7 +75,7 @@
                         <article class="blog-interactive-item anim-skewinup">
                             <a href="{{route('posts.show', $post->id)}}" class="bi-item-image">
                                 <!-- if exist -->
-                                <img src="{{asset('storage/'. $post->postimg)}}" alt="image">
+                                <img src="{{url('public/Image/'. $post->postimg)}}" alt="image">
                             </a>
                             <div class="bi-item-categories">
                                 {{$post->category->title}}

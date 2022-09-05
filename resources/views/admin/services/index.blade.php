@@ -32,7 +32,7 @@
                             <td>{{$row->id}}</td>
                             <td>{{$row->title}}</td>
                             <td>{{$row->subtext}}</td>
-                            <td>{!! Str::limit($row->description, 100)!!}</td>
+                            <td>{!! Str::limit($row->description, 50)!!}</td>
 
                             <td class="center">
 
