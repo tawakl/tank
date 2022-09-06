@@ -280,74 +280,27 @@
                     * Add class "is-open" to the "tt-accordion-content" to make this content open by default.
                     -->
                 <div class="tt-accordion tt-ac-xlg tt-ac-borders">
-                    <div class="tt-accordion-item anim-fadeinup">
-                        <div class="tt-accordion-heading">
-                            <h3 class="tt-ac-head-title">UX / Research</h3>
-                            <div class="tt-accordion-subtext">Mauris mauris ante</div>
-                            <div class="tt-accordion-caret-wrap">
-                                <div class="tt-accordion-caret magnetic-item"></div>
+                    @foreach($services as $service)
+                        <div class="tt-accordion-item anim-fadeinup">
+                            <div class="tt-accordion-heading">
+                                <h3 class="tt-ac-head-title">{{$service->title}}</h3>
+                                <div class="tt-accordion-subtext">{{$service->subtext}}</div>
+                                <div class="tt-accordion-caret-wrap">
+                                    <div class="tt-accordion-caret magnetic-item"></div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- /.tt-accordion-heading -->
-                        <div class="tt-accordion-content max-width-800">
-                            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra
-                                leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
-                        </div>
-                        <!-- /.tt-accordion-content -->
-                    </div>
-                    <!-- /.tt-accordion-item -->
+                            <!-- /.tt-accordion-heading -->
+                            <div class="tt-accordion-content max-width-800">
+                                <p>{!! Str::limit($service->description, 100)!!}</p>
 
-                    <div class="tt-accordion-item anim-fadeinup">
-                        <div class="tt-accordion-heading">
-                            <h3 class="tt-ac-head-title">Digital Strategy</h3>
-                            <div class="tt-accordion-subtext">Vivamus nisi</div>
-                            <div class="tt-accordion-caret-wrap">
-                                <div class="tt-accordion-caret magnetic-item"></div>
+                                <div class="tt-btn tt-btn-link">
+                                    <a href="{{route('service.show',$service->id)}}" data-hover="Read More">Read More</a>
+                                </div>
                             </div>
+                            <!-- /.tt-accordion-content -->
                         </div>
-                        <!-- /.tt-accordion-heading -->
-                        <div class="tt-accordion-content max-width-800">
-                            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra
-                                leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
-                        </div>
-                        <!-- /.tt-accordion-content -->
-                    </div>
-                    <!-- /.tt-accordion-item -->
-
-                    <div class="tt-accordion-item anim-fadeinup">
-                        <div class="tt-accordion-heading">
-                            <h3 class="tt-ac-head-title">Branding</h3>
-                            <div class="tt-accordion-subtext">Nam min proin eget</div>
-                            <div class="tt-accordion-caret-wrap">
-                                <div class="tt-accordion-caret magnetic-item"></div>
-                            </div>
-                        </div>
-                        <!-- /.tt-accordion-heading -->
-                        <div class="tt-accordion-content max-width-800">
-                            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra
-                                leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
-                        </div>
-                        <!-- /.tt-accordion-content -->
-                    </div>
-                    <!-- /.tt-accordion-item -->
-
-                    <div class="tt-accordion-item anim-fadeinup">
-                        <div class="tt-accordion-heading">
-                            <h3 class="tt-ac-head-title">Marketing</h3>
-                            <div class="tt-accordion-subtext">Condimentum sit amet</div>
-                            <div class="tt-accordion-caret-wrap">
-                                <div class="tt-accordion-caret magnetic-item"></div>
-                            </div>
-                        </div>
-                        <!-- /.tt-accordion-heading -->
-                        <div class="tt-accordion-content max-width-800">
-                            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra
-                                leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
-                        </div>
-                        <!-- /.tt-accordion-content -->
-                    </div>
-                    <!-- /.tt-accordion-item -->
-
+                        <!-- /.tt-accordion-item -->
+                    @endforeach
                 </div>
                 <!-- End accordion -->
 
@@ -593,7 +546,7 @@
                     * Use class "tt-pn-scroll" to enable hover title scroll. Note: If "tt-pn-hover-title" text is wider than "tt-pn-link" then it scrolls by default. The longer the text, the faster it scrolls.
                     -->
                 <div class="tt-page-nav tt-pn-scroll">
-                    <a href="portfolio-grid-modern.html" class="tt-pn-link anim-fadeinup">
+                    <a href="{{route('portfolio-grid')}}" class="tt-pn-link anim-fadeinup">
                         <div class="tt-pn-title">Portfolio</div>
                         <div class="tt-pn-hover-title">Portfolio</div>
                     </a>

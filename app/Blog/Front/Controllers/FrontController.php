@@ -89,6 +89,7 @@ class FrontController extends Controller {
     }
     public function about() {
         $data['testimonials'] = Testimonial::latest()->get();
+        $data['services'] = Service::all();
 
         return view('fronte.about',$data);
 
