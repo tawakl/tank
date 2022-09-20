@@ -233,7 +233,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/ahmed/Music/tank",
+    "last_opened_file_path": "/home/ahmed/Music/tank/app/Blog/BaseApp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -329,6 +329,7 @@
       <workItem from="1661777324674" duration="10842000" />
       <workItem from="1661806508191" duration="86830000" />
       <workItem from="1663675780201" duration="2752000" />
+      <workItem from="1663678586098" duration="399000" />
     </task>
     <servers />
   </component>
