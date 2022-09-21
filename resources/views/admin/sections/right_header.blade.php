@@ -15,7 +15,7 @@
             <a class="nav-link" data-toggle="dropdown" href="#">
 {{--                @if( auth()->user()->image)--}}
 {{--                <img src="{{asset('storage/'. auth()->user()->image)}}" class="img-circle elevation-1" style="width: 1.9rem">--}}
-                  {{ auth()->user()->name }}
+{{--                  {{ auth()->user()->name }}--}}
 {{--                @else--}}
 {{--                <img src="{{asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-1" alt="User Image" style="width: 1.9rem">--}}
 

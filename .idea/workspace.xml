@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -235,7 +233,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/ahmed/Music/tank/app/Blog/BaseApp",
+    "last_opened_file_path": "/home/ahmed/Music/tank/app/Blog/Users",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -246,11 +244,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Blog/Users" />
       <recent name="$PROJECT_DIR$/app/Blog/BaseApp" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public/storage" />
       <recent name="$PROJECT_DIR$/resources/views/admin" />
-      <recent name="$PROJECT_DIR$/app/Blog" />
     </key>
   </component>
   <component name="RunManager">
@@ -331,7 +329,7 @@
       <workItem from="1661777324674" duration="10842000" />
       <workItem from="1661806508191" duration="86830000" />
       <workItem from="1663675780201" duration="2752000" />
-      <workItem from="1663678586098" duration="1071000" />
+      <workItem from="1663678586098" duration="1914000" />
     </task>
     <servers />
   </component>
