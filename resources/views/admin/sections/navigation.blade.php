@@ -37,7 +37,7 @@
                         </p>
                     </a>
                 </li>
-{{--                @if(auth()->user()->isAdmin())--}}
+                @if(auth()->user()->isAdmin())
                 <li class="nav-item has-treeview menu-open">
                     <a href="{{ route('users') }}" class="nav-link ">
                         <i class="fas fa-users p-2"></i>
@@ -46,7 +46,7 @@
                         </p>
                     </a>
                 </li>
-{{--                @endif--}}
+                @endif
                 <li class="nav-item has-treeview menu-open">
                     <a href="{{ route('categories') }}" class="nav-link ">
                         <i class="fas fa-list p-2"></i>
