@@ -48,7 +48,7 @@ class ServicesController extends Controller
         if($request->file('image')) {
             $file = $request->file('image');
             $filename = date('YmdHi') . $file->getClientOriginalName();
-            $file->move(public_path('Images'), $filename);
+            $file->move(public_path('public/Image'), $filename);
             $row['image'] = $filename;
         }
         $row->save();

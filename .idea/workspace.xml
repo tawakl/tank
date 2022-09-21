@@ -23,8 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cec28d4-2fa4-4652-bd94-1e02d1e970d6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Blog/Services/Controllers/ServicesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Blog/Services/Controllers/ServicesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/fronte/service.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/fronte/service.blade.php" afterDir="false" />
     </list>
@@ -334,7 +332,7 @@
       <workItem from="1661777324674" duration="10842000" />
       <workItem from="1661806508191" duration="86830000" />
       <workItem from="1663675780201" duration="2752000" />
-      <workItem from="1663678586098" duration="8147000" />
+      <workItem from="1663678586098" duration="8634000" />
     </task>
     <servers />
   </component>
