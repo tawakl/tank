@@ -38,8 +38,8 @@ class ContactController extends Controller
                 'user_message' => $request->get('body'),
             ), function($message) use ($request)
             {
-                $message->from($request->email);
-                $message->to('tawakl.at@gmail.com')
+                $message->from($request->email)
+//                $message->to('tawakl.at@gmail.com')
                    ->subject($request->get('subject'));
 
             });
