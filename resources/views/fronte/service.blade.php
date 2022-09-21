@@ -10,7 +10,7 @@
             ============================= -->
             <div class="ph-image">
                 <div class="ph-image-inner">
-                    <img src="{{url('public/Image/'. $service->image)}}" alt="Image">
+                    <img src="{{url('Images/'. $service->image)}}" alt="Image">
                 </div>
             </div>
             <!-- End page header image -->
