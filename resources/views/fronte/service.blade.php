@@ -13,6 +13,7 @@
                     <img src="{{url('Images/'. $service->image)}}" alt="Image">
                 </div>
             </div>
+
             <!-- End page header image -->
 
             <!-- Begin page header caption
